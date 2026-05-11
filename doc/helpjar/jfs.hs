@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <helpset>
-  <title>Hjälp för Bokföring och Administration – Fribok.org</title>
+  <title>Hjälp för Bokföring och Administration – Bokfri.org</title>
   <maps>
     <homeID>hem_html</homeID>
     <mapref location="default.map"/>

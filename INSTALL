@@ -1,23 +1,23 @@
-Fribok, INSTALL file
+Bokfri, INSTALL file
 
 Build requirements:
 * Java SDK, version 1.7 or greater
 * Apache Maven 2
 
-The preferred way of building Fribok is using the Maven POM-file.
+The preferred way of building Bokfri is using the Maven POM-file.
 
 $ mvn package assembly:single
 [output...]
 
 And to run it:
-$ java -jar target/fribok-2.1-SNAPSHOT-jar-with-dependencies.jar
+$ java -jar target/bokfri-2.1-SNAPSHOT-jar-with-dependencies.jar
 
 The above command must be run from the project root directory.
 
 Upgrade note:
 
 Direct migration from the legacy pre-HSQL `bookkeeper.db` storage format is not
-supported in this fork. Migrate that data with an older Fribok/JFS release
+supported in this fork. Migrate that data with an older Bokfri/JFS release
 first, then move to this fork using the regular backup/restore process.
 
 NOTE: In case you have problem with missing files from jasperforge.org
@@ -52,7 +52,7 @@ easy access inside IntelliJ.
 
 $ mvn idea:idea -DdownloadSources=true -DdownloadJavadocs=true
 
-If you don't wish to use Maven, you can build Fribok from inside
+If you don't wish to use Maven, you can build Bokfri from inside
 IntelliJ IDEA.  What follows is build instructions for IntelliJ IDEA Community
 Edition.
 

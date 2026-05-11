@@ -20,7 +20,7 @@ error handling, Javadoc, UI conventions, testing patterns and best practices.
 - `mvn clean compile`                    Clean and compile sources without tests
 
 ### Run Locally
-- `java -jar target/fribok-<version>-jar-with-dependencies.jar`
+- `java -jar target/bokfri-<version>-jar-with-dependencies.jar`
 
 ## Lint & Static Analysis
 - `mvn checkstyle:check`                  Enforce Checkstyle rules
@@ -80,7 +80,7 @@ CI pipeline in `.github/workflows/ci.yml`:
 ## Additional Tools
 - `mvn dependency:tree`                   Inspect dependency graph
 - `mvn versions:display-dependency-updates` Report available updates
-- `mvn exec:java -Dexec.mainClass=org.fribok.bookkeeping.app.Bookkeeping`
+- `mvn exec:java -Dexec.mainClass=org.fribok.bookkeeping.Bookkeeping`
 Launch main application via Maven
 
 ## Code Style Guidelines

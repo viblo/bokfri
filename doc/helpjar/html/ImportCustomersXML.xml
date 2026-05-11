@@ -13,7 +13,7 @@
                   </note>
                   <inlinegraphic fileref="../images/header.png" width="18.522cm" depth="0.53cm"/> Importera kunder (XML)</para>
                <para/>
-               <para>Du kan importera kunder i XML-format från en XML-fil som skapats från exempelvis en E-butik som stödjer vårt format för XML-filer eller från en XML-fil som skapats i våra program.De kunder som importeras i Fribok Administration uppdaterar redan registrerade kunder eller läggs till som nya kunder.</para>
+               <para>Du kan importera kunder i XML-format från en XML-fil som skapats från exempelvis en E-butik som stödjer vårt format för XML-filer eller från en XML-fil som skapats i våra program.De kunder som importeras i Bokfri Administration uppdaterar redan registrerade kunder eller läggs till som nya kunder.</para>
                <para/>
                <para>Copyright 2006-2018 - Fribok.org</para>
             </entry>

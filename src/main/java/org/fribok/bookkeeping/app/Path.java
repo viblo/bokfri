@@ -14,7 +14,7 @@
  * details.
  *
  * You should have received a copy of the GNU General Public License along with
- * Fribok.  If not, see <http://www.gnu.org/licenses/>.
+ * Bokfri.  If not, see <http://www.gnu.org/licenses/>.
  */
 package org.fribok.bookkeeping.app;
 
@@ -40,7 +40,7 @@ public enum Path {
     /** The application base directory */
     APP_BASE, /** The application data directory */ APP_DATA, /** The user configuration directory */ USER_CONF, /** The user data directory */ USER_DATA;
 
-    private static final String APP_SUBDIR = "fribok";
+    private static final String APP_SUBDIR = "bokfri";
     private static final Map<Path, File> path = new EnumMap<>(Path.class);
 
     static {
@@ -52,7 +52,7 @@ public enum Path {
         String os = System.getProperty("os.name");
 
         if (os.startsWith("Windows")) {
-            // Use %LOCALAPPDATA%\fribok so data is stored in a writable,
+            // Use %LOCALAPPDATA%\bokfri so data is stored in a writable,
             // per-user location regardless of the working directory at launch
             // (e.g. when started via an installer shortcut from C:\Windows\System32).
             String appdata = System.getenv("LOCALAPPDATA");
@@ -67,7 +67,7 @@ public enum Path {
             path.put(USER_DATA, winDataDir);
             path.put(USER_CONF, winDataDir);
         } else if (os.startsWith("Mac OS")) {
-            // Use ~/Library/Application Support/fribok on macOS
+            // Use ~/Library/Application Support/bokfri on macOS
             String home = System.getProperty("user.home");
             File macDataDir = new File(home, "Library/Application Support/" + APP_SUBDIR);
             path.put(USER_DATA, macDataDir);

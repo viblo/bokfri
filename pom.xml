@@ -3,15 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
   <!-- POM Relationships -->
   <groupId>org.fribok</groupId>
-  <artifactId>fribok</artifactId>
+  <artifactId>bokfri</artifactId>
   <version>2.2-SNAPSHOT</version>
   <prerequisites>
     <maven>3.6.3</maven>
   </prerequisites>
   <!-- Project Information -->
-  <name>Fribok</name>
+  <name>Bokfri</name>
   <description>
-    Fribok is a free software bookkeeping package aimed at non-profit
+    Bokfri is a free software bookkeeping package aimed at non-profit
     organizations and small companies.
   </description>
   <url>https://sourceforge.net/projects/jfsaccounting/</url>
@@ -74,13 +74,14 @@
         <artifactId>jpackage-maven-plugin</artifactId>
         <version>1.6.0</version>
         <configuration>
-          <name>Fribok</name>
+          <name>Bokfri</name>
           <appVersion>${jpackage.appVersion}</appVersion>
-          <vendor>Fribok</vendor>
+          <vendor>Bokfri</vendor>
           <destination>${project.basedir}/dist</destination>
           <input>${project.build.directory}</input>
           <mainJar>${project.build.finalName}-jar-with-dependencies.jar</mainJar>
           <mainClass>org.fribok.bookkeeping.Bookkeeping</mainClass>
+          <icon>${project.basedir}/design/favicons/desktop/app-icon.ico</icon>
         </configuration>
       </plugin>
       <plugin>
@@ -374,7 +375,7 @@
         <version>3.2-FINAL</version>
         <scope>compile</scope>
         </dependency-->
-    <dependency> 
+    <dependency>
       <groupId>xml-apis</groupId>
       <artifactId>xml-apis</artifactId>
       <version>2.0.2</version>
@@ -469,7 +470,7 @@
       <url>https://cache-redirector.jetbrains.com/intellij-dependencies</url>
     </pluginRepository>
   </pluginRepositories>
-  
+
   <properties>
     <argLine></argLine>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -529,6 +530,7 @@
                 </goals>
                 <configuration>
                   <type>APP_IMAGE</type>
+                  <icon>${project.basedir}/design/favicons/desktop/icon-512x512.png</icon>
                 </configuration>
               </execution>
             </executions>
@@ -562,6 +564,7 @@
                   <type>MSI</type>
                   <winMenu>true</winMenu>
                   <winShortcut>true</winShortcut>
+                  <icon>${project.basedir}/design/favicons/desktop/app-icon.ico</icon>
                 </configuration>
               </execution>
             </executions>
@@ -593,6 +596,7 @@
                 </goals>
                 <configuration>
                   <type>DMG</type>
+                  <icon>${project.basedir}/design/favicons/desktop/app-icon.icns</icon>
                 </configuration>
               </execution>
             </executions>

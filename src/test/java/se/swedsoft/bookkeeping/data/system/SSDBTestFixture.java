@@ -31,7 +31,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public final class SSDBTestFixture {
 
     /** JDBC URL for the shared in-memory HSQLDB instance. */
-    static final String JDBC_URL = "jdbc:hsqldb:mem:fribok_test";
+    static final String JDBC_URL = "jdbc:hsqldb:mem:bokfri_test";
 
     /**
      * Collects uncaught exceptions from background threads (e.g. HSQLDB

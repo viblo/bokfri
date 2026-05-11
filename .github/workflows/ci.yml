@@ -85,37 +85,37 @@ jobs:
       working-directory: dist
       run: |
         # Create AppDir structure from jpackage app-image
-        mkdir -p Fribok.AppDir/usr
-        cp -r Fribok/* Fribok.AppDir/usr/
+        mkdir -p Bokfri.AppDir/usr
+        cp -r Bokfri/* Bokfri.AppDir/usr/
 
         # Create AppRun script
-        printf '#!/bin/bash\nSELF=$(readlink -f "$0")\nHERE=${SELF%%/*}\nexec "${HERE}/usr/bin/Fribok" "$@"\n' > Fribok.AppDir/AppRun
-        chmod +x Fribok.AppDir/AppRun
+        printf '#!/bin/bash\nSELF=$(readlink -f "$0")\nHERE=${SELF%%/*}\nexec "${HERE}/usr/bin/Bokfri" "$@"\n' > Bokfri.AppDir/AppRun
+        chmod +x Bokfri.AppDir/AppRun
 
         # Create .desktop file
-        printf '[Desktop Entry]\nName=Fribok\nExec=Fribok\nIcon=fribok\nType=Application\nCategories=Office;Finance;\n' > Fribok.AppDir/Fribok.desktop
+        printf '[Desktop Entry]\nName=Bokfri\nExec=Bokfri\nIcon=bokfri\nType=Application\nCategories=Office;Finance;\n' > Bokfri.AppDir/Bokfri.desktop
 
         # Copy icon
-        cp ../src/main/resources/graphics/logo.png Fribok.AppDir/fribok.png
+        cp ../design/favicons/desktop/icon-512x512.png Bokfri.AppDir/bokfri.png
 
         # Download and run appimagetool
         wget -q https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
         chmod +x appimagetool-x86_64.AppImage
-        ARCH=x86_64 ./appimagetool-x86_64.AppImage Fribok.AppDir Fribok-x86_64.AppImage
+        ARCH=x86_64 ./appimagetool-x86_64.AppImage Bokfri.AppDir Bokfri-x86_64.AppImage
 
     - name: Upload Linux artifact
       if: runner.os == 'Linux'
       uses: actions/upload-artifact@v4
       with:
-        name: fribok-linux
-        path: dist/Fribok-x86_64.AppImage
+        name: bokfri-linux
+        path: dist/Bokfri-x86_64.AppImage
 
     # --- Windows steps ---
     - name: Upload Windows artifact
       if: runner.os == 'Windows'
       uses: actions/upload-artifact@v4
       with:
-        name: fribok-windows
+        name: bokfri-windows
         path: dist/*.msi
 
     # --- macOS steps ---
@@ -123,5 +123,5 @@ jobs:
       if: runner.os == 'macOS'
       uses: actions/upload-artifact@v4
       with:
-        name: fribok-macos
+        name: bokfri-macos
         path: dist/*.dmg

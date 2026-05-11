@@ -12,6 +12,7 @@ diverging from upstream version 2.2-SNAPSHOT.
 ## [Unreleased]
 
 ### Added
+- Bokfri branding, package metadata, and application icons across the app.
 - Modernization plan (`MODERNIZATION.md`) documenting a phased approach to
   bring the codebase from Java 5/6-era style to modern Java.
 - `AGENTS.md` with build, test, lint commands and code style guidelines for
@@ -125,7 +126,7 @@ diverging from upstream version 2.2-SNAPSHOT.
   directly from chooser widgets in list dialogs.
 - Dropped the legacy pre-HSQL `bookkeeper.db` import path and its archived
   `db/databas_v1.zip` handoff, requiring very old installations to migrate via
-  historical Fribok releases before using this fork.
+  historical Bokfri releases before using this fork.
 - Encapsulated 53 public mutable fields across 7 classes with proper
   getters/setters (Phase 4 Step 19).
 - Introduced `Optional<T>` for ~100 public API methods across SSDB lookups,

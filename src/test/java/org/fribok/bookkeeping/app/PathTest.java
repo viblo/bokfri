@@ -14,7 +14,7 @@
  * details.
  *
  * You should have received a copy of the GNU General Public License along with
- * Fribok.  If not, see <http://www.gnu.org/licenses/>.
+ * Bokfri.  If not, see <http://www.gnu.org/licenses/>.
  */
 package org.fribok.bookkeeping.app;
 

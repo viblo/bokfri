@@ -148,7 +148,7 @@
   <mapID target="InventoryCount_html" url="html/InventoryCount.html"/>
   <mapID target="DeleteInpayments_html" url="html/DeleteInpayments.html"/>
   <mapID target="Products_html" url="html/Products.html"/>
-  <mapID target="Fribok_logo_png" url="images/logo.png"/>
+  <mapID target="Bokfri_logo_png" url="images/logo.png"/>
   <mapID target="DeleteAccounts_html" url="html/DeleteAccounts.html"/>
   <mapID target="CopySupplierinvoice_html" url="html/CopySupplierinvoice.html"/>
   <mapID target="ChangeOwnIncomeReport_html" url="html/ChangeOwnIncomeReport.html"/>
