@@ -194,14 +194,6 @@ public class SSSupplierInvoice implements SSTableSearchable, Serializable {
     }
 
     /**
-     * @deprecated Use {@link #getLastLocalDate()} instead.
-     */
-    @Deprecated
-    public Date getLastDate() {
-        return SSDateUtil.toDate(getLastLocalDate());
-    }
-
-    /**
      * Returns the date of the most recent supplier invoice.
      *
      * @return the most recent date, or {@code null} if no invoices exist
@@ -274,24 +266,6 @@ public class SSSupplierInvoice implements SSTableSearchable, Serializable {
     }
 
     // //////////////////////////////////////////////////
-
-    /**
-     *
-     * @return
-     */
-    @Deprecated
-    public Date getDueDate() {
-        return SSDateUtil.toDate(iDueDate);
-    }
-
-    /**
-     *
-     * @param iDueDate
-     */
-    @Deprecated
-    public void setDueDate(Date iDueDate) {
-        this.iDueDate = SSDateUtil.toLocalDate(iDueDate);
-    }
 
     /**
      * @return the due date as a LocalDate

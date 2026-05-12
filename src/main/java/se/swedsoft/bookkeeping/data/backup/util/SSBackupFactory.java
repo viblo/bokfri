@@ -79,7 +79,7 @@ public class SSBackupFactory {    private static final Logger LOG = LoggerFactor
     public static SSBackup createBackup(String pFilename) {
         SSBackup iBackup = new SSBackup(SSBackupType.FULL);
 
-        iBackup.setDate(SSDateUtil.toDate(SSDateUtil.now()));
+        iBackup.setLocalDateTime(SSDateUtil.now());
         iBackup.setFilename(pFilename);
 
         // Get the database files

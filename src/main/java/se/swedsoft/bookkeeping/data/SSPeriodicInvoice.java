@@ -268,26 +268,6 @@ public class SSPeriodicInvoice implements Serializable {
     // //////////////////////////////////////////////////
 
     /**
-     *
-     * @return
-     */
-    @Deprecated
-    public Date getPeriodStart() {
-        return SSDateUtil.toDate(iPeriodStart);
-    }
-
-    /**
-     *
-     * @param iPeriodStart
-     */
-    @Deprecated
-    public void setPeriodStart(Date iPeriodStart) {
-        this.iPeriodStart = SSDateUtil.toLocalDate(iPeriodStart);
-
-        // createInvoices();
-    }
-
-    /**
      * @return the period start date as a LocalDate
      */
     public LocalDate getLocalPeriodStart() {
@@ -302,26 +282,6 @@ public class SSPeriodicInvoice implements Serializable {
     }
 
     // //////////////////////////////////////////////////
-
-    /**
-     *
-     * @return
-     */
-    @Deprecated
-    public Date getPeriodEnd() {
-        return SSDateUtil.toDate(iPeriodEnd);
-    }
-
-    /**
-     *
-     * @param iPeriodEnd
-     */
-    @Deprecated
-    public void setPeriodEnd(Date iPeriodEnd) {
-        this.iPeriodEnd = SSDateUtil.toLocalDate(iPeriodEnd);
-
-        // createInvoices();
-    }
 
     /**
      * @return the period end date as a LocalDate

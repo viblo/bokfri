@@ -69,7 +69,7 @@ public class SSInvoice extends SSSale {
         iStockInfluencing = true;
         iNumReminders = 0;
         if (iPaymentTerm != null) {
-            iPaymentDay = SSDateUtil.toLocalDate(iPaymentTerm.addDaysToDate(SSDateUtil.toDate(SSDateUtil.today())));
+            iPaymentDay = iPaymentTerm.addDaysToLocalDate(SSDateUtil.today());
         }
     }
 
@@ -210,24 +210,6 @@ public class SSInvoice extends SSSale {
     }
 
     // //////////////////////////////////////////////////
-
-    /**
-     *
-     * @return
-     */
-    @Deprecated
-    public Date getDueDate() {
-        return SSDateUtil.toDate(iPaymentDay);
-    }
-
-    /**
-     *
-     * @param iPaymentDay
-     */
-    @Deprecated
-    public void setDueDate(Date iPaymentDay) {
-        this.iPaymentDay = SSDateUtil.toLocalDate(iPaymentDay);
-    }
 
     /**
      * @return the due date as a LocalDate

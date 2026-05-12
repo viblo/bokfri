@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -102,24 +101,6 @@ public class SSInventory implements Serializable {
     }
 
     // /////////////////////////////////////////////////////////////////////////////////////
-
-    /**
-     *
-     * @return
-     */
-    @Deprecated
-    public Date getDate() {
-        return SSDateUtil.toDate(iDate);
-    }
-
-    /**
-     *
-     * @param iDate
-     */
-    @Deprecated
-    public void setDate(Date iDate) {
-        this.iDate = SSDateUtil.toLocalDate(iDate);
-    }
 
     /**
      * @return the date as a LocalDate

@@ -2,11 +2,9 @@ package se.swedsoft.bookkeeping.data.common;
 
 
 import se.swedsoft.bookkeeping.gui.util.table.SSTableSearchable;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -99,33 +97,13 @@ public class SSPaymentTerm implements Serializable, SSTableSearchable {
     /**
      * Adds the decoded number of days to the given date.
      *
-     * <p>Note: The original implementation had a bug where the {@code iDate} parameter
-     * was ignored and the current date was used instead. This bug is preserved for
-     * backward compatibility.</p>
-     *
-     * @param iDate the date (ignored — current date is used due to legacy bug)
-     * @return a new date with days added
-     * @deprecated Use {@link #addDaysToLocalDate(LocalDate)} instead
-     */
-    @Deprecated
-    public Date addDaysToDate(Date iDate) {
-        return SSDateUtil.toDate(addDaysToLocalDate(LocalDate.now()));
-    }
-
-    /**
-     * Adds the decoded number of days to the given date.
-     *
-     * <p>Note: For backward compatibility with the legacy {@link #addDaysToDate(Date)},
-     * this uses the current date rather than the provided date. Callers should be aware
-     * of this bug if they rely on the input date.</p>
-     *
-     * @param iDate the date (ignored — current date is used due to legacy bug)
-     * @return a new LocalDate with days added to today
+     * @param iDate the date to add days to
+     * @return a new LocalDate with days added
      */
     public LocalDate addDaysToLocalDate(LocalDate iDate) {
         int iDays = decodeValue();
 
-        return LocalDate.now().plusDays(iDays);
+        return iDate.plusDays(iDays);
     }
 
     // //////////////////////////////////////////////////

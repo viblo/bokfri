@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 
@@ -91,24 +90,6 @@ public class SSTender extends SSSale {
     }
 
     // //////////////////////////////////////////////////
-
-    /**
-     *
-     * @return
-     */
-    @Deprecated
-    public Date getExpires() {
-        return SSDateUtil.toDate(iExpires);
-    }
-
-    /**
-     *
-     * @param iExpires
-     */
-    @Deprecated
-    public void setExpires(Date iExpires) {
-        this.iExpires = SSDateUtil.toLocalDate(iExpires);
-    }
 
     /**
      * @return the expiry date as a LocalDate

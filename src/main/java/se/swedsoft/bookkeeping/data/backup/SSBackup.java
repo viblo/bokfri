@@ -60,22 +60,6 @@ public class SSBackup implements Serializable {
 
     // ///////////////////////////////////////////////////////////////////
 
-    /**
-     *
-     * @return the backupdate
-     */
-    public Date getDate() {
-        return SSDateUtil.toDate(iDate);
-    }
-
-    /**
-     *
-     * @param iDate
-     */
-    public void setDate(Date iDate) {
-        this.iDate = SSDateUtil.toLocalDateTime(iDate);
-    }
-
     public LocalDateTime getLocalDateTime() {
         return iDate;
     }
@@ -158,7 +142,7 @@ public class SSBackup implements Serializable {
         PutField fields = outputStream.putFields();
 
         fields.put("iFilename", iFilename);
-        fields.put("iDate", getDate());
+        fields.put("iDate", iDate);
         fields.put("iType", iType);
 
         outputStream.writeFields();

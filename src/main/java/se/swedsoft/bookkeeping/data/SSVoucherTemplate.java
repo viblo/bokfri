@@ -11,7 +11,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -114,22 +113,6 @@ public class SSVoucherTemplate implements Serializable, SSTableSearchable {
     }
 
     // //////////////////////////////////////////////////////////////////
-
-    /**
-     *
-     * @return
-     */
-    public Date getDate() {
-        return SSDateUtil.toDate(iDate);
-    }
-
-    /**
-     *
-     * @param iDate
-     */
-    public void setDate(Date iDate) {
-        this.iDate = SSDateUtil.toLocalDateTime(iDate);
-    }
 
     public LocalDateTime getLocalDateTime() {
         return iDate;

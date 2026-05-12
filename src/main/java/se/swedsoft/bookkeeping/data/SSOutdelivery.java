@@ -4,9 +4,10 @@ package se.swedsoft.bookkeeping.data;
 import se.swedsoft.bookkeeping.data.system.SSDB;
 import se.swedsoft.bookkeeping.util.SSDateUtil;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class SSOutdelivery implements Serializable {
 
     private Integer iNumber;
 
-    private Date iDate;
+    private LocalDate iDate;
 
     private String iText;
 
@@ -32,7 +33,7 @@ public class SSOutdelivery implements Serializable {
      *
      */
     public SSOutdelivery() {
-        iDate = SSDateUtil.toDate(SSDateUtil.today());
+        iDate = SSDateUtil.today();
         iText = null;
         iRows = new LinkedList<>();
 
@@ -101,28 +102,12 @@ public class SSOutdelivery implements Serializable {
 
     // /////////////////////////////////////////////////////////////////////////////////////
 
-    /**
-     *
-     * @return
-     */
-    public Date getDate() {
+    public LocalDate getLocalDate() {
         return iDate;
     }
 
-    public LocalDate getLocalDate() {
-        return SSDateUtil.toLocalDate(iDate);
-    }
-
-    /**
-     *
-     * @param iDate
-     */
-    public void setDate(Date iDate) {
-        this.iDate = iDate;
-    }
-
     public void setLocalDate(LocalDate iDate) {
-        this.iDate = SSDateUtil.toDate(iDate);
+        this.iDate = iDate;
     }
 
     // /////////////////////////////////////////////////////////////////////////////////////
@@ -205,5 +190,18 @@ public class SSOutdelivery implements Serializable {
         sb.append(", iText='").append(iText).append('\'');
         sb.append('}');
         return sb.toString();
+    }
+
+    /**
+     * Custom deserialization to handle backward compatibility.
+     * Pre-migration serialized streams stored {@code iDate} as {@code java.util.Date}.
+     */
+    @SuppressWarnings("unchecked")
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        ObjectInputStream.GetField fields = in.readFields();
+        iNumber = (Integer) fields.get("iNumber", null);
+        iDate = SSDateUtil.readLocalDate(fields.get("iDate", null));
+        iText = (String) fields.get("iText", null);
+        iRows = (List<SSOutdeliveryRow>) fields.get("iRows", null);
     }
 }
