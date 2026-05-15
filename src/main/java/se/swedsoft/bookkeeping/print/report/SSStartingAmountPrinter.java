@@ -7,9 +7,9 @@ import se.swedsoft.bookkeeping.data.system.SSDB;
 import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.*;
 
 
@@ -20,8 +20,8 @@ import java.util.*;
 public class SSStartingAmountPrinter extends SSPrinter {
 
     private Map<SSAccount, BigDecimal> iInBalance;
-    private Date iFrom;
-    private Date iTo;
+    private LocalDate iFrom;
+    private LocalDate iTo;
 
     /**
      *
@@ -35,8 +35,8 @@ public class SSStartingAmountPrinter extends SSPrinter {
      * @param iAccountingYear
      */
     public SSStartingAmountPrinter(SSNewAccountingYear iAccountingYear) {
-        this(iAccountingYear.getInBalance(), SSDateUtil.toDate(iAccountingYear.getLocalFrom()),
-                SSDateUtil.toDate(iAccountingYear.getLocalTo()));
+        this(iAccountingYear.getInBalance(), iAccountingYear.getLocalFrom(),
+                iAccountingYear.getLocalTo());
     }
 
     /**
@@ -45,7 +45,7 @@ public class SSStartingAmountPrinter extends SSPrinter {
      * @param iFrom
      * @param iTo
      */
-    public SSStartingAmountPrinter(Map<SSAccount, BigDecimal> iInBalance, Date iFrom, Date iTo) {
+    public SSStartingAmountPrinter(Map<SSAccount, BigDecimal> iInBalance, LocalDate iFrom, LocalDate iTo) {
         this.iInBalance = iInBalance;
         this.iFrom = iFrom;
         this.iTo = iTo;
