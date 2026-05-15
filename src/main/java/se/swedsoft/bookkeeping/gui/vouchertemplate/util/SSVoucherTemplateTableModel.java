@@ -6,10 +6,8 @@ import se.swedsoft.bookkeeping.data.system.SSDB;
 import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.table.model.SSTableColumn;
 import se.swedsoft.bookkeeping.gui.util.table.model.SSTableModel;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 
@@ -92,7 +90,7 @@ public class SSVoucherTemplateTableModel extends SSTableModel<SSVoucherTemplate>
 
         @Override
         public void setValue(SSVoucherTemplate iVoucher, Object iValue) {
-            iVoucher.setLocalDateTime(SSDateUtil.toLocalDateTime((Date) iValue));
+            iVoucher.setLocalDateTime((LocalDateTime) iValue);
         }
 
         @Override
