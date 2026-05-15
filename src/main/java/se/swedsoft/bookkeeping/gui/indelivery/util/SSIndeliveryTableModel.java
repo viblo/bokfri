@@ -7,10 +7,8 @@ import se.swedsoft.bookkeeping.data.system.SSDB;
 import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.table.model.SSTableColumn;
 import se.swedsoft.bookkeeping.gui.util.table.model.SSTableModel;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 
@@ -84,7 +82,7 @@ public class SSIndeliveryTableModel extends SSTableModel<SSIndelivery> {
 
         @Override
         public void setValue(SSIndelivery iIndelivery, Object iValue) {
-            iIndelivery.setLocalDate(SSDateUtil.toLocalDate((Date) iValue));
+            iIndelivery.setLocalDate((LocalDate) iValue);
         }
 
         @Override

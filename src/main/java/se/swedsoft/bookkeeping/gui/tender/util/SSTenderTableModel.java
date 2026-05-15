@@ -9,12 +9,10 @@ import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.graphics.SSIcon;
 import se.swedsoft.bookkeeping.gui.util.table.model.SSTableColumn;
 import se.swedsoft.bookkeeping.gui.util.table.model.SSTableModel;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import javax.swing.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 
@@ -166,7 +164,7 @@ public class SSTenderTableModel extends SSTableModel<SSTender> {
 
         @Override
         public void setValue(SSTender iTender, Object iValue) {
-            iTender.setLocalDate(SSDateUtil.toLocalDate((Date) iValue));
+            iTender.setLocalDate((LocalDate) iValue);
         }
 
         @Override
