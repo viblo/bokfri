@@ -124,6 +124,9 @@ diverging from upstream version 2.2-SNAPSHOT.
 - Continued the date migration in report dialogs by exposing `LocalDate`
   values directly for single-date reports and reading local date ranges
   directly from chooser widgets in list dialogs.
+- Continued the date migration in table and report printer flows by keeping
+  voucher, budget, value, sale-report, and starting-amount periods as
+  `LocalDate`/`LocalDateTime` values until final dialog or Jasper boundaries.
 - Dropped the legacy pre-HSQL `bookkeeper.db` import path and its archived
   `db/databas_v1.zip` handoff, requiring very old installations to migrate via
   historical Bokfri releases before using this fork.
