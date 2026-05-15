@@ -889,8 +889,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                             LocalDate iDateFrom = iDialog.getLocalDateFrom();
                             LocalDate iDateTo = iDialog.getLocalDateTo();
 
-                            iPrinter.addParameter("dateFrom", SSDateUtil.toDate(iDateFrom));
-                            iPrinter.addParameter("dateTo", SSDateUtil.toDate(iDateTo));
+                            iPrinter.addParameter("dateFrom", iDateFrom);
+                            iPrinter.addParameter("dateTo", iDateTo);
                         }
                         if (isProductSelected) {
                             SSProduct iProduct = iDialog.getProduct();
@@ -933,8 +933,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                             LocalDate iDateFrom = iDialog.getLocalDateFrom();
                             LocalDate iDateTo = iDialog.getLocalDateTo();
 
-                            iPrinter.addParameter("dateFrom", SSDateUtil.toDate(iDateFrom));
-                            iPrinter.addParameter("dateTo", SSDateUtil.toDate(iDateTo));
+                            iPrinter.addParameter("dateFrom", iDateFrom);
+                            iPrinter.addParameter("dateTo", iDateTo);
                         }
                         if (isProductSelected) {
                             SSProduct iProduct = iDialog.getProduct();
@@ -976,8 +976,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                             LocalDate iDateFrom = iDialog.getLocalDateFrom();
                             LocalDate iDateTo = iDialog.getLocalDateTo();
 
-                            iPrinter.addParameter("dateFrom", SSDateUtil.toDate(iDateFrom));
-                            iPrinter.addParameter("dateTo", SSDateUtil.toDate(iDateTo));
+                            iPrinter.addParameter("dateFrom", iDateFrom);
+                            iPrinter.addParameter("dateTo", iDateTo);
                         }
                         if (isProductSelected) {
                             SSProduct iProduct = iDialog.getProduct();
@@ -1019,8 +1019,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                             LocalDate iDateFrom = iDialog.getLocalDateFrom();
                             LocalDate iDateTo = iDialog.getLocalDateTo();
 
-                            iPrinter.addParameter("dateFrom", SSDateUtil.toDate(iDateFrom));
-                            iPrinter.addParameter("dateTo", SSDateUtil.toDate(iDateTo));
+                            iPrinter.addParameter("dateFrom", iDateFrom);
+                            iPrinter.addParameter("dateTo", iDateTo);
                         }
                         if (isInvoiceSelected) {
                             SSInvoice iInvoice = iDialog.getInvoice();
