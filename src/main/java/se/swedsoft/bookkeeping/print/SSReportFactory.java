@@ -349,7 +349,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
 
         SSProgressDialog.runProgress(iMainFrame, () -> {
 
-                SSBudgetPrinter iPrinter = new SSBudgetPrinter(iFrom, iTo);
+                SSBudgetPrinter iPrinter = new SSBudgetPrinter(SSDateUtil.toLocalDate(iFrom),
+                        SSDateUtil.toLocalDate(iTo));
 
                 iPrinter.preview(iMainFrame);
 

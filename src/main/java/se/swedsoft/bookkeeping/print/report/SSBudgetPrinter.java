@@ -11,13 +11,11 @@ import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
 import se.swedsoft.bookkeeping.print.util.SSDefaultJasperDataSource;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
+import java.time.LocalDate;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
-import java.time.LocalDate;
 
 
 /**
@@ -32,9 +30,9 @@ public class SSBudgetPrinter extends SSPrinter {
 
     private SSNewAccountingYear iAccountingYear;
 
-    private Date  iDateFrom;
+    private LocalDate iDateFrom;
 
-    private Date  iDateTo;
+    private LocalDate iDateTo;
 
     /**
      *
@@ -48,7 +46,7 @@ public class SSBudgetPrinter extends SSPrinter {
      * @param pFrom
      * @param pTo
      */
-    public SSBudgetPrinter(Date pFrom, Date pTo) {
+    public SSBudgetPrinter(LocalDate pFrom, LocalDate pTo) {
         this(SSDB.getInstance().getCurrentYear(), pFrom, pTo);
     }
 
@@ -57,8 +55,7 @@ public class SSBudgetPrinter extends SSPrinter {
      * @param pAccountingYear The accountingyear
      */
     public SSBudgetPrinter(SSNewAccountingYear pAccountingYear) {
-        this(pAccountingYear, SSDateUtil.toDate(pAccountingYear.getLocalFrom()),
-                SSDateUtil.toDate(pAccountingYear.getLocalTo()));
+        this(pAccountingYear, pAccountingYear.getLocalFrom(), pAccountingYear.getLocalTo());
     }
 
     /**
@@ -67,7 +64,7 @@ public class SSBudgetPrinter extends SSPrinter {
      * @param pFrom
      * @param pTo
      */
-    public SSBudgetPrinter(SSNewAccountingYear pAccountingYear, Date pFrom, Date pTo) {
+    public SSBudgetPrinter(SSNewAccountingYear pAccountingYear, LocalDate pFrom, LocalDate pTo) {
         iAccountingYear = pAccountingYear;
         iDateFrom = pFrom;
         iDateTo = pTo;
@@ -168,13 +165,9 @@ public class SSBudgetPrinter extends SSPrinter {
 
         private SSAccount iAccount;
 
-        private Date  iFrom;
+        private LocalDate iFrom;
 
-        private Date  iTo;
-
-        private LocalDate iLocalFrom;
-
-        private LocalDate iLocalTo;
+        private LocalDate iTo;
 
         /**
          *
@@ -182,11 +175,9 @@ public class SSBudgetPrinter extends SSPrinter {
          * @param pFrom
          * @param pTo
          */
-        public SSMonthlyDistributionPrinter(SSNewAccountingYear pAccountingYear, Date pFrom, Date pTo) {
+        public SSMonthlyDistributionPrinter(SSNewAccountingYear pAccountingYear, LocalDate pFrom, LocalDate pTo) {
             iFrom = pFrom;
             iTo = pTo;
-            iLocalFrom = SSDateUtil.toLocalDate(pFrom);
-            iLocalTo = SSDateUtil.toLocalDate(pTo);
             setMargins(0, 0, 0, 0);
 
             setDetail("budget.monthly.jrxml");
@@ -220,7 +211,7 @@ public class SSBudgetPrinter extends SSPrinter {
                         break;
 
                     case 3:
-                        value = iMonth.isBetween(iLocalFrom, iLocalTo);
+                        value = iMonth.isBetween(iFrom, iTo);
                         break;
                     }
 
