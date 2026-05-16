@@ -1188,8 +1188,7 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                 () -> {
 
                         SSCustomerclaimPrinter iPrinter = new SSCustomerclaimPrinter(
-                                SSDateUtil.toDate(SSDateUtil.toLocalDate(iDate)
-                                        .atTime(23, 59, 59, 999_000_000)));
+                                SSDateUtil.toLocalDate(iDate));
 
                         iPrinter.preview(iMainFrame);
 
@@ -1238,7 +1237,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
 
         SSProgressDialog.runProgress(iMainFrame, () -> {
 
-                SSSupplierdebtPrinter iPrinter = new SSSupplierdebtPrinter(iDate);
+                SSSupplierdebtPrinter iPrinter = new SSSupplierdebtPrinter(
+                        SSDateUtil.toLocalDate(iDate));
 
                 iPrinter.preview(iMainFrame);
 

@@ -6,7 +6,6 @@ import se.swedsoft.bookkeeping.data.SSInvoice;
 import se.swedsoft.bookkeeping.data.system.SSDB;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -27,7 +26,7 @@ public class SSCustomerclaimPrinter extends SSPrinter {
      *
      * @param iDate
      */
-    public SSCustomerclaimPrinter(Date iDate) {
+    public SSCustomerclaimPrinter(LocalDate iDate) {
         this(iDate, SSDB.getInstance().getInvoices());
     }
 
@@ -36,10 +35,8 @@ public class SSCustomerclaimPrinter extends SSPrinter {
      * @param iDate
      * @param iInvoices
      */
-    public SSCustomerclaimPrinter(Date iDate, List<SSInvoice> iInvoices) {
-        LocalDate localDate = SSDateUtil.toLocalDate(iDate);
-
-        iSaldos = SSInvoiceMath.getSaldo(iInvoices, localDate);
+    public SSCustomerclaimPrinter(LocalDate iDate, List<SSInvoice> iInvoices) {
+        iSaldos = SSInvoiceMath.getSaldo(iInvoices, iDate);
 
         setPageHeader("header_period.jrxml");
         setColumnHeader("customerclaim.jrxml");
