@@ -18,10 +18,8 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellEditor;
 import java.awt.*;
 import java.math.BigDecimal;
-import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 
 /**
@@ -157,18 +155,6 @@ public class SSVoucherEditors {
         iEditor.setHorizontalAlignment(DefaultTableCellRenderer.RIGHT);
 
         return iEditor;
-    }
-
-    public static DefaultTableCellRenderer createDateRenderer(SSDefaultTableModel<SSVoucherRow> pModel) {
-
-        return new SSDefaultVoucherRowRenderer(pModel) {
-            @Override
-            protected void setValue(Object value) {
-                DateFormat format = DateFormat.getDateInstance(DateFormat.SHORT);
-
-                setText(value != null ? format.format((Date) value) : "");
-            }
-        };
     }
 
     public static TableCellEditor createAccountEditor() {
@@ -323,9 +309,6 @@ public class SSVoucherEditors {
         pTable.setDefaultRenderer(SSNewResultUnit.class, new SSResultUnitCellRenderer());
         pTable.setDefaultEditor(SSNewResultUnit.class, new SSResultUnitCellEditor());
 
-        // Set the default renderer for the date cells.
-        // pTable.setDefaultRenderer(Date.class      , createDateRenderer(pModel));
-        pTable.setDefaultRenderer(Date.class, new SSDateCellRenderer());
         pTable.setDefaultRenderer(LocalDateTime.class, new SSDateTimeCellRenderer());
 
         // pTable.setDefaultRenderer(BigDecimal.class, createBigDecimalRenderer(pModel) );
