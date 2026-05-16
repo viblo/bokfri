@@ -1100,7 +1100,7 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                 SSStockValuePrinter iPrinter;
 
                 if (isDateSelected) {
-                    iPrinter = new SSStockValuePrinter(iDate);
+                    iPrinter = new SSStockValuePrinter(SSDateUtil.toLocalDate(iDate));
                 } else {
                     iPrinter = new SSStockValuePrinter();
                 }

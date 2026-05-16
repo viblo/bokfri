@@ -27,7 +27,7 @@ public class SSStockValuePrinter extends SSPrinter {
 
     private SSStock iStock;
 
-    private Date iDate;
+    private LocalDate iDate;
 
     private Map<SSProduct, BigDecimal> iInprices;
 
@@ -53,16 +53,15 @@ public class SSStockValuePrinter extends SSPrinter {
      *
      * @param iDate
      */
-    public SSStockValuePrinter(Date iDate) {
+    public SSStockValuePrinter(LocalDate iDate) {
         // Get all orders
         iProducts = SSProductMath.getStockProducts(SSDB.getInstance().getProducts());
         iStock = new SSStock();
         this.iDate = iDate;
-        LocalDate localDate = SSDateUtil.toLocalDate(iDate);
 
-        iInprices = SSProductMath.getInprices(iProducts, localDate);
+        iInprices = SSProductMath.getInprices(iProducts, iDate);
 
-        iStock.update(iDate);
+        iStock.update(SSDateUtil.toDate(iDate));
 
         addParameter("periodTitle",
                 SSBundle.getBundle().getString("stockvaluereport.periodtitle"));
