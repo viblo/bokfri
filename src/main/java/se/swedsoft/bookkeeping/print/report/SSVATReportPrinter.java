@@ -6,11 +6,9 @@ import se.swedsoft.bookkeeping.data.SSNewAccountingYear;
 import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.RoundingMode;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import static se.swedsoft.bookkeeping.calc.SSSalesTaxCalculator.SSVATReportGroup;
@@ -24,11 +22,11 @@ public class SSVATReportPrinter extends SSPrinter {
 
     private SSNewAccountingYear iAccountingYear;
 
-    private Date iDateFrom;
+    private LocalDate iDateFrom;
 
-    private Date iDateTo;
+    private LocalDate iDateTo;
 
-    public SSVATReportPrinter(SSNewAccountingYear pAccountingYear, Date pDateFrom, Date pDateTo) {
+    public SSVATReportPrinter(SSNewAccountingYear pAccountingYear, LocalDate pDateFrom, LocalDate pDateTo) {
         iAccountingYear = pAccountingYear;
         iDateFrom = pDateFrom;
         iDateTo = pDateTo;
@@ -57,10 +55,8 @@ public class SSVATReportPrinter extends SSPrinter {
         addParameter("dateFrom", iDateFrom);
         addParameter("dateTo", iDateTo);
 
-        LocalDate iLocalDateFrom = SSDateUtil.toLocalDate(iDateFrom);
-        LocalDate iLocalDateTo = SSDateUtil.toLocalDate(iDateTo);
         SSSalesTaxCalculator iCalculator = new SSSalesTaxCalculator(iAccountingYear,
-                iLocalDateFrom, iLocalDateTo);
+                iDateFrom, iDateTo);
 
         iCalculator.calculate();
 

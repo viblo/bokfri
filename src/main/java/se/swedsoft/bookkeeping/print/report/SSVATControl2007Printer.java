@@ -11,12 +11,12 @@ import se.swedsoft.bookkeeping.data.system.SSDB;
 import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.*;
 
 
@@ -28,9 +28,9 @@ public class SSVATControl2007Printer extends SSPrinter {
 
     private SSNewAccountingYear iAccountingYear;
 
-    private Date iDateFrom;
+    private LocalDate iDateFrom;
 
-    private Date iDateTo;
+    private LocalDate iDateTo;
 
     private List<SSAccount> iAccounts;
 
@@ -46,7 +46,7 @@ public class SSVATControl2007Printer extends SSPrinter {
      * @param iDateFrom
      * @param iDateTo
      */
-    public SSVATControl2007Printer(SSNewAccountingYear iAccountingYear, Date iDateFrom, Date iDateTo) {
+    public SSVATControl2007Printer(SSNewAccountingYear iAccountingYear, LocalDate iDateFrom, LocalDate iDateTo) {
         this.iAccountingYear = iAccountingYear;
         this.iDateFrom = iDateFrom;
         this.iDateTo = iDateTo;
@@ -75,10 +75,8 @@ public class SSVATControl2007Printer extends SSPrinter {
      */
     private void calculate() {
         // Get all vouchers
-        LocalDate iLocalDateFrom = SSDateUtil.toLocalDate(iDateFrom);
-        LocalDate iLocalDateTo = SSDateUtil.toLocalDate(iDateTo);
         List<SSVoucher> iVouchers = SSVoucherMath.getVouchers(
-                iAccountingYear.getVouchers(), iLocalDateFrom, iLocalDateTo);
+                iAccountingYear.getVouchers(), iDateFrom, iDateTo);
 
         iCreditMinusDebetSum = SSVoucherMath.getCreditMinusDebetSum(iVouchers);
         iDebetMinusCreditSum = SSVoucherMath.getDebetMinusCreditSum(iVouchers);
@@ -107,8 +105,7 @@ public class SSVATControl2007Printer extends SSPrinter {
      * @return
      */
     public SSVoucher getVoucher(SSAccount iAccountR1, SSAccount iAccountR2, SSAccount iAccountA) {
-        // DateFormat iFormat =
-        DateFormat iFormat = DateFormat.getDateInstance(DateFormat.SHORT);
+        DateTimeFormatter iFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
 
         String iDescription = String.format(
                 SSBundle.getBundle().getString("vatreport2007.voucherdescription"),
@@ -122,7 +119,7 @@ public class SSVATControl2007Printer extends SSPrinter {
 
         iVoucher.doAutoIncrecement();
         iVoucher.setDescription(iDescription);
-        iVoucher.setLocalDate(SSDateUtil.toLocalDate(iDateTo));
+        iVoucher.setLocalDate(iDateTo);
 
         BigDecimal iSum = new BigDecimal(0);
         BigDecimal iRoundedSum = new BigDecimal(0);

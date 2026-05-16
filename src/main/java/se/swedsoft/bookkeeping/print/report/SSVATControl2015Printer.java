@@ -11,12 +11,12 @@ import se.swedsoft.bookkeeping.data.system.SSDB;
 import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,9 +32,9 @@ public class SSVATControl2015Printer extends SSPrinter {    private static final
 
     private SSNewAccountingYear iAccountingYear;
 
-    private Date iDateFrom;
+    private LocalDate iDateFrom;
 
-    private Date iDateTo;
+    private LocalDate iDateTo;
 
     private int iStartVoucher;
 
@@ -52,7 +52,7 @@ public class SSVATControl2015Printer extends SSPrinter {    private static final
      * @param iDateFrom
      * @param iDateTo
      */
-    public SSVATControl2015Printer(SSNewAccountingYear iAccountingYear, Date iDateFrom, Date iDateTo, int iStartVoucher) {
+    public SSVATControl2015Printer(SSNewAccountingYear iAccountingYear, LocalDate iDateFrom, LocalDate iDateTo, int iStartVoucher) {
         this.iAccountingYear = iAccountingYear;
         this.iDateFrom = iDateFrom;
         this.iDateTo = iDateTo;
@@ -82,10 +82,8 @@ public class SSVATControl2015Printer extends SSPrinter {    private static final
      */
     private void calculate() {
         // Get all vouchers
-        LocalDate iLocalDateFrom = SSDateUtil.toLocalDate(iDateFrom);
-        LocalDate iLocalDateTo = SSDateUtil.toLocalDate(iDateTo);
         List<SSVoucher> iVouchers = SSVoucherMath.getVouchers(
-                iAccountingYear.getVouchers(), iLocalDateFrom, iLocalDateTo);
+                iAccountingYear.getVouchers(), iDateFrom, iDateTo);
 	final int iStartVoucherIndex = iStartVoucher - 1;
 	List<SSVoucher> iVouchers2 = iVouchers; 
 	if (iStartVoucherIndex >= 0 && iStartVoucherIndex < iVouchers.size()) {
@@ -120,8 +118,7 @@ public class SSVATControl2015Printer extends SSPrinter {    private static final
      * @return
      */
     public SSVoucher getVoucher(SSAccount iAccountR1, SSAccount iAccountR2, SSAccount iAccountA) {
-        // DateFormat iFormat =
-        DateFormat iFormat = DateFormat.getDateInstance(DateFormat.SHORT);
+        DateTimeFormatter iFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
 
         String iDescription = String.format(
                 SSBundle.getBundle().getString("vatreport2015.voucherdescription"),
@@ -135,7 +132,7 @@ public class SSVATControl2015Printer extends SSPrinter {    private static final
 
         iVoucher.doAutoIncrecement();
         iVoucher.setDescription(iDescription);
-        iVoucher.setLocalDate(SSDateUtil.toLocalDate(iDateTo));
+        iVoucher.setLocalDate(iDateTo);
 
         BigDecimal iSum = new BigDecimal(0);
         BigDecimal iRoundedSum = new BigDecimal(0);

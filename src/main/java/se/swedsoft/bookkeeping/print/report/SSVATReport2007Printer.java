@@ -9,7 +9,6 @@ import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
 import se.swedsoft.bookkeeping.print.util.SSDefaultJasperDataSource;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -25,9 +24,9 @@ public class SSVATReport2007Printer extends SSPrinter {
 
     private SSNewAccountingYear iAccountingYear;
 
-    private Date iDateFrom;
+    private LocalDate iDateFrom;
 
-    private Date iDateTo;
+    private LocalDate iDateTo;
 
     private SSVATReportRowPrinter iPrinter;
 
@@ -47,7 +46,7 @@ public class SSVATReport2007Printer extends SSPrinter {
      * @param iDateFrom
      * @param iDateTo
      */
-    public SSVATReport2007Printer(SSNewAccountingYear iAccountingYear, Date iDateFrom, Date iDateTo) {
+    public SSVATReport2007Printer(SSNewAccountingYear iAccountingYear, LocalDate iDateFrom, LocalDate iDateTo) {
         this.iAccountingYear = iAccountingYear;
         this.iDateFrom = iDateFrom;
         this.iDateTo = iDateTo;
@@ -75,10 +74,8 @@ public class SSVATReport2007Printer extends SSPrinter {
      */
     private void calculate() {
         // Get all vouchers
-        LocalDate iLocalDateFrom = SSDateUtil.toLocalDate(iDateFrom);
-        LocalDate iLocalDateTo = SSDateUtil.toLocalDate(iDateTo);
         List<SSVoucher> iVouchers = SSVoucherMath.getVouchers(
-                iAccountingYear.getVouchers(), iLocalDateFrom, iLocalDateTo);
+                iAccountingYear.getVouchers(), iDateFrom, iDateTo);
 
         iCreditMinusDebetSum = SSVoucherMath.getCreditMinusDebetSum(iVouchers);
         iDebetMinusCreditSum = SSVoucherMath.getDebetMinusCreditSum(iVouchers);
