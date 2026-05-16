@@ -17,7 +17,6 @@ import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 
@@ -87,32 +86,32 @@ public class SSProjectResultSetupDialog extends SSDialog {
      *
      * @param pDate
      */
-    public void setFrom(Date pDate) {
-        iFrom.setDate(pDate);
+    public void setFrom(LocalDate pDate) {
+        iFrom.setLocalDate(pDate);
     }
 
     /**
      *
      * @param pDate
      */
-    public void setTo(Date pDate) {
-        iTo.setDate(pDate);
+    public void setTo(LocalDate pDate) {
+        iTo.setLocalDate(pDate);
     }
 
     /**
      *
      * @return
      */
-    public Date getFrom() {
-        return iFrom.getDate();
+    public LocalDate getFrom() {
+        return iFrom.getLocalDate();
     }
 
     /**
      *
      * @return
      */
-    public Date getTo() {
-        return iTo.getDate();
+    public LocalDate getTo() {
+        return iTo.getLocalDate();
     }
 
     /**

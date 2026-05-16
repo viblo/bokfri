@@ -248,15 +248,15 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
             return;
         }
 
-        final Date      iFrom = iDialog.getFrom();
-        final Date      iTo = iDialog.getTo();
+        final LocalDate iFrom = iDialog.getFrom();
+        final LocalDate iTo = iDialog.getTo();
         final SSNewProject iProject = iDialog.getProject();
 
         SSProgressDialog.runProgress(iMainFrame,
                 () -> {
 
                         SSProjectResultPrinter iPrinter = new SSProjectResultPrinter(
-                                SSDateUtil.toLocalDate(iFrom), SSDateUtil.toLocalDate(iTo), iProject);
+                                iFrom, iTo, iProject);
 
                         iPrinter.preview(iMainFrame);
 
@@ -274,22 +274,22 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
         final SSResultUnitResultSetupDialog iDialog = new SSResultUnitResultSetupDialog(
                 iMainFrame, bundle.getString("resultreport.perioddialog.title"));
 
-        iDialog.setFrom(SSDateUtil.toDate(iAccountingYear.getLocalFrom()));
-        iDialog.setTo(SSDateUtil.toDate(iAccountingYear.getLocalTo()));
+        iDialog.setFrom(iAccountingYear.getLocalFrom());
+        iDialog.setTo(iAccountingYear.getLocalTo());
         iDialog.setLocationRelativeTo(iMainFrame);
         if (iDialog.showDialog() != JOptionPane.OK_OPTION) {
             return;
         }
 
-        final Date         iFrom = iDialog.getFrom();
-        final Date         iTo = iDialog.getTo();
+        final LocalDate iFrom = iDialog.getFrom();
+        final LocalDate iTo = iDialog.getTo();
         final SSNewResultUnit iResultUnit = iDialog.getSelectedResultUnit();
 
         SSProgressDialog.runProgress(iMainFrame,
                 () -> {
 
                         SSResultUnitResultPrinter iPrinter = new SSResultUnitResultPrinter(
-                                SSDateUtil.toLocalDate(iFrom), SSDateUtil.toLocalDate(iTo), iResultUnit);
+                                iFrom, iTo, iResultUnit);
 
                         iPrinter.preview(iMainFrame);
 

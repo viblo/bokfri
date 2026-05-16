@@ -163,6 +163,8 @@ diverging from upstream version 2.2-SNAPSHOT.
   `LocalDate` accessors.
 - Continued the date migration in cutoff report dialogs by returning selected
   dates as `LocalDate` for receivable, payable, claim, and supplier debt reports.
+- Continued the date migration in project and result-unit result setup dialogs
+  by passing report periods as `LocalDate` values directly.
 - Dropped the legacy pre-HSQL `bookkeeper.db` import path and its archived
   `db/databas_v1.zip` handoff, requiring very old installations to migrate via
   historical Bokfri releases before using this fork.
