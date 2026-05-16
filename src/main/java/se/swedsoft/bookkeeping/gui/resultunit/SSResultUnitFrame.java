@@ -25,7 +25,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
 import java.util.List;
 
 
@@ -293,8 +292,8 @@ public class SSResultUnitFrame extends SSDefaultTableFrame {
             return;
         }
 
-        final Date iFrom = iDialog.getFrom();
-        final Date iTo = iDialog.getTo();
+        final java.time.LocalDate iFrom = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iDialog.getFrom());
+        final java.time.LocalDate iTo = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iDialog.getTo());
 
         final SSResultUnitRevenuePrinter iPrinter = new SSResultUnitRevenuePrinter(
                 iResultUnits, iFrom, iTo);

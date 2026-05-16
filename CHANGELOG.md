@@ -137,6 +137,8 @@ diverging from upstream version 2.2-SNAPSHOT.
   keeping selected report dates as `LocalDate` until stock calculation boundaries.
 - Continued the date migration in result printers by storing report periods as
   `LocalDate` through result calculation.
+- Continued the date migration in revenue printers by storing report periods as
+  `LocalDate` through monthly distribution calculations.
 - Dropped the legacy pre-HSQL `bookkeeper.db` import path and its archived
   `db/databas_v1.zip` handoff, requiring very old installations to migrate via
   historical Bokfri releases before using this fork.

@@ -13,7 +13,6 @@ import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
 import se.swedsoft.bookkeeping.print.util.SSDefaultJasperDataSource;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -32,9 +31,9 @@ public class SSProductRevenuePrinter extends SSPrinter {
 
     private List<SSProduct> iProducts;
 
-    private Date  iDateFrom;
+    private LocalDate iDateFrom;
 
-    private Date  iDateTo;
+    private LocalDate iDateTo;
 
     Map<String, Map<SSMonth, BigDecimal>> iProductRevenue;
 
@@ -44,7 +43,7 @@ public class SSProductRevenuePrinter extends SSPrinter {
      * @param pFrom
      * @param pTo
      */
-    public SSProductRevenuePrinter(List<SSProduct> pProducts, Date pFrom, Date pTo) {
+    public SSProductRevenuePrinter(List<SSProduct> pProducts, LocalDate pFrom, LocalDate pTo) {
         iProducts = pProducts;
         iDateFrom = pFrom;
         iDateTo = pTo;
@@ -124,8 +123,8 @@ public class SSProductRevenuePrinter extends SSPrinter {
     private void calculate() {
         iProductRevenue = new HashMap<>();
         List<SSInvoice> iInvoices = SSDB.getInstance().getInvoices();
-        LocalDate localFrom = SSDateUtil.toLocalDate(iDateFrom);
-        LocalDate localTo = SSDateUtil.toLocalDate(iDateTo);
+        LocalDate localFrom = iDateFrom;
+        LocalDate localTo = iDateTo;
 
         for (SSInvoice iInvoice : iInvoices) {
             LocalDate invoiceLocalDate = iInvoice.getLocalDate();
@@ -199,8 +198,8 @@ public class SSProductRevenuePrinter extends SSPrinter {
         private SSDefaultTableModel<SSMonth> iModel;
 
         private SSProduct iProduct;
-        private Date  iFrom;
-        private Date  iTo;
+        private LocalDate iFrom;
+        private LocalDate iTo;
 
         private LocalDate iLocalFrom;
 
@@ -213,11 +212,11 @@ public class SSProductRevenuePrinter extends SSPrinter {
          * @param pFrom
          * @param pTo
          */
-        public SSMonthlyDistributionPrinter(Date pFrom, Date pTo) {
+        public SSMonthlyDistributionPrinter(LocalDate pFrom, LocalDate pTo) {
             iFrom = pFrom;
             iTo = pTo;
-            iLocalFrom = SSDateUtil.toLocalDate(pFrom);
-            iLocalTo = SSDateUtil.toLocalDate(pTo);
+            iLocalFrom = pFrom;
+            iLocalTo = pTo;
             setMargins(0, 0, 0, 0);
 
             setDetail("productrevenue.monthly.jrxml");

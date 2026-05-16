@@ -31,7 +31,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 
@@ -485,8 +484,8 @@ public class SSProductFrame extends SSDefaultTableFrame {
             return;
         }
 
-        final Date iFrom = iDialog.getFrom();
-        final Date iTo = iDialog.getTo();
+        final java.time.LocalDate iFrom = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iDialog.getFrom());
+        final java.time.LocalDate iTo = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iDialog.getTo());
 
         final SSProductRevenuePrinter iPrinter = new SSProductRevenuePrinter(iProducts,
                 iFrom, iTo);

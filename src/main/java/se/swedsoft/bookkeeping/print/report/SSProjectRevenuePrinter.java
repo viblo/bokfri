@@ -13,7 +13,6 @@ import se.swedsoft.bookkeeping.gui.util.SSBundle;
 import se.swedsoft.bookkeeping.gui.util.model.SSDefaultTableModel;
 import se.swedsoft.bookkeeping.print.SSPrinter;
 import se.swedsoft.bookkeeping.print.util.SSDefaultJasperDataSource;
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -32,9 +31,9 @@ public class SSProjectRevenuePrinter extends SSPrinter {
 
     private List<SSNewProject> iProjects;
 
-    private Date  iDateFrom;
+    private LocalDate iDateFrom;
 
-    private Date  iDateTo;
+    private LocalDate iDateTo;
 
     Map<String, Map<SSMonth, BigDecimal>> iProjectRevenue;
 
@@ -44,7 +43,7 @@ public class SSProjectRevenuePrinter extends SSPrinter {
      * @param pFrom
      * @param pTo
      */
-    public SSProjectRevenuePrinter(List<SSNewProject> pProjects, Date pFrom, Date pTo) {
+    public SSProjectRevenuePrinter(List<SSNewProject> pProjects, LocalDate pFrom, LocalDate pTo) {
         iProjects = pProjects;
         iDateFrom = pFrom;
         iDateTo = pTo;
@@ -124,8 +123,8 @@ public class SSProjectRevenuePrinter extends SSPrinter {
     private void calculate() {
         iProjectRevenue = new HashMap<>();
         List<SSInvoice> iInvoices = SSDB.getInstance().getInvoices();
-        LocalDate localFrom = SSDateUtil.toLocalDate(iDateFrom);
-        LocalDate localTo = SSDateUtil.toLocalDate(iDateTo);
+        LocalDate localFrom = iDateFrom;
+        LocalDate localTo = iDateTo;
 
         for (SSInvoice iInvoice : iInvoices) {
             LocalDate invoiceLocalDate = iInvoice.getLocalDate();
@@ -199,9 +198,9 @@ public class SSProjectRevenuePrinter extends SSPrinter {
         private SSDefaultTableModel<SSMonth> iModel;
 
         private SSNewProject iProject;
-        private Date  iFrom;
+        private LocalDate iFrom;
 
-        private Date  iTo;
+        private LocalDate iTo;
 
         private LocalDate iLocalFrom;
 
@@ -214,11 +213,11 @@ public class SSProjectRevenuePrinter extends SSPrinter {
          * @param pFrom
          * @param pTo
          */
-        public SSMonthlyDistributionPrinter(Date pFrom, Date pTo) {
+        public SSMonthlyDistributionPrinter(LocalDate pFrom, LocalDate pTo) {
             iFrom = pFrom;
             iTo = pTo;
-            iLocalFrom = SSDateUtil.toLocalDate(pFrom);
-            iLocalTo = SSDateUtil.toLocalDate(pTo);
+            iLocalFrom = pFrom;
+            iLocalTo = pTo;
             setMargins(0, 0, 0, 0);
 
             setDetail("projectrevenue.monthly.jrxml");
