@@ -169,6 +169,8 @@ diverging from upstream version 2.2-SNAPSHOT.
   periods as `LocalDate` for balance, budget, VAT, statement, and value reports.
 - Continued the date migration in the quarter report dialog by returning the
   selected quarter bounds as `LocalDate` values directly.
+- Continued the date migration in the sale report dialog by exposing the
+  selected report period as `LocalDate` values directly.
 - Dropped the legacy pre-HSQL `bookkeeper.db` import path and its archived
   `db/databas_v1.zip` handoff, requiring very old installations to migrate via
   historical Bokfri releases before using this fork.

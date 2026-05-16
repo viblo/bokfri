@@ -1254,8 +1254,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
         if (iDialog.showDialog() != JOptionPane.OK_OPTION) {
             return;
         }
-        final Date                            iFrom = iDialog.getFrom();
-        final Date                            iTo = iDialog.getTo();
+        final LocalDate                       iFrom = iDialog.getFrom();
+        final LocalDate                       iTo = iDialog.getTo();
         final SSSaleReportPrinter.SortingMode iSortingMode = iDialog.getSortingMode();
         final boolean                         iAscending = iDialog.getAscending();
 
@@ -1263,8 +1263,7 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                 SSBundle.getBundle().getString("salereport.title"),
                 () -> {
 
-                        SSSaleReportPrinter iPrinter = new SSSaleReportPrinter(
-                                SSDateUtil.toLocalDate(iFrom), SSDateUtil.toLocalDate(iTo),
+                        SSSaleReportPrinter iPrinter = new SSSaleReportPrinter(iFrom, iTo,
                                 iSortingMode, iAscending);
 
                         iPrinter.preview(iMainFrame);

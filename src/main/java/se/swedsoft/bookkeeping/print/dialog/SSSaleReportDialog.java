@@ -12,9 +12,7 @@ import se.swedsoft.bookkeeping.gui.util.dialogs.SSDialog;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
-
-import se.swedsoft.bookkeeping.util.SSDateUtil;
+import java.time.LocalDate;
 
 import static se.swedsoft.bookkeeping.print.report.SSSaleReportPrinter.SortingMode;
 
@@ -47,8 +45,8 @@ public class SSSaleReportDialog extends SSDialog {
         SSNewAccountingYear iCurrentYear = SSDB.getInstance().getCurrentYear();
 
         if (iCurrentYear != null) {
-            iFromDate.setDate(SSDateUtil.toDate(iCurrentYear.getLocalFrom()));
-            iToDate.setDate(SSDateUtil.toDate(iCurrentYear.getLocalTo()));
+            iFromDate.setLocalDate(iCurrentYear.getLocalFrom());
+            iToDate.setLocalDate(iCurrentYear.getLocalTo());
         }
 
         setPanel(iPanel);
@@ -96,16 +94,16 @@ public class SSSaleReportDialog extends SSDialog {
      *
      * @return
      */
-    public Date getFrom() {
-        return iFromDate.getDate();
+    public LocalDate getFrom() {
+        return iFromDate.getLocalDate();
     }
 
     /**
      *
      * @return
      */
-    public Date getTo() {
-        return iToDate.getDate();
+    public LocalDate getTo() {
+        return iToDate.getLocalDate();
     }
 
     @Override
