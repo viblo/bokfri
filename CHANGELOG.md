@@ -175,6 +175,8 @@ diverging from upstream version 2.2-SNAPSHOT.
   report period as `LocalDate` values directly.
 - Continued the date migration in the result report setup panel by passing the
   selected report period as `LocalDate` values directly.
+- Continued the date migration in the legacy VAT report dialog by passing the
+  selected report period as `LocalDate` values directly.
 - Dropped the legacy pre-HSQL `bookkeeper.db` import path and its archived
   `db/databas_v1.zip` handoff, requiring very old installations to migrate via
   historical Bokfri releases before using this fork.

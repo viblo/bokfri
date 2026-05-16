@@ -468,8 +468,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
             return;
         }
 
-        final Date iFrom = iDialog.getFrom();
-        final Date iTo = iDialog.getTo();
+        final LocalDate iFrom = iDialog.getFrom();
+        final LocalDate iTo = iDialog.getTo();
 
         // Get the R1, R2 and A accounts
         final SSAccount iAccountR1 = iDialog.getAccountR1();
@@ -482,11 +482,9 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                         SSMultiPrinter iPrinter = new SSMultiPrinter();
 
                         SSVATReport2007Printer   iPrinter1 = new SSVATReport2007Printer(
-                                iAccountingYear, SSDateUtil.toLocalDate(iFrom),
-                                SSDateUtil.toLocalDate(iTo));
+                                iAccountingYear, iFrom, iTo);
                         SSVATControl2007Printer  iPrinter2 = new SSVATControl2007Printer(
-                                iAccountingYear, SSDateUtil.toLocalDate(iFrom),
-                                SSDateUtil.toLocalDate(iTo));
+                                iAccountingYear, iFrom, iTo);
 
                         final SSVoucher iVoucher = iPrinter2.getVoucher(iAccountR1, iAccountR2,
                                 iAccountA);
@@ -505,7 +503,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                                         DateFormat iFormat = DateFormat.getDateInstance(DateFormat.SHORT);
                                         SSQueryDialog iDialog1 = new SSQueryDialog(iMainFrame,
                                                 SSBundle.getBundle(), "vatcontrol2007.voucherdialog",
-                                                iFormat.format(iFrom), iFormat.format(iTo),
+                                                iFormat.format(SSDateUtil.toDate(iFrom)),
+                                                iFormat.format(SSDateUtil.toDate(iTo)),
                                                 iVoucher.getNumber());
 
                                         int iResponce1 = iDialog1.getResponce();
@@ -543,8 +542,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
             return;
         }
 
-        final Date iFrom = iDialog.getFrom();
-        final Date iTo = iDialog.getTo();
+        final LocalDate iFrom = iDialog.getFrom();
+        final LocalDate iTo = iDialog.getTo();
 
 	final int iStartVoucher = iDialog.getStartVoucher();
 
@@ -559,11 +558,9 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                         SSMultiPrinter iPrinter = new SSMultiPrinter();
 
                         SSVATReport2015Printer   iPrinter1 = new SSVATReport2015Printer(
-                                iAccountingYear, SSDateUtil.toLocalDate(iFrom),
-                                SSDateUtil.toLocalDate(iTo), iStartVoucher);
+                                iAccountingYear, iFrom, iTo, iStartVoucher);
                         SSVATControl2015Printer  iPrinter2 = new SSVATControl2015Printer(
-                                iAccountingYear, SSDateUtil.toLocalDate(iFrom),
-                                SSDateUtil.toLocalDate(iTo), iStartVoucher);
+                                iAccountingYear, iFrom, iTo, iStartVoucher);
 
                         final SSVoucher iVoucher = iPrinter2.getVoucher(iAccountR1, iAccountR2,
                                 iAccountA);
@@ -582,7 +579,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                                         DateFormat iFormat = DateFormat.getDateInstance(DateFormat.SHORT);
                                         SSQueryDialog iDialog1 = new SSQueryDialog(iMainFrame,
                                                 SSBundle.getBundle(), "vatcontrol2015.voucherdialog",
-                                                iFormat.format(iFrom), iFormat.format(iTo),
+                                                iFormat.format(SSDateUtil.toDate(iFrom)),
+                                                iFormat.format(SSDateUtil.toDate(iTo)),
                                                 iVoucher.getNumber());
 
                                         int iResponce1 = iDialog1.getResponce();

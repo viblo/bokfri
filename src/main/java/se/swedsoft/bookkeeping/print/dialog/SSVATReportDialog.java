@@ -19,7 +19,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
-import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -115,11 +114,11 @@ public class SSVATReportDialog extends SSDialog {    private static final Logger
                 : 1;
         LocalDate fromDate = now.minusMonths(vatMonths)
                 .with(TemporalAdjusters.firstDayOfMonth());
-        iFrom.setDate(se.swedsoft.bookkeeping.util.SSDateUtil.toDate(fromDate));
+        iFrom.setLocalDate(fromDate);
 
         LocalDate toDate = now.minusMonths(1)
                 .with(TemporalAdjusters.lastDayOfMonth());
-        iTo.setDate(se.swedsoft.bookkeeping.util.SSDateUtil.toDate(toDate));
+        iTo.setLocalDate(toDate);
 
     }
 
@@ -127,32 +126,32 @@ public class SSVATReportDialog extends SSDialog {    private static final Logger
      *
      * @return
      */
-    public Date getTo() {
-        return iTo.getDate();
+    public LocalDate getTo() {
+        return iTo.getLocalDate();
     }
 
     /**
      *
      * @param to
      */
-    public void setTo(Date to) {
-        iTo.setDate(to);
+    public void setTo(LocalDate to) {
+        iTo.setLocalDate(to);
     }
 
     /**
      *
      * @return
      */
-    public Date getFrom() {
-        return iFrom.getDate();
+    public LocalDate getFrom() {
+        return iFrom.getLocalDate();
     }
 
     /**
      *
      * @param from
      */
-    public void setFrom(Date from) {
-        iFrom.setDate(from);
+    public void setFrom(LocalDate from) {
+        iFrom.setLocalDate(from);
     }
 
     /**
