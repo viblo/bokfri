@@ -1097,7 +1097,7 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
             return;
         }
 
-        final Date iDate = iDialog.getDate();
+        final LocalDate iDate = iDialog.getLocalDate();
         final boolean isDateSelected = iDialog.isDateSelected();
 
         SSProgressDialog.runProgress(iMainFrame, () -> {
@@ -1105,7 +1105,7 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                 SSStockValuePrinter iPrinter;
 
                 if (isDateSelected) {
-                    iPrinter = new SSStockValuePrinter(SSDateUtil.toLocalDate(iDate));
+                    iPrinter = new SSStockValuePrinter(iDate);
                 } else {
                     iPrinter = new SSStockValuePrinter();
                 }
@@ -1130,7 +1130,7 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
         if (iDialog.showDialog() != JOptionPane.OK_OPTION) {
             return;
         }
-        final Date iDate = iDialog.getDate();
+        final LocalDate iDate = iDialog.getLocalDate();
         final boolean iDateSelected = iDialog.isDateSelected();
 
         SSProgressDialog.runProgress(iMainFrame, () -> {
@@ -1139,7 +1139,7 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                 SSStockAccountPrinter iPrinter;
 
                 if (iDateSelected) {
-                    iPrinter = new SSStockAccountPrinter(SSDateUtil.toLocalDate(iDate));
+                    iPrinter = new SSStockAccountPrinter(iDate);
                 } else {
                     iPrinter = new SSStockAccountPrinter();
                 }

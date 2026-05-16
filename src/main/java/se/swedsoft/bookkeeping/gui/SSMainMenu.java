@@ -80,7 +80,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-import se.swedsoft.bookkeeping.util.SSDateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -488,13 +487,13 @@ public class SSMainMenu {    private static final Logger LOG = LoggerFactory.get
 
                 iDialog.setLocationRelativeTo(iMainFrame);
                 if(iDialog.showDialog() != JOptionPane.OK_OPTION) return;
-                final Date    iDate         = iDialog.getDate();
+                final LocalDate iDate       = iDialog.getLocalDate();
                 final boolean iDateSelected = iDialog.isDateSelected();
                 SSProgressDialog.runProgress(iMainFrame, () -> {
 
                         SSInventoryBasisPrinter iPrinter;
                         if(iDateSelected){
-                            iPrinter = new SSInventoryBasisPrinter(SSDateUtil.toLocalDate(iDate));
+                            iPrinter = new SSInventoryBasisPrinter(iDate);
                         } else {
                             iPrinter = new SSInventoryBasisPrinter();
                         }
