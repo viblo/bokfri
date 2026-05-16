@@ -11,6 +11,7 @@ import se.swedsoft.bookkeeping.print.report.sales.SSSalePrinterUtils;
 
 import java.math.BigDecimal;
 import java.text.DateFormatSymbols;
+import java.time.LocalDate;
 import java.util.*;
 
 
@@ -22,9 +23,9 @@ public class SSQuarterReportPrinter extends SSPrinter {
 
     private Locale iLocale;
 
-    private Date iFrom;
+    private LocalDate iFrom;
 
-    private Date iTo;
+    private LocalDate iTo;
 
     private List<SSCustomer> iCustomers;
 
@@ -38,7 +39,7 @@ public class SSQuarterReportPrinter extends SSPrinter {
      * @param iFrom
      * @param iTo
      */
-    public SSQuarterReportPrinter(Locale iLocale, Date iFrom, Date iTo) {
+    public SSQuarterReportPrinter(Locale iLocale, LocalDate iFrom, LocalDate iTo) {
         // Get all orders
         iCustomers = SSDB.getInstance().getCustomers();
         this.iLocale = iLocale;
@@ -63,8 +64,8 @@ public class SSQuarterReportPrinter extends SSPrinter {
 
         Map<String, List<SSInvoice>> iInvoicesForCustomers = SSInvoiceMath.getInvoicesforCustomers();
         Map<String, List<SSCreditInvoice>> iCreditInvoicesForCustomers = SSCreditInvoiceMath.getCreditInvoicesforCustomers();
-        java.time.LocalDate localFrom = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iFrom);
-        java.time.LocalDate localTo = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iTo);
+        LocalDate localFrom = iFrom;
+        LocalDate localTo = iTo;
 
         // List<SSInvoice>       iInvoices       = SSDB.getInstance().getInvoices();
         // List<SSCreditInvoice> iCreditInvoices = SSDB.getInstance().getCreditInvoices();
@@ -158,10 +159,8 @@ public class SSQuarterReportPrinter extends SSPrinter {
      * @return
      */
     private String getQuarterText() {
-        java.time.LocalDate localFrom = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iFrom);
-
-        String iYear = Integer.toString(localFrom.getYear()).substring(2);
-        String iMonth = Integer.toString((localFrom.getMonthValue() - 1) / 3 + 1);
+        String iYear = Integer.toString(iFrom.getYear()).substring(2);
+        String iMonth = Integer.toString((iFrom.getMonthValue() - 1) / 3 + 1);
 
         return iYear + '-' + iMonth;
     }
@@ -173,12 +172,9 @@ public class SSQuarterReportPrinter extends SSPrinter {
     private String getPeriodText() {
         String[] iMonths = new DateFormatSymbols().getMonths();
 
-        java.time.LocalDate localFrom = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iFrom);
-        java.time.LocalDate localTo = se.swedsoft.bookkeeping.util.SSDateUtil.toLocalDate(iTo);
-
-        String iMonthFrom = iMonths[localFrom.getMonthValue() - 1];
-        String iMonthTo = iMonths[localTo.getMonthValue() - 1];
-        String iYear = Integer.toString(localTo.getYear());
+        String iMonthFrom = iMonths[iFrom.getMonthValue() - 1];
+        String iMonthTo = iMonths[iTo.getMonthValue() - 1];
+        String iYear = Integer.toString(iTo.getYear());
 
         return iMonthFrom + " - " + iMonthTo + ' ' + iYear;
 

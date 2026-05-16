@@ -2104,8 +2104,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
             return;
         }
 
-        final Date iDate = iDialog.getDate();
-        final Date iEndDate = iDialog.getEndDate();
+        final LocalDate iDate = SSDateUtil.toLocalDate(iDialog.getDate());
+        final LocalDate iEndDate = SSDateUtil.toLocalDate(iDialog.getEndDate());
 
         SSProgressDialog.runProgress(iMainFrame,
                 () -> {
