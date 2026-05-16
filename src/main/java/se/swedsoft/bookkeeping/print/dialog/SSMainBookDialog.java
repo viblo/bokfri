@@ -19,7 +19,7 @@ import se.swedsoft.bookkeeping.gui.util.model.SSAccountTableModel;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
+import java.time.LocalDate;
 
 
 /**
@@ -79,16 +79,16 @@ public class SSMainBookDialog extends SSDialog {
      *
      * @param pDateFrom
      */
-    public void setDateFrom(Date pDateFrom) {
-        iFromDate.setDate(pDateFrom);
+    public void setDateFrom(LocalDate pDateFrom) {
+        iFromDate.setLocalDate(pDateFrom);
     }
 
     /**
      *
      * @param pDateTo
      */
-    public void setDateTo(Date pDateTo) {
-        iToDate.setDate(pDateTo);
+    public void setDateTo(LocalDate pDateTo) {
+        iToDate.setLocalDate(pDateTo);
     }
 
     /**
@@ -112,16 +112,16 @@ public class SSMainBookDialog extends SSDialog {
      *
      * @return
      */
-    public Date getDateFrom() {
-        return iFromDate.getDate();
+    public LocalDate getDateFrom() {
+        return iFromDate.getLocalDate();
     }
 
     /**
      *
      * @return
      */
-    public Date getDateTo() {
-        return iToDate.getDate();
+    public LocalDate getDateTo() {
+        return iToDate.getLocalDate();
     }
 
     /**
@@ -208,4 +208,3 @@ public class SSMainBookDialog extends SSDialog {
         return sb.toString();
     }
 }
-

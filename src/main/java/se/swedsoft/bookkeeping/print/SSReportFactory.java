@@ -111,15 +111,15 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
     public static void MainbookReport(final SSMainFrame iMainFrame, final SSNewAccountingYear pYearData) {
         final SSMainBookDialog iDialog = new SSMainBookDialog(iMainFrame);
 
-        iDialog.setDateFrom(SSDateUtil.toDate(pYearData.getLocalFrom()));
-        iDialog.setDateTo(SSDateUtil.toDate(pYearData.getLocalTo()));
+        iDialog.setDateFrom(pYearData.getLocalFrom());
+        iDialog.setDateTo(pYearData.getLocalTo());
 
         iDialog.addOkActionListener(e -> {
 
                 iDialog.closeDialog();
 
-                final Date       lDateFrom = iDialog.getDateFrom();
-                final Date       lDateTo = iDialog.getDateTo();
+                final LocalDate  lDateFrom = iDialog.getDateFrom();
+                final LocalDate  lDateTo = iDialog.getDateTo();
                 final SSAccount  lAccountFrom = iDialog.getAccountFrom();
                 final SSAccount  lAccountTo = iDialog.getAccountTo();
 
@@ -132,8 +132,8 @@ public class SSReportFactory {    private static final Logger LOG = LoggerFactor
                         () -> {
 
                                 SSMainBookPrinter iPrinter = new SSMainBookPrinter(pYearData,
-                                        lAccountFrom, lAccountTo, SSDateUtil.toLocalDate(lDateFrom),
-                                        SSDateUtil.toLocalDate(lDateTo), iProject, iResultUnit);
+                                        lAccountFrom, lAccountTo, lDateFrom, lDateTo, iProject,
+                                        iResultUnit);
 
                                 if (isProjectSelected) {}
                                 if (isResultUnitSelected) {}
