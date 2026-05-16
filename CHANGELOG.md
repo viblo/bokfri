@@ -151,6 +151,8 @@ diverging from upstream version 2.2-SNAPSHOT.
   timestamps use the `LocalDateTime` renderer.
 - Removed the unused voucher editor `Date` renderer helper after voucher row
   setup moved to `LocalDateTime` rendering.
+- Removed stale supplier and periodic invoice panel `Date` imports after those
+  panels moved to local date chooser accessors.
 - Dropped the legacy pre-HSQL `bookkeeper.db` import path and its archived
   `db/databas_v1.zip` handoff, requiring very old installations to migrate via
   historical Bokfri releases before using this fork.
