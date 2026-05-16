@@ -9,7 +9,6 @@ import se.swedsoft.bookkeeping.gui.util.table.SSTable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 
 /**
@@ -46,8 +45,6 @@ public class SSTableEditor {
         iTable.setDefaultRenderer(Integer.class, new SSIntegerRenderer());
         iTable.setDefaultEditor(Integer.class, new SSIntegerCellEditor());
 
-        iTable.setDefaultRenderer(Date.class, new SSDateCellRenderer());
-        iTable.setDefaultEditor(Date.class, new SSDateCellEditor());
         iTable.setDefaultRenderer(LocalDate.class, new SSDateCellRenderer());
         iTable.setDefaultEditor(LocalDate.class, new SSDateCellEditor());
         iTable.setDefaultRenderer(LocalDateTime.class, new SSDateTimeCellRenderer());
