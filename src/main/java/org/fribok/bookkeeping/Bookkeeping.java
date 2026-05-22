@@ -16,6 +16,7 @@ import se.swedsoft.bookkeeping.gui.util.frame.SSFrameManager;
 import se.swedsoft.bookkeeping.gui.util.graphics.SSIcon;
 
 import javax.swing.*;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.io.File;
 import java.sql.Connection;
@@ -106,6 +107,10 @@ public class Bookkeeping {    private static final Logger LOG = LoggerFactory.ge
         } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             LOG.error("Unexpected error", e);
         }
+        UIManager.put("OptionPane.yesButtonText", "Ja");
+        UIManager.put("OptionPane.noButtonText", "Nej");
+        UIManager.put("OptionPane.cancelButtonText", "Avbryt");
+        UIManager.put("OptionPane.okButtonText", "OK");
         iRunning = true;
 
         // Print information to ease debugging
@@ -154,10 +159,13 @@ public class Bookkeeping {    private static final Logger LOG = LoggerFactory.ge
 
         UIManager.put("InternalFrame.icon", SSIcon.getIcon("ICON_FRAME"));
         UIManager.put("InternalFrame.inactiveIcon", SSIcon.getIcon("ICON_FRAME"));
-        startupDatabase();
 
-        // Display the main frame.
+        // Display the main frame before database startup so the user gets
+        // immediate feedback after launching the application.
         iMainFrame.setVisible(true);
+        iMainFrame.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        startupDatabase();
+        iMainFrame.setCursor(Cursor.getDefaultCursor());
 
         // Only display the company iMainFrame if there are no companies defined.
         // I would prefer to only open the select company iMainFrame if there are no companies.

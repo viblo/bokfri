@@ -259,6 +259,12 @@ public class SSMainMenu {    private static final Logger LOG = LoggerFactory.get
         // *****************************
         iMenuLoader.addActionListener("filemenu.backup.restore", e -> SSBackupFrame.showFrame(iMainFrame, 600, 400));
 
+        // Network database path (legacy server feature)
+        // *****************************
+        iMenuLoader.addActionListener("filemenu.network.settings.db",
+                e -> new SSInformationDialog(iMainFrame,
+                        "filemenu.network.settings.db.unavailable"));
+
         // Exit
         // *****************************
         iMenuLoader.addActionListener("filemenu.exit", e -> {
@@ -850,6 +856,10 @@ public class SSMainMenu {    private static final Logger LOG = LoggerFactory.get
                 BrowserLaunch.openURL( url );
 
             });
+
+        iMenuLoader.addActionListener("helpmenu.clearlocks",
+                e -> new SSInformationDialog(iMainFrame,
+                        "helpmenu.clearlocks.unavailable"));
 
         iMenuLoader.addActionListener("helpmenu.compress", e -> {
 

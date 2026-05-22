@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 import java.util.List;
 
 import static se.swedsoft.bookkeeping.data.backup.util.SSBackupZip.ArchiveFile;
@@ -36,18 +35,7 @@ public class SSBackupFactory {    private static final Logger LOG = LoggerFactor
      * @return
      */
     public static String getDefaultFileName() {
-        LocalDateTime iDate = SSDateUtil.now();
-
-        DateTimeFormatter iDateFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
-        DateTimeFormatter iTimeFormat = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
-
-        String iFileName = "backup." + iDateFormat.format(iDate) + '.'
-                + iTimeFormat.format(iDate) + ".zip";
-
-        iFileName = iFileName.replace(":", "");
-        iFileName = iFileName.replace("-", "");
-
-        return iFileName;
+        return "Bokfri_backup_" + formatBackupTimestamp(SSDateUtil.now()) + ".zip";
     }
 
     /**
@@ -56,18 +44,19 @@ public class SSBackupFactory {    private static final Logger LOG = LoggerFactor
      * @return
      */
     public static String getDefaultFileName(SSNewCompany iCompany) {
-        LocalDateTime iDate = SSDateUtil.now();
+        return "Bokfri_backup_" + sanitizeFilenamePart(iCompany.getName()) + '_'
+                + formatBackupTimestamp(SSDateUtil.now()) + ".zip";
+    }
 
-        DateTimeFormatter iDateFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
-        DateTimeFormatter iTimeFormat = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
+    private static String formatBackupTimestamp(LocalDateTime pDateTime) {
+        return pDateTime.format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmm"));
+    }
 
-        String iFileName = "backup." + iCompany.getName() + '.'
-                + iDateFormat.format(iDate) + '.' + iTimeFormat.format(iDate) + ".zip";
-
-        iFileName = iFileName.replace(":", "");
-        iFileName = iFileName.replace("-", "");
-
-        return iFileName;
+    private static String sanitizeFilenamePart(String pName) {
+        if (pName == null || pName.isBlank()) {
+            return "foretag";
+        }
+        return pName.replaceAll("[^A-Za-z0-9._-]+", "_");
     }
 
     /**

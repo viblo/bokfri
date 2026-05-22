@@ -4,10 +4,13 @@ package se.swedsoft.bookkeeping.gui.util.graphics;
 import org.fribok.bookkeeping.app.Path;
 
 import javax.imageio.ImageIO;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.net.URL;
 import org.slf4j.Logger;
@@ -37,7 +40,13 @@ public class SSImage {    private static final Logger LOG = LoggerFactory.getLog
         loadImage("OCRBackground", "OCRBackground.png");
         loadImage("CHECK", "Check.png");
         loadImage("SERVER", "Server.png");
+        loadImage("ABOUT_LOGO", "About_Logo.png");
         loadImage("ICON_LOGO", "Logo_Icon16.png");
+        loadImage("ICON_LOGO_32", "Logo_Icon32.png");
+        loadImage("ICON_LOGO_64", "Logo_Icon64.png");
+        loadImage("ICON_LOGO_128", "Logo_Icon128.png");
+        loadImage("ICON_LOGO_256", "Logo_Icon256.png");
+        loadImage("ICON_LOGO_512", "Logo_Icon512.png");
     }
 
     /**
@@ -87,5 +96,32 @@ public class SSImage {    private static final Logger LOG = LoggerFactory.getLog
             LOG.info("(SSImage): Image not found: " + name);
         }
         return graphics.get(name);
+    }
+
+    /**
+     * Gets all bundled application icon sizes for window managers that prefer
+     * larger icons than 16x16 (for example Linux Alt-Tab and task bars).
+     *
+     * @return immutable list of application icon images
+     */
+    public static List<Image> getApplicationIcons() {
+        List<Image> images = new ArrayList<>();
+
+        addApplicationIcon(images, "ICON_LOGO");
+        addApplicationIcon(images, "ICON_LOGO_32");
+        addApplicationIcon(images, "ICON_LOGO_64");
+        addApplicationIcon(images, "ICON_LOGO_128");
+        addApplicationIcon(images, "ICON_LOGO_256");
+        addApplicationIcon(images, "ICON_LOGO_512");
+
+        return Collections.unmodifiableList(images);
+    }
+
+    private static void addApplicationIcon(List<Image> images, String name) {
+        Image image = getImage(name);
+
+        if (image != null) {
+            images.add(image);
+        }
     }
 }

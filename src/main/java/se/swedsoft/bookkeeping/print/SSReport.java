@@ -183,6 +183,7 @@ public class SSReport {    private static final Logger LOG = LoggerFactory.getLo
 
         } catch (JRException e) {
             LOG.error("Unexpected error", e);
+            throw new SSException("Kunde inte skapa rapporten: " + e.getLocalizedMessage());
         }
 
     }
