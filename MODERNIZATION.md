@@ -87,7 +87,6 @@ Status: not started
 Current repo state:
 - `javax.mail` still present in `pom.xml` and referenced from mail/report code
 - `jxl` still powers Excel import/export code
-- `com.lowagie:itext` 4.2.2 is still used
 - IntelliJ GUI Designer runtime/plugin is still required
 - `javax.help:javahelp` is still present and actively referenced
 - Spring dependencies remain in `pom.xml`, but there are `0` `org.springframework` references in `src/main/java`
@@ -96,7 +95,6 @@ Current repo state:
 Remaining tasks:
 - Replace `javax.mail` with `jakarta.mail`
 - Replace `jxl` with Apache POI or another maintained Excel library
-- Replace `itext` 4.x with a maintained alternative such as OpenPDF if licensing/functionality fit
 - Decide whether to keep or eliminate IntelliJ GUI Designer as a build dependency
 - Replace or remove JavaHelp
 - Remove unused Spring dependencies after confirming nothing depends on them indirectly

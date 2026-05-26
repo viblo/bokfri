@@ -208,6 +208,9 @@ diverging from upstream version 2.2-SNAPSHOT.
   in `SSVoucherMath` and `SSBudget`.
 
 ### Removed
+- Unused direct dependencies: legacy iText, JasperReports bundled fonts,
+  Mockito, and direct `xml-apis`; PDF export now relies on JasperReports'
+  OpenPDF dependency and XML APIs continue through Xerces/JDK boundaries.
 - Dead multi-user/server mode code (Phase 3.5): removed `SSPostLock`,
   `SSCompanyLock`, `SSYearLock`, and all lock acquisition/release calls
   across 54+ GUI files. Simplified `SSTriggerHandler` to a direct
