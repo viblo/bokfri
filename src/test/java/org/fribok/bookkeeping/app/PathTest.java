@@ -21,6 +21,7 @@ package org.fribok.bookkeeping.app;
 
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
@@ -30,6 +31,40 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @author Stefan Kangas
  */
 public class PathTest {
+    @Test
+    void customAppSubdirCanBeConfiguredForDevBuilds() {
+        String previousValue = System.getProperty("bokfri.appSubdir");
+
+        try {
+            System.setProperty("bokfri.appSubdir", "bokfri-dev");
+
+            assertThat(Path.getAppSubdir()).isEqualTo("bokfri-dev");
+        } finally {
+            if (previousValue == null) {
+                System.clearProperty("bokfri.appSubdir");
+            } else {
+                System.setProperty("bokfri.appSubdir", previousValue);
+            }
+        }
+    }
+
+    @Test
+    void blankCustomAppSubdirFallsBackToReleaseSubdir() {
+        String previousValue = System.getProperty("bokfri.appSubdir");
+
+        try {
+            System.setProperty("bokfri.appSubdir", "  ");
+
+            assertThat(Path.getAppSubdir()).isEqualTo("bokfri");
+        } finally {
+            if (previousValue == null) {
+                System.clearProperty("bokfri.appSubdir");
+            } else {
+                System.setProperty("bokfri.appSubdir", previousValue);
+            }
+        }
+    }
+
     @Test
     void valuesNotNull() {
         for (Path path : Path.values()) {

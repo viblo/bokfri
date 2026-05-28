@@ -76,12 +76,14 @@ jobs:
         PATCH="${PATCH:-0}"
         APP_NAME="Bokfri"
         APP_BASENAME="Bokfri"
+        APP_SUBDIR="bokfri"
         MAC_PACKAGE_IDENTIFIER="org.fribok.bookkeeping"
         VERSION="${MAJOR}.${MINOR}.${PATCH}"
 
         if [[ "$GITHUB_REF" == "refs/heads/master" ]]; then
           APP_NAME="Bokfri Dev"
           APP_BASENAME="Bokfri-Dev"
+          APP_SUBDIR="bokfri-dev"
           MAC_PACKAGE_IDENTIFIER="org.fribok.bookkeeping.dev"
           VERSION="${MAJOR}.${MINOR}.${GITHUB_RUN_NUMBER}"
         fi
@@ -94,6 +96,7 @@ jobs:
         mvn clean package -DskipTests -Djpackage.profile=true \
           -Djpackage.name="$APP_NAME" \
           -Djpackage.appVersion="$VERSION" \
+          -Djpackage.appSubdir="$APP_SUBDIR" \
           -Djpackage.macPackageIdentifier="$MAC_PACKAGE_IDENTIFIER"
 
     - name: List dist contents

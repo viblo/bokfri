@@ -40,7 +40,8 @@ public enum Path {
     /** The application base directory */
     APP_BASE, /** The application data directory */ APP_DATA, /** The user configuration directory */ USER_CONF, /** The user data directory */ USER_DATA;
 
-    private static final String APP_SUBDIR = "bokfri";
+    private static final String DEFAULT_APP_SUBDIR = "bokfri";
+    private static final String APP_SUBDIR_PROPERTY = "bokfri.appSubdir";
     private static final Map<Path, File> path = new EnumMap<>(Path.class);
 
     static {
@@ -50,10 +51,11 @@ public enum Path {
         path.put(APP_DATA, new File(base, "data"));
 
         String os = System.getProperty("os.name");
+        String appSubdir = getAppSubdir();
 
         if (os.startsWith("Windows")) {
-            // Use %LOCALAPPDATA%\bokfri so data is stored in a writable,
-            // per-user location regardless of the working directory at launch
+            // Use %LOCALAPPDATA%\bokfri (or \bokfri-dev for dev builds) so data is stored
+            // in a writable, per-user location regardless of the working directory at launch
             // (e.g. when started via an installer shortcut from C:\Windows\System32).
             String appdata = System.getenv("LOCALAPPDATA");
             if (appdata == null || appdata.isEmpty()) {
@@ -63,13 +65,13 @@ public enum Path {
             if (appdata == null || appdata.isEmpty()) {
                 appdata = System.getProperty("user.home");
             }
-            File winDataDir = new File(appdata, APP_SUBDIR);
+            File winDataDir = new File(appdata, appSubdir);
             path.put(USER_DATA, winDataDir);
             path.put(USER_CONF, winDataDir);
         } else if (os.startsWith("Mac OS")) {
-            // Use ~/Library/Application Support/bokfri on macOS
+            // Use ~/Library/Application Support/bokfri (or bokfri-dev) on macOS.
             String home = System.getProperty("user.home");
-            File macDataDir = new File(home, "Library/Application Support/" + APP_SUBDIR);
+            File macDataDir = new File(home, "Library/Application Support/" + appSubdir);
             path.put(USER_DATA, macDataDir);
             path.put(USER_CONF, macDataDir);
         } else { // assume freedesktop.org compliance
@@ -77,9 +79,18 @@ public enum Path {
             String userData = iBaseDirs.getUserPath(BaseDirs.Resource.DATA);
             String userConf = iBaseDirs.getUserPath(BaseDirs.Resource.CONFIG);
 
-            path.put(USER_DATA, new File(userData, APP_SUBDIR));
-            path.put(USER_CONF, new File(userConf, APP_SUBDIR));
+            path.put(USER_DATA, new File(userData, appSubdir));
+            path.put(USER_CONF, new File(userConf, appSubdir));
         }
+    }
+
+    static String getAppSubdir() {
+        String configuredSubdir = System.getProperty(APP_SUBDIR_PROPERTY);
+
+        if (configuredSubdir == null || configuredSubdir.trim().isEmpty()) {
+            return DEFAULT_APP_SUBDIR;
+        }
+        return configuredSubdir.trim();
     }
 
     /**

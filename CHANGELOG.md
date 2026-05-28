@@ -40,6 +40,8 @@ diverging from upstream version 2.2-SNAPSHOT.
   (Phase 3 Step 15) (PR #9).
 
 ### Changed
+- Isolated `Bokfri Dev` packaged builds to a separate `bokfri-dev` user
+  data/config directory so dev builds no longer share storage with release builds.
 - Package master-branch Linux AppImage and macOS DMG builds as `Bokfri Dev`,
   matching the Windows MSI dev-channel naming for side-by-side tester installs.
 - Restored backup create/restore compatibility after the `SSBackup` metadata

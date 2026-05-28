@@ -83,6 +83,9 @@
           <mainClass>org.fribok.bookkeeping.Bookkeeping</mainClass>
           <icon>${project.basedir}/design/favicons/desktop/app-icon.ico</icon>
           <macPackageIdentifier>${jpackage.macPackageIdentifier}</macPackageIdentifier>
+          <javaOptions>
+            <javaOption>-Dbokfri.appSubdir=${jpackage.appSubdir}</javaOption>
+          </javaOptions>
         </configuration>
       </plugin>
       <plugin>
@@ -457,6 +460,7 @@
     <!--maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format-->
     <jpackage.appVersion>${project.version}</jpackage.appVersion>
     <jpackage.name>Bokfri</jpackage.name>
+    <jpackage.appSubdir>bokfri</jpackage.appSubdir>
     <jpackage.macPackageIdentifier>org.fribok.bookkeeping</jpackage.macPackageIdentifier>
   </properties>
   <profiles>
