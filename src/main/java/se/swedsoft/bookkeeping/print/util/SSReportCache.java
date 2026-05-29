@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SSReportCache {    private static final Logger LOG = LoggerFactory.getLogger(SSReportCache.class);
 
-    private static final File REPORT_DIR = new File(Path.get(Path.APP_DATA), "report");
+    private static final File REPORT_DIR = new File(Path.get(Path.USER_DATA), "report");
     private static final File COMPILED_DIR = new File(REPORT_DIR, "compiled");
     private static final String REPORT_RESOURCE = "/reports/report/";
     private static final String CACHE_BUILD_SUFFIX = ".build";
@@ -119,10 +119,9 @@ public class SSReportCache {    private static final Logger LOG = LoggerFactory.
             }
 
             JasperReport iReport = JasperCompileManager.compileReport(is);
-            // Make the output directory
-            iCompiledFile.getParentFile().mkdirs();
+            saveCompiledReport(iCompiledFile, iReport);
 
-            return saveCompiledReport(iCompiledFile, iReport);
+            return iReport;
         } catch (JRException ex) {
             LOG.error("Unexpected error", ex);
         }
@@ -179,23 +178,19 @@ public class SSReportCache {    private static final Logger LOG = LoggerFactory.
      *
      * @return The report
      */
-    private JasperReport saveCompiledReport(File pCompiledFile, JasperReport pReport) {
+    private void saveCompiledReport(File pCompiledFile, JasperReport pReport) {
         try {
-            FileOutputStream iFileOutputStream = new FileOutputStream(pCompiledFile);
+            Files.createDirectories(pCompiledFile.getParentFile().toPath());
 
-            ObjectOutputStream iObjectOutputStream = new ObjectOutputStream(
-                    new BufferedOutputStream(iFileOutputStream));
-
-            iObjectOutputStream.writeObject(pReport);
-            iObjectOutputStream.flush();
+            try (ObjectOutputStream iObjectOutputStream = new ObjectOutputStream(
+                    new BufferedOutputStream(new FileOutputStream(pCompiledFile)))) {
+                iObjectOutputStream.writeObject(pReport);
+            }
             Files.writeString(getBuildMarkerFile(pCompiledFile).toPath(), Version.APP_BUILD,
                     StandardCharsets.UTF_8);
-
-            return pReport;
         } catch (IOException e) {
-            LOG.error("Unexpected error", e);
+            LOG.warn("Could not cache compiled report {}; using in-memory report", pCompiledFile, e);
         }
-        return null;
     }
 
     private File getBuildMarkerFile(File compiledFile) {

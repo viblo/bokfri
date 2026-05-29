@@ -46,7 +46,7 @@ import se.swedsoft.bookkeeping.util.SSDateUtil;
  */
 public class SSReportFactory {    private static final Logger LOG = LoggerFactory.getLogger(SSReportFactory.class);
 
-    private static final File PDF_FILE_DIR = new File(Path.get(Path.APP_DATA), "pdftoemail");
+    private static final File PDF_FILE_DIR = new File(Path.get(Path.USER_DATA), "pdftoemail");
     private SSReportFactory() {}
 
     /**

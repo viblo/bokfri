@@ -68,7 +68,7 @@ public class SSSalePrinterUtils {    private static final Logger LOG = LoggerFac
     public static void addParameterForQRCode(final String uqrData, SSPrinter iPrinter) {
 //SSNewCompany iCompany,
 //SSInvoice iInvoice,
-        File uqrFileDir = new File(Path.get(Path.APP_DATA), "qrcode");
+        File uqrFileDir = new File(Path.get(Path.USER_DATA), "qrcode");
         String iFileName = "qrkod-faktura.png";
         if (!uqrFileDir.exists()) {
             uqrFileDir.mkdirs();

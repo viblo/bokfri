@@ -193,6 +193,8 @@ diverging from upstream version 2.2-SNAPSHOT.
   reduced `return null` sites from ~419 to ~212 (Phase 4 Step 20).
 
 ### Fixed
+- Fixed packaged report previews using unwritable installation/current-working
+  directories for generated report caches, QR images, and email PDFs.
 - Fixed stale compiled Jasper report caches surviving app upgrades by tying
   cached reports to the exact Bokfri build that produced them.
 - Fixed sales and quarter report previews on systems without Arial installed by

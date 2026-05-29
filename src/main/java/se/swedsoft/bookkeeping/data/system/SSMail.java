@@ -40,8 +40,8 @@ public class SSMail {
     // Change this to get detailed debug info form JavaMail
     private static final boolean SHOULD_DEBUG_PRINT = false;
 
-    // This dir is where to look for pdf to send as attachments. 
-    private static final File PDF_FILE_DIR = new File(Path.get(Path.APP_DATA), "pdftoemail");
+    // This dir is where to look for pdf to send as attachments.
+    private static final File PDF_FILE_DIR = new File(Path.get(Path.USER_DATA), "pdftoemail");
 
     private SSMail() {}
 
