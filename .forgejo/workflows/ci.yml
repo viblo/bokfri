@@ -16,109 +16,31 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up JDK
+    - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: '21'
 
-    - name: Build and test
-      run: mvn clean install -Pcoverage
+    - name: Verify Java
+      run: java -version
 
-    - name: Upload coverage report
-      uses: actions/upload-artifact@v4
-      with:
-        name: jacoco-report
-        path: target/site/jacoco/
+    - name: Verify Maven
+      run: mvn --version
+
+    - name: Compile
+      run: mvn compile -q
+
+    - name: Test
+      run: mvn test -Pcoverage
 
     - name: Run Checkstyle
       run: mvn checkstyle:check -q
       continue-on-error: true
 
-  build:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-    runs-on: codeberg-medium
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Set up JDK
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '21'
-
-    - name: Test
-      run: mvn test -Pcoverage
-
-    - name: Build
-      shell: bash
-      run: |
-        RAW=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-        BASE="${RAW%-SNAPSHOT}"
-        IFS=. read -r MAJOR MINOR PATCH <<< "$BASE"
-        MAJOR="${MAJOR:-0}"
-        MINOR="${MINOR:-0}"
-        PATCH="${PATCH:-0}"
-        APP_NAME="Bokfri"
-        APP_BASENAME="Bokfri"
-        APP_SUBDIR="bokfri"
-        VERSION="${MAJOR}.${MINOR}.${PATCH}"
-
-        if [[ "${GITHUB_REF_NAME}" == "main" ]]; then
-          APP_NAME="Bokfri Dev"
-          APP_BASENAME="Bokfri-Dev"
-          APP_SUBDIR="bokfri-dev"
-          VERSION="${MAJOR}.${MINOR}.${GITHUB_RUN_NUMBER}"
-        fi
-
-        # Strip macPackageIdentifier — jpackage on Linux rejects macOS-only args
-        mvn clean package -DskipTests -Djpackage.profile=true \
-          -Djpackage.name="$APP_NAME" \
-          -Djpackage.appVersion="$VERSION" \
-          -Djpackage.appSubdir="$APP_SUBDIR"
-
-    - name: List dist contents
-      shell: bash
-      run: ls -lR dist/ || echo "dist/ directory not found"
-
-    - name: Install libfuse2
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y libfuse2
-
-    - name: Create AppImage
-      working-directory: dist
-      run: |
-        APPDIR="${APP_BASENAME}.AppDir"
-        mkdir -p "$APPDIR/usr"
-        cp -r "$APP_NAME"/* "$APPDIR/usr/"
-
-        cat > "$APPDIR/AppRun" <<EOF
-        #!/bin/bash
-        SELF=\$(readlink -f "\$0")
-        HERE=\${SELF%/*}
-        exec "\${HERE}/usr/bin/${APP_NAME}" "\$@"
-        EOF
-        chmod +x "$APPDIR/AppRun"
-
-        cat > "$APPDIR/${APP_BASENAME}.desktop" <<EOF
-        [Desktop Entry]
-        Name=${APP_NAME}
-        Exec=${APP_BASENAME}
-        Icon=bokfri
-        Type=Application
-        Categories=Office;Finance;
-        EOF
-
-        cp ../design/favicons/desktop/icon-512x512.png "$APPDIR/bokfri.png"
-
-        wget -q https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
-        chmod +x appimagetool-x86_64.AppImage
-        ARCH=x86_64 ./appimagetool-x86_64.AppImage "$APPDIR" "${APP_BASENAME}-x86_64.AppImage"
-
-    - name: Upload Linux artifact
+    - name: Upload coverage report
+      if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ github.ref_name == 'main' && 'bokfri-linux-dev' || 'bokfri-linux' }}
-        path: ${{ github.ref_name == 'main' && 'dist/Bokfri-Dev-x86_64.AppImage' || 'dist/Bokfri-x86_64.AppImage' }}
+        name: jacoco-report
+        path: target/site/jacoco/
