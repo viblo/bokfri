@@ -27,27 +27,14 @@ jobs:
         sudo apt-get update -qq
         sudo apt-get install -y -qq maven
 
-    - name: Verify Java
-      run: java -version
-
-    - name: Verify Maven
-      run: mvn --version
-
-    - name: Compile
-      run: mvn compile -q
-
-    - name: Test
-      run: mvn test -Pcoverage
+    - name: Build and test
+      run: mvn clean test -Pcoverage
 
     - name: Run Checkstyle
       run: mvn checkstyle:check -q
       continue-on-error: true
 
-    - name: List JaCoCo output
-      run: ls -la target/site/jacoco/ 2>&1 || echo "No jacoco directory"
-
     - name: Upload coverage report
-      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: jacoco-report
