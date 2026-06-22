@@ -43,9 +43,13 @@ jobs:
       run: mvn checkstyle:check -q
       continue-on-error: true
 
+    - name: List JaCoCo output
+      run: ls -la target/site/jacoco/ 2>&1 || echo "No jacoco directory"
+
     - name: Upload coverage report
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: jacoco-report
         path: target/site/jacoco/
+        if-no-files-found: ignore
