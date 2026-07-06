@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'website/**'
+      - 'doc/helpjar/html/**'
       - '.forgejo/workflows/pages.yml'
   workflow_dispatch:
 
@@ -16,24 +17,26 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Deploy to pages branch
+    - name: Prepare site
       run: |
-        REPO="https://codeberg.org/viblo-ai/bokfri.git"
-        # Use CI token if available, else rely on default permissions
-        if [ -n "${CI_TOKEN}" ]; then
-          REPO="https://viblo-ai:${CI_TOKEN}@codeberg.org/viblo-ai/bokfri.git"
+        # Bygg ihop landningssidan och hjälpdokumentationen
+        mkdir -p _deploy
+
+        # Landningssida
+        cp -r website/* _deploy/
+
+        # Hjälpdokumentation (från JavaHelp)
+        if [ -d "doc/helpjar/html" ]; then
+          mkdir -p _deploy/help
+          cp -r doc/helpjar/html/* _deploy/help/
         fi
 
-        # Work in a temp directory for the pages branch
-        TMP=$(mktemp -d)
-        cp -r website/* "${TMP}/"
-        cd "${TMP}"
+        echo "Site contents:"
+        find _deploy -type f | sort | head -30
 
-        git init
-        git checkout -b pages
-        git config user.name "CI Bot"
-        git config user.email "ci@bokfri.viblo.se"
-        git add .
-        git commit -m "Deploy website $(date -Iseconds)" || exit 0
-        git push -f "${REPO}" pages
-      shell: bash
+    - name: Deploy to Codeberg Pages
+      uses: https://codeberg.org/git-pages/action@v2
+      with:
+        site: https://${{ forge.repository_owner }}.codeberg.page/bokfri/
+        token: ${{ forge.token }}
+        source: _deploy/
