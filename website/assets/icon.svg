@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 64 64"
+   role="img"
+   aria-labelledby="title desc"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="Bokfri icon.svg"
+   inkscape:export-filename="Bokfri favicon.png"
+   inkscape:export-xdpi="36"
+   inkscape:export-ydpi="36"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.45"
+     inkscape:cx="123.25843"
+     inkscape:cy="43.595506"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <title
+     id="title">Bokfri favicon B variant</title>
+  <desc
+     id="desc">A stylized monogram combining the letter B and a ledger spine.</desc>
+  <rect
+     x="0.15091342"
+     y="0.024622785"
+     width="63.777599"
+     height="64.030182"
+     rx="15.9444"
+     fill="#f4e9d8"
+     id="rect2"
+     style="stroke-width:1.42043" />
+  <rect
+     x="8.8478603"
+     y="0.024622785"
+     width="13.045418"
+     height="64.030182"
+     rx="6.5227089"
+     fill="#c86845"
+     id="rect3"
+     style="stroke-width:1.42043" />
+  <path
+     d="M 30.590224,16.728148 V 46.27038 l 18.463924,0.08614 c 3.478737,0.01623 5.252262,-3.169054 5.252262,-7.623327 0,-4.454274 -2.26339,-8.059257 -5.59755,-8.019823 M 30.590224,16.728148 H 48.70886 c 3.478778,0 5.797965,2.923118 5.797965,6.681411 0,3.758293 -2.319187,7.238194 -5.797965,7.238194 H 30.590224"
+     fill="none"
+     stroke="#16353b"
+     stroke-width="6.81808"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path3"
+     sodipodi:nodetypes="ccssccsssc" />
+  <path
+     d="m 12.330782,17.113122 h 6.377759 m -6.377759,9.743723 h 6.377759 m -6.377759,9.743723 h 6.377759"
+     fill="none"
+     stroke="#f4e9d8"
+     stroke-width="2.84087"
+     stroke-linecap="round"
+     opacity="0.9"
+     id="path4" />
+</svg>

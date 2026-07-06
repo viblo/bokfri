@@ -12,20 +12,20 @@ on:
 
 jobs:
   deploy:
-    runs-on: codeberg-small
+    runs-on: codeberg-tiny
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
     - name: Prepare site
       run: |
-        # Bygg ihop landningssidan och hjälpdokumentationen
+        # Assemble landing page and help documentation into _deploy
         mkdir -p _deploy
 
-        # Landningssida
+        # Landing page
         cp -r website/* _deploy/
 
-        # Hjälpdokumentation (från JavaHelp)
+        # Help documentation (migrated from JavaHelp)
         if [ -d "doc/helpjar/html" ]; then
           mkdir -p _deploy/help
           cp -r doc/helpjar/html/* _deploy/help/
