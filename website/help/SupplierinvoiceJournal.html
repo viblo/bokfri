@@ -1,79 +1,56 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="sv">
 <head>
-<title>Leverantörsfakturajournal</title>
-<meta http-equiv="Content-Language" content="sv">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="style.css" type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bokfri — Leverantörsfakturajournal</title>
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
+<header>
+  <img src="images/header.png" alt="">
+</header>
 
-<body><table width="70px" border=1><tr><td>
+<h1>Leverantörsfakturajournal</h1>
 
- <img src="images/header.png" width="700" height="20" alt="Header">
-<BR>
-<SPAN CLASS="rubrik">Leverantörsfakturajournal</SPAN><BR>
-<hr>
-<SPAN CLASS="text">Den här rapporten listar leverantörsfakturor mellan två datum och visar hur varje leverantörsfaktura kommer att bokföras och hur de bidrar
-till den totala bokföringsposten i bokföringsunderlaget på sista sidan i den här rapporten.<BR><BR> När du ska skriva ut leverantörsfakturajournalen
+<p>Den här rapporten listar leverantörsfakturor mellan två datum och visar hur varje leverantörsfaktura kommer att bokföras och hur de bidrar
+till den totala bokföringsposten i bokföringsunderlaget på sista sidan i den här rapporten.</p>
+<p>När du ska skriva ut leverantörsfakturajournalen
 kan du välja startdatum och slutdatum för fakturadatum för att få med alla icke bokförda leverantörsfakturor under vald period i leverantörsfakturajournalen.
-Leverantörsfakturajournalen används för att bokföra flera leverantörsfakturor under en månad automatiskt i en verifikation.<BR><BR>I leverantörsfakturajournalen är det viktigt
+Leverantörsfakturajournalen används för att bokföra flera leverantörsfakturor under en månad automatiskt i en verifikation.</p>
+<p>I leverantörsfakturajournalen är det viktigt
 att kontrollera leverantörsfakturornas nummerserie, att det inte finns några luckor i nummerserien, så att inte vissa leverantörsfakturor utelämnas i bokföringen.
 Du bör även kontrollera att rätt kontonummer har använts vid bokföring av leverantörsfakturorna, du kan ändra konteringen för de enskilda leverantörsfakturorna
-tills leverantörsfakturajournalen med aktuella leverantörsfakturor har godkänts och bokförts.<BR><BR>När du har skrivit ut leverantörsfakturajournalen kommer du få en fråga om
+tills leverantörsfakturajournalen med aktuella leverantörsfakturor har godkänts och bokförts.</p>
+<p>När du har skrivit ut leverantörsfakturajournalen kommer du få en fråga om
 ni vill godkänna och bokföra leverantörsfakturajournalen, om du svarar "Ja" på den här frågan så kommer leverantörsfakturajournalen bokföras automatiskt enligt bokföringsunderlaget.
-Bokföringsunderlaget utgör en verifikation för konteringen.<BR><BR>
-Följande sidor och fält finns i den här rapporten:</SPAN><BR><BR>
-<SPAN CLASS="flik">Leverantörsfakturajournal</SPAN><BR>
-<SPAN CLASS="undermeny">Faktura nr</SPAN><BR>
-<SPAN CLASS="text">Här visas ett unikt internt löpnummer för varje registrerad leverantörsfaktura.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Leverantörs nr</SPAN><BR>
-<SPAN CLASS="text">Här visas Leverantörsnumret på den leverantör som har skapat leverantörsfakturan.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Leverantörsnamn</SPAN><BR>
-<SPAN CLASS="text">Här visas leverantörens företagsnamn.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Datum</SPAN><BR>
-<SPAN CLASS="text">Här visas datumet då leverantörsfakturan skapades och utfärdades.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Valuta</SPAN><BR>
-<SPAN CLASS="text">Här visas leverantörsfakturans valuta.</SPAN><BR><BR>
+Bokföringsunderlaget utgör en verifikation för konteringen.</p>
+<p>Följande sidor och fält finns i den här rapporten:</p>
+<p>Leverantörsfakturajournal Faktura nr Här visas ett unikt internt löpnummer för varje registrerad leverantörsfaktura.</p>
+<p>Leverantörs nr Här visas Leverantörsnumret på den leverantör som har skapat leverantörsfakturan.</p>
+<p>Leverantörsnamn Här visas leverantörens företagsnamn.</p>
+<p>Datum Här visas datumet då leverantörsfakturan skapades och utfärdades.</p>
+<p>Valuta Här visas leverantörsfakturans valuta.</p>
+<p>Konto nr Här visas de kontonummer som anges under leverantörsfakturans konteringsflik.</p>
+<p>Beskrivning Här visas kontobeskrivningen för framförvarande kontonummer.</p>
+<p>Debet Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörsfakturan.</p>
+<p>Kredit Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörsfakturan.</p>
+<p>Projekt Här visas projektet som har registrerats för framförvarande konto i leverantörsfakturan.</p>
+<p>Resultatenhet Här visas resultatenheten som har registrerats för framförvarande konto i leverantörsfakturan.</p>
+<p>Totalsumma Här visas leverantörsfakturans totala monetära värde inklusive moms angivet i leverantörsfakturans valuta.</p>
+<p>Varav moms Här visas leverantörsfakturans totala monetära värde för mervärdesskatt angivet i leverantörsfakturans valuta.</p>
+<p>Valutakurs Här visas leverantörsfakturans valutakurs, valutakursen visas som hur många enheter av redovisningsvalutan du måste betala för en enhet av
+valutan som är angiven i leverantörsfakturan.</p>
+<p>Totalt redovisningsvaluta Här visas leverantörsfakturans totala monetära värde inklusive moms angivet i redovisningsvalutan, det här värdet
+beräknas genom att "Totalsumma" multipliceras med "Valutakurs".</p>
+<p>Bokföringsunderlag Konto Här visas de kontonummer som ska användas vid bokföring av leverantörsfakturajournalen.</p>
+<p>Beskrivning Här visas kontobeskrivningen för framförvarande kontonummer.</p>
+<p>Projekt Här visas projektet som skall bokföras för framförvarande konto.</p>
+<p>Resultatenhet Här visas resultatenheten som skall bokföras för framförvarande konto.</p>
+<p>Debet Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</p>
+<p>Kredit Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</p>
 
-<SPAN CLASS="undermeny">Konto nr</SPAN><BR>
-<SPAN CLASS="text">Här visas de kontonummer som anges under leverantörsfakturans konteringsflik.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Beskrivning</SPAN><BR>
-<SPAN CLASS="text">Här visas kontobeskrivningen för framförvarande kontonummer.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Debet</SPAN><BR>
-<SPAN CLASS="text">Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörsfakturan.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Kredit</SPAN><BR>
-<SPAN CLASS="text">Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörsfakturan.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Projekt</SPAN><BR>
-<SPAN CLASS="text">Här visas projektet som har registrerats för framförvarande konto i leverantörsfakturan.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Resultatenhet</SPAN><BR>
-<SPAN CLASS="text">Här visas resultatenheten som har registrerats för framförvarande konto i leverantörsfakturan.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Totalsumma</SPAN><BR>
-<SPAN CLASS="text">Här visas leverantörsfakturans totala monetära värde inklusive moms angivet i leverantörsfakturans valuta.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Varav moms</SPAN><BR>
-<SPAN CLASS="text">Här visas leverantörsfakturans totala monetära värde för mervärdesskatt angivet i leverantörsfakturans valuta.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Valutakurs</SPAN><BR>
-<SPAN CLASS="text">Här visas leverantörsfakturans valutakurs, valutakursen visas som hur många enheter av redovisningsvalutan du måste betala för en enhet av
-valutan som är angiven i leverantörsfakturan.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Totalt redovisningsvaluta</SPAN><BR>
-<SPAN CLASS="text">Här visas leverantörsfakturans totala monetära värde inklusive moms angivet i redovisningsvalutan, det här värdet
-beräknas genom att "Totalsumma" multipliceras med "Valutakurs".</SPAN><BR><BR>
-<SPAN CLASS="flik">Bokföringsunderlag</SPAN><BR>
-<SPAN CLASS="undermeny">Konto</SPAN><BR>
-<SPAN CLASS="text">Här visas de kontonummer som ska användas vid bokföring av leverantörsfakturajournalen.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Beskrivning</SPAN><BR>
-<SPAN CLASS="text">Här visas kontobeskrivningen för framförvarande kontonummer.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Projekt</SPAN><BR>
-<SPAN CLASS="text">Här visas projektet som skall bokföras för framförvarande konto.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Resultatenhet</SPAN><BR>
-<SPAN CLASS="text">Här visas resultatenheten som skall bokföras för framförvarande konto.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Debet</SPAN><BR>
-<SPAN CLASS="text">Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</SPAN><BR><BR>
-<SPAN CLASS="undermeny">Kredit</SPAN><BR>
-<SPAN CLASS="text">Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</SPAN><BR><BR>
 
-<hr>
-<SPAN CLASS="copyright">Copyright 2006-©-Fribok Bokföring</SPAN><BR>
-</td></tr></table></body>
-
+</body>
 </html>
