@@ -1,4 +1,4 @@
-/* Bokfri help pages — with sidebar navigation */
+/* Bokfri help pages — colors from logo */
 
 *,
 *::before,
@@ -12,8 +12,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  color: #1a1a2e;
-  background: #f8f9fa;
+  color: #16353b;
+  background: #f4e9d8;
 }
 
 .layout {
@@ -25,25 +25,25 @@ body {
 .sidebar {
   width: 260px;
   flex-shrink: 0;
-  background: #16213e;
-  color: #ccc;
+  background: #16353b;
+  color: #c4b49e;
   padding: 2rem 1.5rem;
   overflow-y: auto;
   font-size: 0.9rem;
 }
 
 .sidebar h2 a {
-  color: #fff;
+  color: #f4e9d8;
   font-size: 1.2rem;
   text-decoration: none;
   display: block;
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(244,233,216,0.2);
 }
 
 .sidebar h2 a:hover {
-  color: #7dd3fc;
+  color: #c86845;
 }
 
 .sidebar .toc {
@@ -53,7 +53,7 @@ body {
 
 .sidebar .section {
   margin-bottom: 1rem;
-  color: #94a3b8;
+  color: #c86845;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -71,7 +71,7 @@ body {
 }
 
 .sidebar .section ul a {
-  color: #cbd5e1;
+  color: #c4b49e;
   text-decoration: none;
   display: block;
   padding: 0.2rem 0;
@@ -79,13 +79,13 @@ body {
 }
 
 .sidebar .section ul a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.08);
+  color: #f4e9d8;
+  background: rgba(244,233,216,0.08);
 }
 
 .sidebar .section ul a.current {
-  color: #7dd3fc;
-  background: rgba(125,211,252,0.1);
+  color: #f4e9d8;
+  background: rgba(200,104,69,0.15);
   font-weight: 600;
 }
 
@@ -104,15 +104,15 @@ body {
 
 .content h1 {
   font-size: 1.8rem;
-  color: #16213e;
+  color: #16353b;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #c86845;
 }
 
 .content h2 {
   font-size: 1.3rem;
-  color: #0f3460;
+  color: #c86845;
   margin: 1.5rem 0 0.5rem;
 }
 
@@ -130,24 +130,24 @@ body {
 }
 
 .content a {
-  color: #0f3460;
+  color: #c86845;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .content a:hover {
-  color: #16213e;
+  color: #16353b;
 }
 
 /* Breadcrumb */
 .breadcrumb {
   margin-bottom: 1rem;
   font-size: 0.85rem;
-  color: #888;
+  color: #8a7a6a;
 }
 
 .breadcrumb a {
-  color: #888;
+  color: #8a7a6a;
 }
 
 /* Prev/Next navigation */
@@ -156,12 +156,12 @@ body {
   justify-content: space-between;
   margin-top: 2.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #c86845;
   font-size: 0.95rem;
 }
 
 .page-nav a {
-  color: #0f3460;
+  color: #c86845;
   text-decoration: none;
 }
 
@@ -184,22 +184,22 @@ dl {
 
 dt {
   font-weight: 600;
-  color: #0f3460;
+  color: #c86845;
   margin-bottom: 0.15rem;
 }
 
 dd {
   margin-bottom: 0.75rem;
   margin-left: 0;
-  color: #1a1a2e;
+  color: #16353b;
 }
 
 .copyright {
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #c86845;
   font-size: 0.85rem;
-  color: #888;
+  color: #8a7a6a;
 }
 
 /* Mobile: stack sidebar above content */
@@ -220,8 +220,8 @@ dd {
 /* Hamburger toggle for mobile */
 .sidebar-toggle {
   display: none;
-  background: #16213e;
-  color: #fff;
+  background: #16353b;
+  color: #f4e9d8;
   border: none;
   padding: 0.75rem 1.25rem;
   font-size: 1rem;
