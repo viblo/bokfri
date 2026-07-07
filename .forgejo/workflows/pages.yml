@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'website/**'
-      - 'doc/helpjar/html/**'
       - '.forgejo/workflows/pages.yml'
   workflow_dispatch:
 
@@ -17,27 +16,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Prepare site
-      run: |
-        # Assemble landing page and help documentation into _deploy
-        mkdir -p _deploy
-
-        # Landing page
-        cp -r website/* _deploy/
-
-        # Help documentation (migrated from JavaHelp)
-        if [ -d "doc/helpjar/html" ]; then
-          mkdir -p _deploy/help
-          cp -r doc/helpjar/html/* _deploy/help/
-        fi
-
-        echo "Site contents:"
-        find _deploy -type f | sort | head -30
-
     - name: Deploy to Codeberg Pages
       uses: https://codeberg.org/git-pages/action@v2
       with:
         site: https://bokfri.viblo.se/
         server: codeberg.page
         token: ${{ forge.token }}
-        source: _deploy/
+        source: website/
