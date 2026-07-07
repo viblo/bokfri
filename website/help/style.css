@@ -96,6 +96,147 @@ body {
   padding: 2rem 2.5rem;
 }
 
+/* Hero and search on index page */
+.content-index {
+  max-width: 900px;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  color: #16353b;
+  border: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.hero-sub {
+  color: #8a7a6a;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.search-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#help-search {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-size: 1.05rem;
+  border: 2px solid #c86845;
+  border-radius: 8px;
+  background: #fff;
+  color: #16353b;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(22,53,59,0.1);
+}
+
+#help-search::placeholder {
+  color: #b0a08a;
+}
+
+#help-search:focus {
+  border-color: #16353b;
+  box-shadow: 0 2px 12px rgba(22,53,59,0.15);
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #c86845;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(22,53,59,0.15);
+}
+
+.search-results.hidden {
+  display: none;
+}
+
+.search-item {
+  display: block;
+  padding: 0.7rem 1.25rem;
+  color: #16353b;
+  text-decoration: none;
+  border-bottom: 1px solid #f4e9d8;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item:hover {
+  background: #f4e9d8;
+}
+
+.search-item span {
+  display: block;
+  color: #16353b;
+}
+
+.search-item small {
+  display: block;
+  color: #8a7a6a;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  padding-bottom: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e0d5c4;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(22,53,59,0.12);
+  border-color: #c86845;
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  color: #16353b;
+  margin-bottom: 0.25rem;
+}
+
+.card-count {
+  font-size: 0.8rem;
+  color: #8a7a6a;
+}
+
 .content header img {
   max-width: 100%;
   height: auto;
