@@ -1,4 +1,4 @@
-/* Bokfri help pages — matches landing page style */
+/* Bokfri help pages — with sidebar navigation */
 
 *,
 *::before,
@@ -14,22 +14,95 @@ body {
   line-height: 1.6;
   color: #1a1a2e;
   background: #f8f9fa;
-  max-width: 720px;
-  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #16213e;
+  color: #ccc;
   padding: 2rem 1.5rem;
+  overflow-y: auto;
+  font-size: 0.9rem;
 }
 
-header {
-  margin-bottom: 1.5rem;
+.sidebar h2 a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
-header img {
+.sidebar h2 a:hover {
+  color: #7dd3fc;
+}
+
+.sidebar .toc {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .section {
+  margin-bottom: 1rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.sidebar .section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.25rem;
+}
+
+.sidebar .section ul li {
+  margin-bottom: 0.15rem;
+}
+
+.sidebar .section ul a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0;
+  border-radius: 3px;
+}
+
+.sidebar .section ul a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.sidebar .section ul a.current {
+  color: #7dd3fc;
+  background: rgba(125,211,252,0.1);
+  font-weight: 600;
+}
+
+/* Main content area */
+.content {
+  flex: 1;
+  max-width: 720px;
+  padding: 2rem 2.5rem;
+}
+
+.content header img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-h1 {
+.content h1 {
   font-size: 1.8rem;
   color: #16213e;
   margin-bottom: 1rem;
@@ -37,55 +110,71 @@ h1 {
   border-bottom: 2px solid #e0e0e0;
 }
 
-h2 {
+.content h2 {
   font-size: 1.3rem;
   color: #0f3460;
   margin: 1.5rem 0 0.5rem;
 }
 
-p {
+.content p {
   margin-bottom: 0.75rem;
 }
 
-ul, ol {
+.content ul, .content ol {
   padding-left: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
-li {
+.content li {
   margin-bottom: 0.25rem;
 }
 
-a {
+.content a {
   color: #0f3460;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-a:hover {
+.content a:hover {
   color: #16213e;
 }
 
-.nav {
-  margin-bottom: 1.5rem;
+/* Breadcrumb */
+.breadcrumb {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #888;
 }
 
-.nav a {
+.breadcrumb a {
+  color: #888;
+}
+
+/* Prev/Next navigation */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
   font-size: 0.95rem;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 1.5rem 0;
+.page-nav a {
+  color: #0f3460;
+  text-decoration: none;
 }
 
-.copyright {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e0e0e0;
-  font-size: 0.85rem;
-  color: #888;
+.page-nav a:hover {
+  text-decoration: underline;
+}
+
+.page-nav .prev::before {
+  content: "← ";
+}
+
+.page-nav .next::after {
+  content: " →";
 }
 
 /* Definition list for field descriptions */
@@ -103,4 +192,49 @@ dd {
   margin-bottom: 0.75rem;
   margin-left: 0;
   color: #1a1a2e;
+}
+
+.copyright {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Mobile: stack sidebar above content */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    max-height: 40vh;
+  }
+  .content {
+    padding: 1.5rem;
+  }
+}
+
+/* Hamburger toggle for mobile */
+.sidebar-toggle {
+  display: none;
+  background: #16213e;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+  .sidebar.hidden {
+    display: none;
+  }
 }
