@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Skapa offert</title>
+<title>Skapa offert</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,124 +14,240 @@
 
 <h1>Skapa offert</h1>
 
-<p>I det här formuläret registrerar du nya offerter. En offert är ett erbjudande till en kund gällande kvantitet
-och pris. Du tar bort produktrader genom att markera produktraden och trycka på knappen "Del" på tangentbordet.</p>
+<p>I det här formuläret registrerar du nya offerter. En offert är ett erbjudande till en kund gällande kvantitet</p>
+<p>och pris. Du tar bort produktrader genom att markera produktraden och trycka på knappen "Del" på tangentbordet.</p>
 <p>Följande flikar och fält finns när du skall registrera en ny offert:</p>
-<p>Offertuppgifter Offertnummer Här uppräknas ett unikt nummer enligt en sekventiell nummerserie för att kunna identifiera en offert .</p>
-<p>Kundnummer Här kan du välja en redan registrerad kund för offerten och få data om kunden hämtad till offerten. Du behöver inte
-välja en kund i uppslagskolumnen utan kan ändå skapa en offert.</p>
-<p>Kundnamn Här skriver du in kundens företagsnamn eller personnamn.</p>
-<p>Vår kontaktperson Här skriver du in ert företags kontaktperson för frågor när det gäller den här offerten.</p>
-<p>Er kontaktperson Här skriver du in kundens kontaktperson för frågor när det gäller den här offerten.</p>
-<p>Offertdatum Här skriver du in eller väljer ett datum för offerten. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Giltig tom Här skriver du in eller väljer ett datum som offerten är giltig till. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Betalningsvillkor Här väljer du betalningsvillkor för offerten.
-Du kan lägga till, ändra och ta bort betalningsvillkor med hjälp av knappen längst till
-höger om textfältet för betalningsvillkor. När du väljer ändra eller ta bort så avses det betalningsvillkor som visas i textrutan.</p>
-<p>Leveransvillkor Här väljer du leveransvillkor för offerten.
-Du kan lägga till, ändra och ta bort leveransvillkor med hjälp av knappen längst till
-höger om textfältet för leveransvillkor. När du väljer ändra eller ta bort så avses det leveransvillkor som visas i textrutan.</p>
-<p>Leveranssätt Här väljer du leveranssätt för offerten.
-Du kan lägga till, ändra och ta bort leveranssätt med hjälp av knappen längst till
-höger om textfältet för leveranssätt. När du väljer ändra eller ta bort så avses det leveranssätt som visas i textrutan.</p>
-<p>Valuta Här väljer du valuta för offerten. Du kan lägga till, ändra och ta bort valuta med hjälp av knappen näst längst till
-höger om textfältet för valuta. När du väljer ändra eller ta bort så avses den valuta som visas i textrutan. Med hjälp av miniräknaren längst
-till höger om textfältet för valuta kan du räkna om priserna i "Enhetspris" i hela offerten till vald valuta. Du måste ha angett en
-redovisningsvaluta i företagsinställningarna och valt en valuta för offerten.</p>
-<p>Valutakurs Här skriver du in valutakursen på offertdatum för offerten då offerten ställs ut i en valuta skild från
-redovisningsvalutan. Du skriver in valutakursen som hur många enheter av redovisningsvalutan du måste betala för en enhet av
-valutan som är angiven i offerten.</p>
-<p>Lägg automatiskt till nya kunder och produkter i kund- och produktregister Kryssa i den här rutan om du vill att en tillagd kund eller tillagda produkter i offerten som inte redan
-finns i respektive register skall läggas till i dessa register automatiskt.</p>
-<p>Produktnr Här skriver du in eller väljer en produkt från uppslagskolumnen. Du kan skriva in ett helt nytt
-produktnummer som inte finns sparat sedan tidigare i produktregistret.</p>
-<p>Beskrivning Här visas produktens beskrivning om du valt en produkt från produktregistret, du kan ändra den här beskrivningen
-eller skriva en helt egen om beskrivning saknas.</p>
-<p>Enhetspris Här visas produktens enhetspris om du valt en produkt från produktregistret, du kan ändra det här priset
-eller skriva in ett eget pris om enhetspris saknas.</p>
-<p>TB Här visas produktens täckningsbidrag angivet i redovisningsvalutan. Täckningsbidraget beräknas som "Enhetspris"
-minus "Senaste inpris", där senaste inpris är angivet i redovisningsvalutan. Om du ändrar enhetspris eller valuta räknas täkningsbidraget
-om. När du ändrar valuta räknas täkningsbidraget om enligt den valutakurs som är standardkurs för valutan, du kan ändra den här standardkursen
-för valutan direkt i offerten.</p>
-<p>Antal Här skriver du in antalet enheter för produkten som ska vara med i offerten.</p>
-<p>Enhet Här visas produktens enhet om du valt en produkt från produktregistret, du kan ändra den här enheten till en annan
-eller välja en enhet om enhet saknas.</p>
-<p>Rabatt Här visas en radrabatt i procent om du valt en kund från kundregistret, du kan ändra den här rabatten eller skriva
-in en egen rabatt om rabatt saknas.</p>
-<p>Summa Här visas radens nettosumma exklusive moms, summa beräknas från enhetspris, antal och rabatt.</p>
-<p>Moms Här visas produktens momssats om du valt en produkt från produktregistret, du kan välja en annan momssats genom att
-dubbelklicka i fältet.</p>
-<p>Kunduppgifter Fakturaadress: Namn Här visas kundens företagsnamn eller personnamn för fakturering om du har valt en kund från kundregistret, du kan ändra
-det här namnet eller skriva in ett nytt namn.</p>
-<p>Fakturaadress: Adress Här visas kundens postadress för fakturering om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Fakturaadress: Adress2 Här visas kundens andra postadress för fakturering om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Fakturaadress: Postnummer Här visas kundens postnummer för fakturering om du har valt en kund från kundregistret, du kan ändra
-det här postnumret eller skriva in ett nytt postnummer.</p>
-<p>Fakturaadress: Postort Här visas kundens postort för fakturering om du har valt en kund från kundregistret, du kan ändra
-den här postorten eller skriva in en ny postort.</p>
-<p>Fakturaadress: Land Här visas kundens land för fakturering om du har valt en kund från kundregistret, du kan ändra
-det här landet eller skriva in ett nytt land.</p>
-<p>Leveransadress: Namn Här visas kundens företagsnamn eller personnamn för leverans om du har valt en kund från kundregistret, du kan ändra
-det här namnet eller skriva in ett nytt namn.</p>
-<p>Leveransadress: Adress Här visas kundens postadress för leverans om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Leveransadress: Adress2 Här visas kundens andra postadress för leverans om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Leveransadress: Postnummer Här visas kundens postnummer för leverans om du har valt en kund från kundregistret, du kan ändra
-det här postnumret eller skriva in ett nytt postnummer.</p>
-<p>Leveransadress: Postort Här visas kundens postort för leverans om du har valt en kund från kundregistret, du kan ändra
-den här postorten eller skriva in en ny postort.</p>
-<p>Leveransadress: Land Här visas kundens land för leverans om du har valt en kund från kundregistret, du kan ändra
-det här landet eller skriva in ett nytt land.</p>
-<p>Offerttext Här visas offerttexten från företagsinställningarna, du kan ändra den här standardtexten för den här offerten eller
-skriva in en ny text om offerttext saknas.</p>
-<p>Dröjsmålsränta Här visas dröjsmålsräntan hämtad från företagsinställningarna, du kan ändra den här dröjsmålsräntan för den här offerten eller skriva in
-en ny dröjsmålsränta om dröjsmålsränta saknas.</p>
-<p>EU-försäljning varor Kryssa i den här rutan om den här offerten avser försäljning och leverans av varor till ett annat EU-land utanför Sverige. Du kan inte
-kryssa i "EU-försäljning trepart varor" om den här rutan är ikryssad.</p>
-<p>EU-försäljning trepart varor Kryssa i den här rutan om den här offerten avser försäljning till ett annat EU-land utanför Sverige där ert företag är mellanman.
-Det här är aktuellt om tre EU-länder är inblandade i en transaktion och ert företag säljer varor till ett EU-land där varorna levereras till
-det här EU-landet direkt från ett annat EU-land. Du kan inte kryssa i "EU-försäljning varor" om den här rutan är ikryssad.</p>
-<p>Konton och moms Kundfordran Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inbetalning Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Utbetalning Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Kontant Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Leverantörsskuld Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 1 Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 2 Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 3 Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Försäljning Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inköp Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursvinst Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursförlust Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Öresavrundning Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ränteintäkt Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ingående moms Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Momsfri Kryssa i den här rutan om din försäljning till den här kunden är momsfri, det vill säga då någon moms inte skall
-läggas till på fakturan.</p>
-<p>Momskod 1 Här visas procentuell moms för momskod 1 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</p>
-<p>Momskod 2 Här visas procentuell moms för momskod 2 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</p>
-<p>Momskod 3 Här visas procentuell moms för momskod 3 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</p>
-
+<p>Offertuppgifter</p>
+<dl>
+  <dt>Offertnummer</dt>
+  <dd>Här uppräknas ett unikt nummer enligt en sekventiell nummerserie för att kunna identifiera en offert .</dd>
+</dl>
+<dl>
+  <dt>Kundnummer</dt>
+  <dd>Här kan du välja en redan registrerad kund för offerten och få data om kunden hämtad till offerten. Du behöver inte välja en kund i uppslagskolumnen utan kan ändå skapa en offert.</dd>
+</dl>
+<dl>
+  <dt>Kundnamn</dt>
+  <dd>Här skriver du in kundens företagsnamn eller personnamn.</dd>
+</dl>
+<dl>
+  <dt>Vår kontaktperson</dt>
+  <dd>Här skriver du in ert företags kontaktperson för frågor när det gäller den här offerten.</dd>
+</dl>
+<dl>
+  <dt>Er kontaktperson</dt>
+  <dd>Här skriver du in kundens kontaktperson för frågor när det gäller den här offerten.</dd>
+</dl>
+<dl>
+  <dt>Offertdatum</dt>
+  <dd>Här skriver du in eller väljer ett datum för offerten. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Giltig tom</dt>
+  <dd>Här skriver du in eller väljer ett datum som offerten är giltig till. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Betalningsvillkor</dt>
+  <dd>Här väljer du betalningsvillkor för offerten. Du kan lägga till, ändra och ta bort betalningsvillkor med hjälp av knappen längst till höger om textfältet för betalningsvillkor. När du väljer ändra eller ta bort så avses det betalningsvillkor som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Leveransvillkor</dt>
+  <dd>Här väljer du leveransvillkor för offerten. Du kan lägga till, ändra och ta bort leveransvillkor med hjälp av knappen längst till höger om textfältet för leveransvillkor. När du väljer ändra eller ta bort så avses det leveransvillkor som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Leveranssätt</dt>
+  <dd>Här väljer du leveranssätt för offerten. Du kan lägga till, ändra och ta bort leveranssätt med hjälp av knappen längst till höger om textfältet för leveranssätt. När du väljer ändra eller ta bort så avses det leveranssätt som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Valuta</dt>
+  <dd>Här väljer du valuta för offerten. Du kan lägga till, ändra och ta bort valuta med hjälp av knappen näst längst till höger om textfältet för valuta. När du väljer ändra eller ta bort så avses den valuta som visas i textrutan. Med hjälp av miniräknaren längst till höger om textfältet för valuta kan du räkna om priserna i "Enhetspris" i hela offerten till vald valuta. Du måste ha angett en redovisningsvaluta i företagsinställningarna och valt en valuta för offerten.</dd>
+</dl>
+<dl>
+  <dt>Valutakurs</dt>
+  <dd>Här skriver du in valutakursen på offertdatum för offerten då offerten ställs ut i en valuta skild från redovisningsvalutan. Du skriver in valutakursen som hur många enheter av redovisningsvalutan du måste betala för en enhet av valutan som är angiven i offerten.</dd>
+</dl>
+<dl>
+  <dt>Lägg automatiskt till nya kunder och produkter i kund- och produktregister</dt>
+  <dd>Kryssa i den här rutan om du vill att en tillagd kund eller tillagda produkter i offerten som inte redan finns i respektive register skall läggas till i dessa register automatiskt.</dd>
+</dl>
+<dl>
+  <dt>Produktnr</dt>
+  <dd>Här skriver du in eller väljer en produkt från uppslagskolumnen. Du kan skriva in ett helt nytt produktnummer som inte finns sparat sedan tidigare i produktregistret.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas produktens beskrivning om du valt en produkt från produktregistret, du kan ändra den här beskrivningen eller skriva en helt egen om beskrivning saknas.</dd>
+</dl>
+<dl>
+  <dt>Enhetspris</dt>
+  <dd>Här visas produktens enhetspris om du valt en produkt från produktregistret, du kan ändra det här priset eller skriva in ett eget pris om enhetspris saknas.</dd>
+</dl>
+<dl>
+  <dt>TB</dt>
+  <dd>Här visas produktens täckningsbidrag angivet i redovisningsvalutan. Täckningsbidraget beräknas som "Enhetspris" minus "Senaste inpris", där senaste inpris är angivet i redovisningsvalutan. Om du ändrar enhetspris eller valuta räknas täkningsbidraget om. När du ändrar valuta räknas täkningsbidraget om enligt den valutakurs som är standardkurs för valutan, du kan ändra den här standardkursen för valutan direkt i offerten.</dd>
+</dl>
+<dl>
+  <dt>Antal</dt>
+  <dd>Här skriver du in antalet enheter för produkten som ska vara med i offerten.</dd>
+</dl>
+<dl>
+  <dt>Enhet</dt>
+  <dd>Här visas produktens enhet om du valt en produkt från produktregistret, du kan ändra den här enheten till en annan eller välja en enhet om enhet saknas.</dd>
+</dl>
+<dl>
+  <dt>Rabatt</dt>
+  <dd>Här visas en radrabatt i procent om du valt en kund från kundregistret, du kan ändra den här rabatten eller skriva in en egen rabatt om rabatt saknas.</dd>
+</dl>
+<dl>
+  <dt>Summa</dt>
+  <dd>Här visas radens nettosumma exklusive moms, summa beräknas från enhetspris, antal och rabatt.</dd>
+</dl>
+<dl>
+  <dt>Moms</dt>
+  <dd>Här visas produktens momssats om du valt en produkt från produktregistret, du kan välja en annan momssats genom att dubbelklicka i fältet.</dd>
+</dl>
+<p>Kunduppgifter</p>
+<dl>
+  <dt>Fakturaadress: Namn</dt>
+  <dd>Här visas kundens företagsnamn eller personnamn för fakturering om du har valt en kund från kundregistret, du kan ändra det här namnet eller skriva in ett nytt namn.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Adress</dt>
+  <dd>Här visas kundens postadress för fakturering om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Adress2</dt>
+  <dd>Här visas kundens andra postadress för fakturering om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Postnummer</dt>
+  <dd>Här visas kundens postnummer för fakturering om du har valt en kund från kundregistret, du kan ändra det här postnumret eller skriva in ett nytt postnummer.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Postort</dt>
+  <dd>Här visas kundens postort för fakturering om du har valt en kund från kundregistret, du kan ändra den här postorten eller skriva in en ny postort.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Land</dt>
+  <dd>Här visas kundens land för fakturering om du har valt en kund från kundregistret, du kan ändra det här landet eller skriva in ett nytt land.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Namn</dt>
+  <dd>Här visas kundens företagsnamn eller personnamn för leverans om du har valt en kund från kundregistret, du kan ändra det här namnet eller skriva in ett nytt namn.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Adress</dt>
+  <dd>Här visas kundens postadress för leverans om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Adress2</dt>
+  <dd>Här visas kundens andra postadress för leverans om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Postnummer</dt>
+  <dd>Här visas kundens postnummer för leverans om du har valt en kund från kundregistret, du kan ändra det här postnumret eller skriva in ett nytt postnummer.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Postort</dt>
+  <dd>Här visas kundens postort för leverans om du har valt en kund från kundregistret, du kan ändra den här postorten eller skriva in en ny postort.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Land</dt>
+  <dd>Här visas kundens land för leverans om du har valt en kund från kundregistret, du kan ändra det här landet eller skriva in ett nytt land.</dd>
+</dl>
+<dl>
+  <dt>Offerttext</dt>
+  <dd>Här visas offerttexten från företagsinställningarna, du kan ändra den här standardtexten för den här offerten eller skriva in en ny text om offerttext saknas.</dd>
+</dl>
+<dl>
+  <dt>Dröjsmålsränta</dt>
+  <dd>Här visas dröjsmålsräntan hämtad från företagsinställningarna, du kan ändra den här dröjsmålsräntan för den här offerten eller skriva in en ny dröjsmålsränta om dröjsmålsränta saknas.</dd>
+</dl>
+<dl>
+  <dt>EU-försäljning varor</dt>
+  <dd>Kryssa i den här rutan om den här offerten avser försäljning och leverans av varor till ett annat EU-land utanför Sverige. Du kan inte kryssa i "EU-försäljning trepart varor" om den här rutan är ikryssad.</dd>
+</dl>
+<dl>
+  <dt>EU-försäljning trepart varor</dt>
+  <dd>Kryssa i den här rutan om den här offerten avser försäljning till ett annat EU-land utanför Sverige där ert företag är mellanman. Det här är aktuellt om tre EU-länder är inblandade i en transaktion och ert företag säljer varor till ett EU-land där varorna levereras till det här EU-landet direkt från ett annat EU-land. Du kan inte kryssa i "EU-försäljning varor" om den här rutan är ikryssad.</dd>
+</dl>
+<p>Konton och moms</p>
+<dl>
+  <dt>Kundfordran</dt>
+  <dd>Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inbetalning</dt>
+  <dd>Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Utbetalning</dt>
+  <dd>Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Kontant</dt>
+  <dd>Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Leverantörsskuld</dt>
+  <dd>Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 1</dt>
+  <dd>Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 2</dt>
+  <dd>Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 3</dt>
+  <dd>Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Försäljning</dt>
+  <dd>Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inköp</dt>
+  <dd>Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursvinst</dt>
+  <dd>Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursförlust</dt>
+  <dd>Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Öresavrundning</dt>
+  <dd>Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ränteintäkt</dt>
+  <dd>Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ingående moms</dt>
+  <dd>Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här offerten eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Momsfri</dt>
+  <dd>Kryssa i den här rutan om din försäljning till den här kunden är momsfri, det vill säga då någon moms inte skall läggas till på fakturan.</dd>
+</dl>
+<dl>
+  <dt>Momskod 1</dt>
+  <dd>Här visas procentuell moms för momskod 1 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</dd>
+</dl>
+<dl>
+  <dt>Momskod 2</dt>
+  <dd>Här visas procentuell moms för momskod 2 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</dd>
+</dl>
+<dl>
+  <dt>Momskod 3</dt>
+  <dd>Här visas procentuell moms för momskod 3 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</dd>
+</dl>
 
 </body>
 </html>

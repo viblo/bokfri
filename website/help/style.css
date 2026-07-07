@@ -88,13 +88,19 @@ hr {
   color: #888;
 }
 
-/* Tab / submenu style preserved from original */
-.flik {
-  font-weight: 600;
-  color: #0f3460;
+/* Definition list for field descriptions */
+dl {
+  margin-bottom: 1rem;
 }
 
-.undermeny {
-  font-style: italic;
-  color: #555;
+dt {
+  font-weight: 600;
+  color: #0f3460;
+  margin-bottom: 0.15rem;
+}
+
+dd {
+  margin-bottom: 0.75rem;
+  margin-left: 0;
+  color: #1a1a2e;
 }

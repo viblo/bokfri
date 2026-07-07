@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Leverantörskreditfakturajournal</title>
+<title>Leverantörskreditfakturajournal</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,43 +14,105 @@
 
 <h1>Leverantörskreditfakturajournal</h1>
 
-<p>Den här rapporten listar leverantörskreditfakturor mellan två datum och visar hur varje leverantörskreditfaktura kommer att bokföras och hur de bidrar
-till den totala bokföringsposten i bokföringsunderlaget på sista sidan i den här rapporten.</p>
-<p>När du ska skriva ut leverantörskreditfakturajournalen
-kan du välja startdatum och slutdatum för fakturadatum för att få med alla icke bokförda leverantörskreditfakturor under vald period i leverantörskreditfakturajournalen.
-Leverantörskreditfakturajournalen används för att bokföra flera leverantörskreditfakturor under en månad automatiskt i en verifikation.</p>
-<p>I leverantörskreditfakturajournalen är det viktigt
-att kontrollera leverantörskreditfakturornas nummerserie, att det inte finns några luckor i nummerserien, så att inte vissa leverantörskreditfakturor utelämnas i bokföringen.
-Du bör även kontrollera att rätt kontonummer har använts vid bokföring av leverantörskreditfakturorna, du kan ändra konteringen för de enskilda leverantörskreditfakturorna
-tills leverantörskreditfakturajournalen med aktuella leverantörskreditfakturor har godkänts och bokförts.</p>
-<p>När du har skrivit ut leverantörskreditfakturajournalen kommer du få en fråga om
-ni vill godkänna och bokföra leverantörskreditfakturajournalen, om du svarar "Ja" på den här frågan så kommer leverantörskreditfakturajournalen bokföras automatiskt enligt bokföringsunderlaget.
-Bokföringsunderlaget utgör en verifikation för konteringen.</p>
+<p>Den här rapporten listar leverantörskreditfakturor mellan två datum och visar hur varje leverantörskreditfaktura kommer att bokföras och hur de bidrar</p>
+<p>till den totala bokföringsposten i bokföringsunderlaget på sista sidan i den här rapporten.</p>
+<p>När du ska skriva ut leverantörskreditfakturajournalen</p>
+<p>kan du välja startdatum och slutdatum för fakturadatum för att få med alla icke bokförda leverantörskreditfakturor under vald period i leverantörskreditfakturajournalen.</p>
+<p>Leverantörskreditfakturajournalen används för att bokföra flera leverantörskreditfakturor under en månad automatiskt i en verifikation.</p>
+<p>I leverantörskreditfakturajournalen är det viktigt</p>
+<p>att kontrollera leverantörskreditfakturornas nummerserie, att det inte finns några luckor i nummerserien, så att inte vissa leverantörskreditfakturor utelämnas i bokföringen.</p>
+<p>Du bör även kontrollera att rätt kontonummer har använts vid bokföring av leverantörskreditfakturorna, du kan ändra konteringen för de enskilda leverantörskreditfakturorna</p>
+<p>tills leverantörskreditfakturajournalen med aktuella leverantörskreditfakturor har godkänts och bokförts.</p>
+<p>När du har skrivit ut leverantörskreditfakturajournalen kommer du få en fråga om</p>
+<p>ni vill godkänna och bokföra leverantörskreditfakturajournalen, om du svarar "Ja" på den här frågan så kommer leverantörskreditfakturajournalen bokföras automatiskt enligt bokföringsunderlaget.</p>
+<p>Bokföringsunderlaget utgör en verifikation för konteringen.</p>
 <p>Följande sidor och fält finns i den här rapporten:</p>
-<p>Lev.kreditfakturajournal Faktura nr Här visas ett unikt internt löpnummer för varje registrerad leverantörskreditfaktura.</p>
-<p>Leverantörs nr Här visas leverantörsnumret på den leverantör som har skapat leverantörskreditfakturan.</p>
-<p>Leverantörsnamn Här visas leverantörens företagsnamn.</p>
-<p>Datum Här visas datumet då leverantörskreditfakturan skapades och utfärdades av leverantören.</p>
-<p>Valuta Här visas leverantörskreditfakturans valuta.</p>
-<p>Konto nr Här visas de kontonummer som anges under leverantörskreditfakturans konteringsflik.</p>
-<p>Beskrivning Här visas kontobeskrivningen för framförvarande kontonummer.</p>
-<p>Debet Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörskreditfakturan.</p>
-<p>Kredit Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörskreditfakturan.</p>
-<p>Projekt Här visas projektet som har registrerats för framförvarande konto i leverantörskreditfakturan.</p>
-<p>Resultatenhet Här visas resultatenheten som har registrerats för framförvarande konto i leverantörskreditfakturan.</p>
-<p>Totalsumma Här visas leverantörskreditfakturans totala monetära värde inklusive moms angivet i leverantörskreditfakturans valuta.</p>
-<p>Varav moms Här visas leverantörskreditfakturans totala monetära värde för mervärdesskatt angivet i leverantörskreditfakturans valuta.</p>
-<p>Valutakurs Här visas leverantörskreditfakturans valutakurs, valutakursen visas som hur många enheter av redovisningsvalutan du måste betala för en enhet av
-valutan som är angiven i leverantörskreditfakturan.</p>
-<p>Totalt redovisningsvaluta Här visas leverantörskreditfakturans totala monetära värde inklusive moms angivet i redovisningsvalutan, det här värdet
-beräknas genom att "Totalsumma" multipliceras med "Valutakurs".</p>
-<p>Bokföringsunderlag Konto Här visas de kontonummer som ska användas vid bokföring av leverantörskreditfakturajournalen.</p>
-<p>Beskrivning Här visas kontobeskrivningen för framförvarande kontonummer.</p>
-<p>Projekt Här visas projektet som skall bokföras för framförvarande konto.</p>
-<p>Resultatenhet Här visas resultatenheten som skall bokföras för framförvarande konto.</p>
-<p>Debet Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</p>
-<p>Kredit Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</p>
-
+<p>Lev.kreditfakturajournal</p>
+<dl>
+  <dt>Faktura nr</dt>
+  <dd>Här visas ett unikt internt löpnummer för varje registrerad leverantörskreditfaktura.</dd>
+</dl>
+<dl>
+  <dt>Leverantörs nr</dt>
+  <dd>Här visas leverantörsnumret på den leverantör som har skapat leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Leverantörsnamn</dt>
+  <dd>Här visas leverantörens företagsnamn.</dd>
+</dl>
+<dl>
+  <dt>Datum</dt>
+  <dd>Här visas datumet då leverantörskreditfakturan skapades och utfärdades av leverantören.</dd>
+</dl>
+<dl>
+  <dt>Valuta</dt>
+  <dd>Här visas leverantörskreditfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Konto nr</dt>
+  <dd>Här visas de kontonummer som anges under leverantörskreditfakturans konteringsflik.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas kontobeskrivningen för framförvarande kontonummer.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här visas ett monetärt belopp som har registrerats för framförvarande konto i leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här visas projektet som har registrerats för framförvarande konto i leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här visas resultatenheten som har registrerats för framförvarande konto i leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Totalsumma</dt>
+  <dd>Här visas leverantörskreditfakturans totala monetära värde inklusive moms angivet i leverantörskreditfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Varav moms</dt>
+  <dd>Här visas leverantörskreditfakturans totala monetära värde för mervärdesskatt angivet i leverantörskreditfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Valutakurs</dt>
+  <dd>Här visas leverantörskreditfakturans valutakurs, valutakursen visas som hur många enheter av redovisningsvalutan du måste betala för en enhet av valutan som är angiven i leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Totalt redovisningsvaluta</dt>
+  <dd>Här visas leverantörskreditfakturans totala monetära värde inklusive moms angivet i redovisningsvalutan, det här värdet beräknas genom att "Totalsumma" multipliceras med "Valutakurs".</dd>
+</dl>
+<p>Bokföringsunderlag</p>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här visas de kontonummer som ska användas vid bokföring av leverantörskreditfakturajournalen.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas kontobeskrivningen för framförvarande kontonummer.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här visas projektet som skall bokföras för framförvarande konto.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här visas resultatenheten som skall bokföras för framförvarande konto.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</dd>
+</dl>
 
 </body>
 </html>

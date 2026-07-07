@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Plocklista</title>
+<title>Plocklista</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,56 +14,167 @@
 
 <h1>Plocklista</h1>
 
-<p>Den här rapporten visar en plocklista. En plocklista ger lagerpersonalen befogenhet att plocka och packa produkter
-på lagret i paket för leverans till kund.</p>
-<p>Du skriver ut en plocklista genom att markera önskad order i listan över ordrar och trycka på knappen
-"Skriv ut ordrar" och därefter välja "Plocklista". En plocklista kan skrivas ut på både svenska och engelska.</p>
+<p>Den här rapporten visar en plocklista. En plocklista ger lagerpersonalen befogenhet att plocka och packa produkter</p>
+<p>på lagret i paket för leverans till kund.</p>
+<p>Du skriver ut en plocklista genom att markera önskad order i listan över ordrar och trycka på knappen</p>
+<p>"Skriv ut ordrar" och därefter välja "Plocklista". En plocklista kan skrivas ut på både svenska och engelska.</p>
 <p>Följande fält finns i den här rapporten:</p>
-<p>Ordernummer Här visas ett unikt nummer för att identifiera en order.</p>
-<p>Orderdatum Här visas datumet då ordern skapades och utfärdades.</p>
-<p>Leveransadress Här visas kundens leveransadress enligt ordern, den adress dit produkterna skall skickas.</p>
-<p>Fakturaadress Här visas kundens fakturaadress enligt ordern, den adress dit orderbekräftelsen skall skickas.</p>
-<p>Vår kontakt Här visas ert företags kontaktperson när det gäller frågor rörande den här ordern.</p>
-<p>Leveransvillkor Här visas leveransvillkoret för ordern, leveransvillkoret anger vem som ansvarar för leveransen mellan olika punkter
-på leveransrutten och vem som står för fraktkostnaden.</p>
-<p>Leveranssätt Här visas leveranssättet för ordern, leveranssättet anger på vilket sätt och med vilket transportmedel produkterna levereras till kunden.</p>
-<p>Betalningsvillkor Här visas betalningsvillkoret för ordern, betalningsvillkoret anger kredittiden för när en faktura skall betalas efter
-fakturans utfärdande.</p>
-<p>Dröjsmålsränta Här visas dröjsmålsräntan för ordern, dröjsmålsräntan anger med vilken räntesats på årsbasis ränta ska beräknas
-och faktureras vid för sen betalning av fakturan.</p>
-<p>Ert kundnummer Här visas kundnumret för den kund som ordern är skapad för.</p>
-<p>Er kontakt Här visas kundens kontaktperson när det gäller frågor rörande den här ordern.</p>
-<p>Ert ordernummer Här visas kundens order- eller avtalsnummer så att kunden kan knyta orderbekräftelsen från ert företag till
-sin egen beställning eller till ett avtal mellan ert företag och kunden.</p>
-<p>Beräknad leverans Här visas en beräknad leveranstid eller ett beräknat leveransdatum för produkterna i ordern.</p>
-<p>Produkt nr Här visas ett unikt nummer för de produkter som ingår i ordern och som finns upplagda i produktregistret.
-Saknas ett produktnummer beror det på att produkten inte finns upplagd i produktregistret.</p>
-<p>Beskrivning Här visas produktens namn eller beskrivning enligt ordern.</p>
-<p>Lagerplats Här visas var produkten finns att hitta, en kod för lagerplatsen.</p>
-<p>Antal Här visas antalet enheter av produkten som skall plockas och packas till kunden.</p>
-<p>Antal plockat Här kan du manuellt fylla i antalet enheter av varje produkt som har blivit plockade och packade för ordern.</p>
-<p>Total vikt Här visas den totala vikten för alla produkter i hela ordern i den viktenhet som angivits i företagsinställningarna.</p>
-<p>Total volym Här visas den totala volymen för alla produkter i hela ordern i den volymenhet som angivits i företagsinställningarna.</p>
-<p>Ordertext Här visas en frivillig text eller ett meddelande till kunden för ordern.</p>
-<p>Företagsnamn Här visas ert företags företagsnamn enligt företagsinställningarna.</p>
-<p>Adress Här visas ert företags postadress enligt företagsinställningarna.</p>
-<p>Adress2 Här visas ert företags andra rad för postadress enligt företagsinställningarna.</p>
-<p>Postnummer Här visas ert företags postnummer enligt företagsinställningarna.</p>
-<p>Postort Här visas ert företags postort enligt företagsinställningarna.</p>
-<p>Land Här visas ert företags land enligt företagsinställningarna.</p>
-<p>Telefon Här visas ert företags huvudsakliga telefonnummer enligt företagsinställningarna.</p>
-<p>Fax Här visas ert företags faxnummer enligt företagsinställningarna.</p>
-<p>Säte Här visas orten för ert företags säte (orten för huvudkontoret) enligt företagsinställningarna, måste anges om ert företag är en filial.</p>
-<p>E-post Här visas ert företags e-postadress enligt företagsinställningarna.</p>
-<p>Hemsida Här visas ert företags Internetadress för hemsida enligt företagsinställningarna.</p>
-<p>Org nr Här visas ert företags organisationsnummer enligt företagsinställningarna.</p>
-<p>VAT-nr Här visas ert företags momsregistreringsnummer (VAT-nummer) enligt företagsinställningarna.</p>
-<p>Plusgiro Här visas ert företags plusgironummer enligt företagsinställningarna.</p>
-<p>Bankgiro Här visas ert företags bankgironummer enligt företagsinställningarna.</p>
-<p>Bank Här visas ert företags bank för ert internationella bankkonto(IBAN) enligt företagsinställningarna.</p>
-<p>BIC Här visas ert företags identifieringskod för banken där du har ert internationella bankkonto (IBAN) enligt företagsinställningarna.</p>
-<p>IBAN Här visas ert företags internationella bankkontonummer(IBAN) enligt företagsinställningarna.</p>
-
+<dl>
+  <dt>Ordernummer</dt>
+  <dd>Här visas ett unikt nummer för att identifiera en order.</dd>
+</dl>
+<dl>
+  <dt>Orderdatum</dt>
+  <dd>Här visas datumet då ordern skapades och utfärdades.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress</dt>
+  <dd>Här visas kundens leveransadress enligt ordern, den adress dit produkterna skall skickas.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress</dt>
+  <dd>Här visas kundens fakturaadress enligt ordern, den adress dit orderbekräftelsen skall skickas.</dd>
+</dl>
+<dl>
+  <dt>Vår kontakt</dt>
+  <dd>Här visas ert företags kontaktperson när det gäller frågor rörande den här ordern.</dd>
+</dl>
+<dl>
+  <dt>Leveransvillkor</dt>
+  <dd>Här visas leveransvillkoret för ordern, leveransvillkoret anger vem som ansvarar för leveransen mellan olika punkter på leveransrutten och vem som står för fraktkostnaden.</dd>
+</dl>
+<dl>
+  <dt>Leveranssätt</dt>
+  <dd>Här visas leveranssättet för ordern, leveranssättet anger på vilket sätt och med vilket transportmedel produkterna levereras till kunden.</dd>
+</dl>
+<dl>
+  <dt>Betalningsvillkor</dt>
+  <dd>Här visas betalningsvillkoret för ordern, betalningsvillkoret anger kredittiden för när en faktura skall betalas efter fakturans utfärdande.</dd>
+</dl>
+<dl>
+  <dt>Dröjsmålsränta</dt>
+  <dd>Här visas dröjsmålsräntan för ordern, dröjsmålsräntan anger med vilken räntesats på årsbasis ränta ska beräknas och faktureras vid för sen betalning av fakturan.</dd>
+</dl>
+<dl>
+  <dt>Ert kundnummer</dt>
+  <dd>Här visas kundnumret för den kund som ordern är skapad för.</dd>
+</dl>
+<dl>
+  <dt>Er kontakt</dt>
+  <dd>Här visas kundens kontaktperson när det gäller frågor rörande den här ordern.</dd>
+</dl>
+<dl>
+  <dt>Ert ordernummer</dt>
+  <dd>Här visas kundens order- eller avtalsnummer så att kunden kan knyta orderbekräftelsen från ert företag till sin egen beställning eller till ett avtal mellan ert företag och kunden.</dd>
+</dl>
+<dl>
+  <dt>Beräknad leverans</dt>
+  <dd>Här visas en beräknad leveranstid eller ett beräknat leveransdatum för produkterna i ordern.</dd>
+</dl>
+<dl>
+  <dt>Produkt nr</dt>
+  <dd>Här visas ett unikt nummer för de produkter som ingår i ordern och som finns upplagda i produktregistret. Saknas ett produktnummer beror det på att produkten inte finns upplagd i produktregistret.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas produktens namn eller beskrivning enligt ordern.</dd>
+</dl>
+<dl>
+  <dt>Lagerplats</dt>
+  <dd>Här visas var produkten finns att hitta, en kod för lagerplatsen.</dd>
+</dl>
+<dl>
+  <dt>Antal</dt>
+  <dd>Här visas antalet enheter av produkten som skall plockas och packas till kunden.</dd>
+</dl>
+<dl>
+  <dt>Antal plockat</dt>
+  <dd>Här kan du manuellt fylla i antalet enheter av varje produkt som har blivit plockade och packade för ordern.</dd>
+</dl>
+<dl>
+  <dt>Total vikt</dt>
+  <dd>Här visas den totala vikten för alla produkter i hela ordern i den viktenhet som angivits i företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Total volym</dt>
+  <dd>Här visas den totala volymen för alla produkter i hela ordern i den volymenhet som angivits i företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Ordertext</dt>
+  <dd>Här visas en frivillig text eller ett meddelande till kunden för ordern.</dd>
+</dl>
+<dl>
+  <dt>Företagsnamn</dt>
+  <dd>Här visas ert företags företagsnamn enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Adress</dt>
+  <dd>Här visas ert företags postadress enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Adress2</dt>
+  <dd>Här visas ert företags andra rad för postadress enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Postnummer</dt>
+  <dd>Här visas ert företags postnummer enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Postort</dt>
+  <dd>Här visas ert företags postort enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Land</dt>
+  <dd>Här visas ert företags land enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Telefon</dt>
+  <dd>Här visas ert företags huvudsakliga telefonnummer enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Fax</dt>
+  <dd>Här visas ert företags faxnummer enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Säte</dt>
+  <dd>Här visas orten för ert företags säte (orten för huvudkontoret) enligt företagsinställningarna, måste anges om ert företag är en filial.</dd>
+</dl>
+<dl>
+  <dt>E-post</dt>
+  <dd>Här visas ert företags e-postadress enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Hemsida</dt>
+  <dd>Här visas ert företags Internetadress för hemsida enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Org nr</dt>
+  <dd>Här visas ert företags organisationsnummer enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>VAT-nr</dt>
+  <dd>Här visas ert företags momsregistreringsnummer (VAT-nummer) enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Plusgiro</dt>
+  <dd>Här visas ert företags plusgironummer enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Bankgiro</dt>
+  <dd>Här visas ert företags bankgironummer enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Bank</dt>
+  <dd>Här visas ert företags bank för ert internationella bankkonto(IBAN) enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>BIC</dt>
+  <dd>Här visas ert företags identifieringskod för banken där du har ert internationella bankkonto (IBAN) enligt företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>IBAN</dt>
+  <dd>Här visas ert företags internationella bankkontonummer(IBAN) enligt företagsinställningarna.</dd>
+</dl>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Kopiera leverantörskreditfaktura</title>
+<title>Kopiera leverantörskreditfaktura</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,96 +14,204 @@
 
 <h1>Kopiera leverantörskreditfaktura</h1>
 
-<p>I det här formuläret kan du ändra registrerad data för en kopierad leverantörskreditfaktura. Du ändrar data genom att ersätta texten i textfält,
-fylla i text i tomma fält eller välja annan text i uppslagskolumner. Tryck på knappen "Ok" när du är klara med era ändringar.
-Du tar bort produktrader genom att markera produktraden och trycka på knappen "Del" på tangentbordet.</p>
+<p>I det här formuläret kan du ändra registrerad data för en kopierad leverantörskreditfaktura. Du ändrar data genom att ersätta texten i textfält,</p>
+<p>fylla i text i tomma fält eller välja annan text i uppslagskolumner. Tryck på knappen "Ok" när du är klara med era ändringar.</p>
+<p>Du tar bort produktrader genom att markera produktraden och trycka på knappen "Del" på tangentbordet.</p>
 <p>Följande flikar och fält finns när du skall ändra en kopierad leverantörskreditfaktura:</p>
-<p>Fakturauppgifter Kreditfakturanr Här uppräknas ett unikt internt nummer enligt en sekventiell nummerserie för att kunna identifiera en leverantörskreditfaktura.</p>
-<p>Krediterar Här visas ett internt löpnummer på den leverantörsfaktura som blir krediterad av den här leverantörskreditfakturan.</p>
-<p>Leverantör Här kan du välja en redan registrerad leverantör för leverantörskreditfakturan och få data om leverantören hämtad till leverantörskreditfakturan.
-Du måste ha skapat leverantören i leverantörsregistret innan du kan skapa en leverantörskreditfaktura för leverantören.</p>
-<p>OCR/Referens nummer Här skriver du in OCR-numret eller fakturanumret på leverantörskreditfakturan.</p>
-<p>Fakturadatum Här skriver du in eller väljer ett fakturadatum enligt uppgift på leverantörskreditfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Valuta Här visas valutan på den krediterade leverantörsfakturan.</p>
-<p>Valutakurs Här visas valutakursen på den krediterade leverantörsfakturan, leverantörsfakturan krediteras med samma valutakurs
-som gällde när leverantörsfakturan skapades.</p>
-<p>Moms totalt Här skriver du in totalt monetärt värde för moms i den valuta som gäller för leverantörskreditfakturan enligt uppgift på leverantörskreditfakturan.</p>
-<p>Öresavrundning Här skriver du in totalt monetärt värde för öresavrundning (positivt/negativt) i den valuta som gäller för leverantörsfakturan enligt uppgift på leverantörsfakturan.</p>
-<p>Produktnr Här skriver du in eller väljer en produkt från uppslagskolumnen. Du kan skriva in ett helt nytt
-produktnummer som inte finns sparat sedan tidigare i produktregistret.</p>
-<p>Beskrivning Här visas produktens beskrivning om du valt en produkt från produktregistret, du kan ändra den här beskrivningen
-eller skriva en helt egen om beskrivning saknas.</p>
-<p>Inköpsspris Här visas produktens inköpspris om du valt en produkt från produktregistret, du kan ändra det här priset
-eller skriva in ett eget pris om inköpspris saknas. Inköpspris används tillsammans med enhetsfrakt för beräkning av lagervärde.</p>
-<p>Enhetsfrakt Här visas produktens fraktkostnad per enhet om du valt en produkt från produktregistret, du kan ändra den här enhetsfrakten
-eller skriva in ett eget värde om enhetsfrakt saknas. Enhetsfrakt används tillsammans med inköpspris för beräkning av lagervärde.</p>
-<p>Antal Här skriver du in antalet enheter av produkten som är med i leverantörskreditfakturan. Det antal du fyller i här
-minskar antalet i lager för produkten om produkten är en lagervara och checkrutan för "Lagerför" är ikryssad.</p>
-<p>Enhet Här visas produktens enhet om du valt en produkt från produktregistret, du kan ändra den här enheten till en annan
-eller välja en enhet om enhet saknas.</p>
-<p>Summa Här visas radens nettosumma exklusive moms, summa beräknas från inköpspris och antal.</p>
-<p>Konto Här visas inköpskontot för produkten om du valt en produkt från produktregistret, du kan välja ett annat konto,
-skriva in ett nytt konto eller välja ett nytt konto om kontonummer saknas. Kontonumret visar på hur produktraden skall bokföras.</p>
-<p>Resultatenhet Här kan du skriva in eller välja en resultatenhet för produktraden, det här har betydelse för vilken resultatenhet
-produktraden skall bokföras på.</p>
-<p>Projekt Här kan du skriva in eller välja ett projekt för produktraden, det här har betydelse för vilket projekt
-produktraden skall bokföras på.</p>
-<p>Konton Kundfordran Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inbetalning Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverleverantörskreditfakturanantörsfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Utbetalning Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Kontant Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Leverantörsskuld Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 1 Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 2 Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 3 Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Försäljning Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inköp Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursvinst Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursförlust Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Öresavrundning Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ränteintäkt Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ingående moms Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Manuell kontering Här kan du manuellt bokföra affärshändelser som inte har med kostnader att göra. Tillexempel kan du här
-bokföra utgående- och ingående moms vid inköp av varor eller tjänster från ett annat EU-land än Sverige.</p>
-<p>Konto Här skriver du in eller väljer ett kontonummer för konteringsraden.</p>
-<p>Benämning Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot.
-Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan.</p>
-<p>Debet Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kredit Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kontering Här visas hur den här leverantörskreditfakturan kommer att bokföras i leverantörskreditfakturajournalen, och hur den här leverantörskreditfakturan kommer
-påverka den totala bokföringsposten i bokföringsunderlaget när leverantörskreditfakturajournalen skrivs ut och bokförs. Tryck på knappen
-"Uppdatera" för att se konteringen för den här leverantörskreditfakturan. Du kan ändra de automatiskt ifyllda kontona i konteringen genom att ändra
-kontonummer under fliken "Konton" för "Leverantörsskuld" och "Ingående moms".</p>
-<p>Konto Här visas ett kontonummer för konteringsraden.</p>
-<p>Benämning Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot.
-Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan</p>
-<p>Debet Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kredit Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Projekt Här visas ett projektnummer för att specificera intäkten eller kostnaden
-på ett visst projekt.</p>
-<p>Resultatenhet Här visas ett resultatenhetsnummer för att specificera intäkten eller kostnaden
-på en viss resultatenhet.</p>
-<p>Leverantörskreditfakturan är bokförd Den här kryssrutan är ikryssad om kreditfakturan blivit utskriven i en leverantörskreditfakturajournal och bokförd enligt
-leverantörskreditfakturajournalens bokföringsunderlag.</p>
-<p>Lagerför Kryssa i den här rutan om du vill att produkterna i leverantörskreditfakturan skall vara med
-i lagerberäkningen för antalet i lager.</p>
-
+<p>Fakturauppgifter</p>
+<dl>
+  <dt>Kreditfakturanr</dt>
+  <dd>Här uppräknas ett unikt internt nummer enligt en sekventiell nummerserie för att kunna identifiera en leverantörskreditfaktura.</dd>
+</dl>
+<dl>
+  <dt>Krediterar</dt>
+  <dd>Här visas ett internt löpnummer på den leverantörsfaktura som blir krediterad av den här leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Leverantör</dt>
+  <dd>Här kan du välja en redan registrerad leverantör för leverantörskreditfakturan och få data om leverantören hämtad till leverantörskreditfakturan. Du måste ha skapat leverantören i leverantörsregistret innan du kan skapa en leverantörskreditfaktura för leverantören.</dd>
+</dl>
+<dl>
+  <dt>OCR/Referens nummer</dt>
+  <dd>Här skriver du in OCR-numret eller fakturanumret på leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Fakturadatum</dt>
+  <dd>Här skriver du in eller väljer ett fakturadatum enligt uppgift på leverantörskreditfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Valuta</dt>
+  <dd>Här visas valutan på den krediterade leverantörsfakturan.</dd>
+</dl>
+<dl>
+  <dt>Valutakurs</dt>
+  <dd>Här visas valutakursen på den krediterade leverantörsfakturan, leverantörsfakturan krediteras med samma valutakurs som gällde när leverantörsfakturan skapades.</dd>
+</dl>
+<dl>
+  <dt>Moms totalt</dt>
+  <dd>Här skriver du in totalt monetärt värde för moms i den valuta som gäller för leverantörskreditfakturan enligt uppgift på leverantörskreditfakturan.</dd>
+</dl>
+<dl>
+  <dt>Öresavrundning</dt>
+  <dd>Här skriver du in totalt monetärt värde för öresavrundning (positivt/negativt) i den valuta som gäller för leverantörsfakturan enligt uppgift på leverantörsfakturan.</dd>
+</dl>
+<dl>
+  <dt>Produktnr</dt>
+  <dd>Här skriver du in eller väljer en produkt från uppslagskolumnen. Du kan skriva in ett helt nytt produktnummer som inte finns sparat sedan tidigare i produktregistret.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas produktens beskrivning om du valt en produkt från produktregistret, du kan ändra den här beskrivningen eller skriva en helt egen om beskrivning saknas.</dd>
+</dl>
+<dl>
+  <dt>Inköpsspris</dt>
+  <dd>Här visas produktens inköpspris om du valt en produkt från produktregistret, du kan ändra det här priset eller skriva in ett eget pris om inköpspris saknas. Inköpspris används tillsammans med enhetsfrakt för beräkning av lagervärde.</dd>
+</dl>
+<dl>
+  <dt>Enhetsfrakt</dt>
+  <dd>Här visas produktens fraktkostnad per enhet om du valt en produkt från produktregistret, du kan ändra den här enhetsfrakten eller skriva in ett eget värde om enhetsfrakt saknas. Enhetsfrakt används tillsammans med inköpspris för beräkning av lagervärde.</dd>
+</dl>
+<dl>
+  <dt>Antal</dt>
+  <dd>Här skriver du in antalet enheter av produkten som är med i leverantörskreditfakturan. Det antal du fyller i här minskar antalet i lager för produkten om produkten är en lagervara och checkrutan för "Lagerför" är ikryssad.</dd>
+</dl>
+<dl>
+  <dt>Enhet</dt>
+  <dd>Här visas produktens enhet om du valt en produkt från produktregistret, du kan ändra den här enheten till en annan eller välja en enhet om enhet saknas.</dd>
+</dl>
+<dl>
+  <dt>Summa</dt>
+  <dd>Här visas radens nettosumma exklusive moms, summa beräknas från inköpspris och antal.</dd>
+</dl>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här visas inköpskontot för produkten om du valt en produkt från produktregistret, du kan välja ett annat konto, skriva in ett nytt konto eller välja ett nytt konto om kontonummer saknas. Kontonumret visar på hur produktraden skall bokföras.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här kan du skriva in eller välja en resultatenhet för produktraden, det här har betydelse för vilken resultatenhet produktraden skall bokföras på.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här kan du skriva in eller välja ett projekt för produktraden, det här har betydelse för vilket projekt produktraden skall bokföras på.</dd>
+</dl>
+<p>Konton</p>
+<dl>
+  <dt>Kundfordran</dt>
+  <dd>Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inbetalning</dt>
+  <dd>Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverleverantörskreditfakturanantörsfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Utbetalning</dt>
+  <dd>Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Kontant</dt>
+  <dd>Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Leverantörsskuld</dt>
+  <dd>Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 1</dt>
+  <dd>Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 2</dt>
+  <dd>Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 3</dt>
+  <dd>Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Försäljning</dt>
+  <dd>Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inköp</dt>
+  <dd>Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursvinst</dt>
+  <dd>Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursförlust</dt>
+  <dd>Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Öresavrundning</dt>
+  <dd>Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ränteintäkt</dt>
+  <dd>Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ingående moms</dt>
+  <dd>Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här leverantörskreditfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<p>Manuell kontering</p>
+<p>Här kan du manuellt bokföra affärshändelser som inte har med kostnader att göra. Tillexempel kan du här</p>
+<p>bokföra utgående- och ingående moms vid inköp av varor eller tjänster från ett annat EU-land än Sverige.</p>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här skriver du in eller väljer ett kontonummer för konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Benämning</dt>
+  <dd>Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot. Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<p>Kontering</p>
+<p>Här visas hur den här leverantörskreditfakturan kommer att bokföras i leverantörskreditfakturajournalen, och hur den här leverantörskreditfakturan kommer</p>
+<p>påverka den totala bokföringsposten i bokföringsunderlaget när leverantörskreditfakturajournalen skrivs ut och bokförs. Tryck på knappen</p>
+<p>"Uppdatera" för att se konteringen för den här leverantörskreditfakturan. Du kan ändra de automatiskt ifyllda kontona i konteringen genom att ändra</p>
+<p>kontonummer under fliken "Konton" för "Leverantörsskuld" och "Ingående moms".</p>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här visas ett kontonummer för konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Benämning</dt>
+  <dd>Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot. Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här visas ett projektnummer för att specificera intäkten eller kostnaden på ett visst projekt.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här visas ett resultatenhetsnummer för att specificera intäkten eller kostnaden på en viss resultatenhet.</dd>
+</dl>
+<dl>
+  <dt>Leverantörskreditfakturan är bokförd</dt>
+  <dd>Den här kryssrutan är ikryssad om kreditfakturan blivit utskriven i en leverantörskreditfakturajournal och bokförd enligt leverantörskreditfakturajournalens bokföringsunderlag.</dd>
+</dl>
+<dl>
+  <dt>Lagerför</dt>
+  <dd>Kryssa i den här rutan om du vill att produkterna i leverantörskreditfakturan skall vara med i lagerberäkningen för antalet i lager.</dd>
+</dl>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Ändra produkter</title>
+<title>Ändra produkter</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,57 +14,134 @@
 
 <h1>Ändra produkter</h1>
 
-<p>I det här formuläret kan du ändra registrerad data för en produkt. Du ändrar data genom att ersätta texten i textfält,
-fylla i text i tomma fält eller välja annan text i uppslagskolumner. Tryck på knappen "Ok" när du är klara med era ändringar.</p>
+<p>I det här formuläret kan du ändra registrerad data för en produkt. Du ändrar data genom att ersätta texten i textfält,</p>
+<p>fylla i text i tomma fält eller välja annan text i uppslagskolumner. Tryck på knappen "Ok" när du är klara med era ändringar.</p>
 <p>Följande flikar och fält finns när du skall ändra en produkt:</p>
-<p>Produktuppgifter Produktnummer Här skriver du in ett unikt nummer för att identifiera en produkt, ett produktnummer kan bestå av både bokstäver
-och siffror.</p>
-<p>Beskrivning Här skriver du in produktens namn.</p>
-<p>Enhetspris Här skriver du in produktens försäljningspris exklusive moms i valfri valuta, priset bör dock anges i redovisningsvalutan. Med
-hjälp av miniräknaren kan du automatiskt beräkna försäljningspriset på en paketprodukt utifrån försäljningspriset på paketproduktens ingående produkter.</p>
-<p>Momskod Här väljer du en momskod för produkten, det finns fyra momskoder att välja mellan.</p>
-<p>Inköpspris Här skriver du in produktens inköpspris exklusive moms i valfri valuta, priset bör dock anges i den valuta som används
-mest frekvent vid inköp av produkten.</p>
-<p>Enhetsfrakt Här skriver du in produktens frakt per enhet exklusive moms vid inköp, anges i samma valuta som för inköpspris,
-används för lagervärdeberäkning.</p>
-<p>Enhet Här väljer du en enhet för produkten, du kan lägga till, ändra och ta bort enheter med hjälp av knappen längst till
-höger om textfältet för enhet. När du väljer ändra eller ta bort så avses den enhet som visas i textrutan.</p>
-<p>Vikt Här skriver du in produktens vikt i den enhet för vikt som har angivits i företagsinställningarna.</p>
-<p>Volym Här skriver du in produktens volym i den enhet för volym som har angivits i företagsinställningarna.</p>
-<p>Utgått Kryssa i den här rutan om produkten har utgått ur ert sortiment och därmed inte längre kommer att säljas.</p>
-<p>Lagervara Kryssa i den här rutan om produkten är en lagervara som ska vara med vid inventering och i lagerstatistiken.</p>
-<p>Försäljningskonto Här kan du skriva in eller välja ett standardkonto för försäljning, vilket kommer upp automatiskt när produkten
-väljs i kundfaktura.</p>
-<p>Inköpskonto Här kan du skriva in eller välja ett standardkonto för inköp, vilket kommer upp automatiskt när produkten
-väljs i leverantörsfaktura.</p>
-<p>Projekt Här kan du skriva in eller välja ett standardprojekt för produkten, vilket kommer upp automatiskt när produkten
-väljs.</p>
-<p>Resultatenhet Här kan du skriva in eller välja en standardresultatenhet för produkten, vilket kommer upp automatiskt när produkten
-väljs.</p>
-<p>Lager och leverans Lagerplats Här skriver du in produktens lagerplats, så att du kan hitta till produkten på lagret.</p>
-<p>Beställningspunkt Här skriver du in en beställningspunkt för produkten, en lagernivå som skall initera inköp av produkten.</p>
-<p>Beställningsantal Här skriver du in en minsta beställningsvolym, det antal som skall beställas när beställningspunkten nåtts
-och ett inköp skall göras.</p>
-<p>Huvudleverantör Här skriver du in eller väljer en rekommenderad leverantör varifrån inköp bör göras.</p>
-<p>Lev art nr Här skriver du in huvudleverantörens produktnummer, det här numret kommer automatiskt upp när produkten väljs i
-inköpsorder.</p>
-<p>Språk och bidrag Svenska Här skriver du in en produktbeskrivning (produktens namn) på svenska, den här produktbeskrivningen används
-när du skriver ut dokument på svenska.</p>
-<p>Engelska Här skriver du in en produktbeskrivning (produktens namn) på engelska, den här produktbeskrivningen används
-när du skriver ut dokument på engelska.</p>
-<p>Bidragskalkyl Här visas en bidragskalkyl för aktuell produkt i redovisningsvalutan, tryck på knappen
-till höger om senaste inpris för att uppdatera beräkningen av täckningsbidrag och täckningsgrad.</p>
-<p>Senaste inpris Här visas senaste inpris för produkten angivet i redovisningsvalutan, senaste inpris beräknas som det senaste inköpspriset plus den
-senaste enhetsfrakten som har angivits för produkten i en leverantörsfaktura.</p>
-<p>Täckningsbidrag (TB) Här visas täckningsbidraget för produkten, täckningsbidraget beräknas som "Försäljningspris" minus "Senaste inpris".
-Täckningsbidraget visas alltid i redovisningsvalutan.</p>
-<p>Täckningsgrad (TG) Här visas täckningsgraden för produkten, täckningsgraden beräknas som "Täckningsbidrag" dividerat med "Försäljningspris".</p>
-<p>Ingående produkter Här kan du välja produkter som ska ingå i en paketprodukt.</p>
-<p>Produkt nr Här skriver du in eller väljer ett produktnummer.</p>
-<p>Beskrivning Här visas produktens namn enligt valt produktnummer.</p>
-<p>Antal Här skriver du in det antal enheter av den ingående produkten som ingår i paketprodukten.</p>
-<p>Enhet Här visas den ingående produktens enhet enligt valt produktnummer.</p>
-
+<p>Produktuppgifter</p>
+<dl>
+  <dt>Produktnummer</dt>
+  <dd>Här skriver du in ett unikt nummer för att identifiera en produkt, ett produktnummer kan bestå av både bokstäver och siffror.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här skriver du in produktens namn.</dd>
+</dl>
+<dl>
+  <dt>Enhetspris</dt>
+  <dd>Här skriver du in produktens försäljningspris exklusive moms i valfri valuta, priset bör dock anges i redovisningsvalutan. Med hjälp av miniräknaren kan du automatiskt beräkna försäljningspriset på en paketprodukt utifrån försäljningspriset på paketproduktens ingående produkter.</dd>
+</dl>
+<dl>
+  <dt>Momskod</dt>
+  <dd>Här väljer du en momskod för produkten, det finns fyra momskoder att välja mellan.</dd>
+</dl>
+<dl>
+  <dt>Inköpspris</dt>
+  <dd>Här skriver du in produktens inköpspris exklusive moms i valfri valuta, priset bör dock anges i den valuta som används mest frekvent vid inköp av produkten.</dd>
+</dl>
+<dl>
+  <dt>Enhetsfrakt</dt>
+  <dd>Här skriver du in produktens frakt per enhet exklusive moms vid inköp, anges i samma valuta som för inköpspris, används för lagervärdeberäkning.</dd>
+</dl>
+<dl>
+  <dt>Enhet</dt>
+  <dd>Här väljer du en enhet för produkten, du kan lägga till, ändra och ta bort enheter med hjälp av knappen längst till höger om textfältet för enhet. När du väljer ändra eller ta bort så avses den enhet som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Vikt</dt>
+  <dd>Här skriver du in produktens vikt i den enhet för vikt som har angivits i företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Volym</dt>
+  <dd>Här skriver du in produktens volym i den enhet för volym som har angivits i företagsinställningarna.</dd>
+</dl>
+<dl>
+  <dt>Utgått</dt>
+  <dd>Kryssa i den här rutan om produkten har utgått ur ert sortiment och därmed inte längre kommer att säljas.</dd>
+</dl>
+<dl>
+  <dt>Lagervara</dt>
+  <dd>Kryssa i den här rutan om produkten är en lagervara som ska vara med vid inventering och i lagerstatistiken.</dd>
+</dl>
+<dl>
+  <dt>Försäljningskonto</dt>
+  <dd>Här kan du skriva in eller välja ett standardkonto för försäljning, vilket kommer upp automatiskt när produkten väljs i kundfaktura.</dd>
+</dl>
+<dl>
+  <dt>Inköpskonto</dt>
+  <dd>Här kan du skriva in eller välja ett standardkonto för inköp, vilket kommer upp automatiskt när produkten väljs i leverantörsfaktura.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här kan du skriva in eller välja ett standardprojekt för produkten, vilket kommer upp automatiskt när produkten väljs.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här kan du skriva in eller välja en standardresultatenhet för produkten, vilket kommer upp automatiskt när produkten väljs.</dd>
+</dl>
+<p>Lager och leverans</p>
+<dl>
+  <dt>Lagerplats</dt>
+  <dd>Här skriver du in produktens lagerplats, så att du kan hitta till produkten på lagret.</dd>
+</dl>
+<dl>
+  <dt>Beställningspunkt</dt>
+  <dd>Här skriver du in en beställningspunkt för produkten, en lagernivå som skall initera inköp av produkten.</dd>
+</dl>
+<dl>
+  <dt>Beställningsantal</dt>
+  <dd>Här skriver du in en minsta beställningsvolym, det antal som skall beställas när beställningspunkten nåtts och ett inköp skall göras.</dd>
+</dl>
+<dl>
+  <dt>Huvudleverantör</dt>
+  <dd>Här skriver du in eller väljer en rekommenderad leverantör varifrån inköp bör göras.</dd>
+</dl>
+<dl>
+  <dt>Lev art nr</dt>
+  <dd>Här skriver du in huvudleverantörens produktnummer, det här numret kommer automatiskt upp när produkten väljs i inköpsorder.</dd>
+</dl>
+<p>Språk och bidrag</p>
+<dl>
+  <dt>Svenska</dt>
+  <dd>Här skriver du in en produktbeskrivning (produktens namn) på svenska, den här produktbeskrivningen används när du skriver ut dokument på svenska.</dd>
+</dl>
+<dl>
+  <dt>Engelska</dt>
+  <dd>Här skriver du in en produktbeskrivning (produktens namn) på engelska, den här produktbeskrivningen används när du skriver ut dokument på engelska.</dd>
+</dl>
+<dl>
+  <dt>Bidragskalkyl</dt>
+  <dd>Här visas en bidragskalkyl för aktuell produkt i redovisningsvalutan, tryck på knappen till höger om senaste inpris för att uppdatera beräkningen av täckningsbidrag och täckningsgrad.</dd>
+</dl>
+<dl>
+  <dt>Senaste inpris</dt>
+  <dd>Här visas senaste inpris för produkten angivet i redovisningsvalutan, senaste inpris beräknas som det senaste inköpspriset plus den senaste enhetsfrakten som har angivits för produkten i en leverantörsfaktura.</dd>
+</dl>
+<dl>
+  <dt>Täckningsbidrag (TB)</dt>
+  <dd>Här visas täckningsbidraget för produkten, täckningsbidraget beräknas som "Försäljningspris" minus "Senaste inpris". Täckningsbidraget visas alltid i redovisningsvalutan.</dd>
+</dl>
+<dl>
+  <dt>Täckningsgrad (TG)</dt>
+  <dd>Här visas täckningsgraden för produkten, täckningsgraden beräknas som "Täckningsbidrag" dividerat med "Försäljningspris".</dd>
+</dl>
+<p>Ingående produkter</p>
+<p>Här kan du välja produkter som ska ingå i en paketprodukt.</p>
+<dl>
+  <dt>Produkt nr</dt>
+  <dd>Här skriver du in eller väljer ett produktnummer.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas produktens namn enligt valt produktnummer.</dd>
+</dl>
+<dl>
+  <dt>Antal</dt>
+  <dd>Här skriver du in det antal enheter av den ingående produkten som ingår i paketprodukten.</dd>
+</dl>
+<dl>
+  <dt>Enhet</dt>
+  <dd>Här visas den ingående produktens enhet enligt valt produktnummer.</dd>
+</dl>
 
 </body>
 </html>

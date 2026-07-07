@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Ändra verifikationer</title>
+<title>Ändra verifikationer</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,40 +14,68 @@
 
 <h1>Ändra verifikationer</h1>
 
-<p>I det här formuläret kan du ändra i redan registrerade verifikationer. Du kan stryka över befintliga konteringsrader,
-lägga till konteringsrader och ta bort tillagda rader när du ändrar i en redan registrerad verifikation. Du kan således inte ändra belopp och kontonummer
-i redan registrerade konteringsrader eller ta bort befintliga konteringsrader. Det här för att man skall kunna se vilka befintliga konteringsrader
-som har blivit ändrade.</p>
-<p>När du skall stryka över en konteringsrad så markerar du önskad konteringsrad och trycker på knappen "Stryk över rad", du fyller
-sedan i din "Signatur" och ändringsdatumet fylls i automatiskt i kolumnen "Ändrad".</p>
-<p>Du lägger till nya rader på precis samma sätt som när du registrerar nya verifikationer, men du fyller även i "Signatur"
-och ändringsdatumet fylls i automatiskt. Du tar bort en tillagd rad genom att markera den och trycka på knappen "Radera rad".</p>
-<p>När du är klara med era ändringar så trycker du på knappen "Registrera". Observera att era konteringsrader måste balansera i
-kredit och debet kolumnerna, det vill säga differensen måste vara noll, för att du skall kunna registrera en verifikation.</p>
-<p>Du kan flytta
-mellan konteringscellerna genom att använda "Tab" eller "Enter" på tangentbordet. Om du flyttar mellan konteringscellerna med "Enter" stannar tabbordningen efter
-kreditkolumnen och differensen fylls i automatiskt i debet eller kredit.</p>
+<p>I det här formuläret kan du ändra i redan registrerade verifikationer. Du kan stryka över befintliga konteringsrader,</p>
+<p>lägga till konteringsrader och ta bort tillagda rader när du ändrar i en redan registrerad verifikation. Du kan således inte ändra belopp och kontonummer</p>
+<p>i redan registrerade konteringsrader eller ta bort befintliga konteringsrader. Det här för att man skall kunna se vilka befintliga konteringsrader</p>
+<p>som har blivit ändrade.</p>
+<p>När du skall stryka över en konteringsrad så markerar du önskad konteringsrad och trycker på knappen "Stryk över rad", du fyller</p>
+<p>sedan i din "Signatur" och ändringsdatumet fylls i automatiskt i kolumnen "Ändrad".</p>
+<p>Du lägger till nya rader på precis samma sätt som när du registrerar nya verifikationer, men du fyller även i "Signatur"</p>
+<p>och ändringsdatumet fylls i automatiskt. Du tar bort en tillagd rad genom att markera den och trycka på knappen "Radera rad".</p>
+<p>När du är klara med era ändringar så trycker du på knappen "Registrera". Observera att era konteringsrader måste balansera i</p>
+<p>kredit och debet kolumnerna, det vill säga differensen måste vara noll, för att du skall kunna registrera en verifikation.</p>
+<p>Du kan flytta</p>
+<p>mellan konteringscellerna genom att använda "Tab" eller "Enter" på tangentbordet. Om du flyttar mellan konteringscellerna med "Enter" stannar tabbordningen efter</p>
+<p>kreditkolumnen och differensen fylls i automatiskt i debet eller kredit.</p>
 <p>Följande fält finns när du skall ändra i en redan registrerad verifikation:</p>
-<p>Verifikation Här visas ett unikt nummer för varje registrerad verifikation enligt en obruten nummerserie som börjar med 1 för
-varje nytt bokföringsår och ökar med 1 för varje ny verifikation.</p>
-<p>Datum I det här fältet visas datumet för den affärshändelse som verifikationen avser.</p>
-<p>Beskrivning Här visas en text för att beskriva den affärshändelse som den underliggande verifikationen utgör.</p>
-<p>Spara som konteringsmall Checka i den här rutan för att spara din registrerade verifikation som en konteringsmall, de konteringsrader
-ni har registrerat sparas utan belopp tillsammans med verifikationstexten.</p>
-<p>Konto Här skriver du in eller väljer ett kontonummer för konteringsraden.</p>
-<p>Benämning Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot.
-Beskrivningen hämtas från kontoplanen enligt valt kontonummer enligt ovan.</p>
-<p>Debet Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kredit Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Projekt Här kan du välja eller skriva in ett projektnummer för att specificera intäkten eller kostnaden
-på ett visst projekt.</p>
-<p>Resultatenhet Här kan du välja eller skriva in ett resultatenhetsnummer för att specificera intäkten eller kostnaden
-på en viss resultatenhet.</p>
-<p>Signatur Här skriver du in din signatur om du gör en ändring i en verifikation, antingen att du stryker över eller
-lägger till en rad i en redan registrerad verifikation.</p>
-<p>Ändrad Här anges datumet för ändringen automatiskt om du gör en ändring i en verifikation, antingen att du stryker över eller
-lägger till en rad i en redan registrerad verifikation.</p>
-
+<dl>
+  <dt>Verifikation</dt>
+  <dd>Här visas ett unikt nummer för varje registrerad verifikation enligt en obruten nummerserie som börjar med 1 för varje nytt bokföringsår och ökar med 1 för varje ny verifikation.</dd>
+</dl>
+<dl>
+  <dt>Datum</dt>
+  <dd>I det här fältet visas datumet för den affärshändelse som verifikationen avser.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas en text för att beskriva den affärshändelse som den underliggande verifikationen utgör.</dd>
+</dl>
+<dl>
+  <dt>Spara som konteringsmall</dt>
+  <dd>Checka i den här rutan för att spara din registrerade verifikation som en konteringsmall, de konteringsrader ni har registrerat sparas utan belopp tillsammans med verifikationstexten.</dd>
+</dl>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här skriver du in eller väljer ett kontonummer för konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Benämning</dt>
+  <dd>Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot. Beskrivningen hämtas från kontoplanen enligt valt kontonummer enligt ovan.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här kan du välja eller skriva in ett projektnummer för att specificera intäkten eller kostnaden på ett visst projekt.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här kan du välja eller skriva in ett resultatenhetsnummer för att specificera intäkten eller kostnaden på en viss resultatenhet.</dd>
+</dl>
+<dl>
+  <dt>Signatur</dt>
+  <dd>Här skriver du in din signatur om du gör en ändring i en verifikation, antingen att du stryker över eller lägger till en rad i en redan registrerad verifikation.</dd>
+</dl>
+<dl>
+  <dt>Ändrad</dt>
+  <dd>Här anges datumet för ändringen automatiskt om du gör en ändring i en verifikation, antingen att du stryker över eller lägger till en rad i en redan registrerad verifikation.</dd>
+</dl>
 
 </body>
 </html>

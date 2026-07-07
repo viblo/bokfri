@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Kopiera kunder</title>
+<title>Kopiera kunder</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,61 +14,159 @@
 
 <h1>Kopiera kunder</h1>
 
-<p>I det här formuläret kan du ändra registrerad data för en kopierad kund. Du måste ändra kundnumret så att alla
-kunder har ett unikt kundnummer. Du ändrar data genom att ersätta text i textfält,
-fylla i text i tomma fält eller välja annan text i uppslagskolumner. Tryck på knappen "Ok" när du är klara med era ändringar.</p>
+<p>I det här formuläret kan du ändra registrerad data för en kopierad kund. Du måste ändra kundnumret så att alla</p>
+<p>kunder har ett unikt kundnummer. Du ändrar data genom att ersätta text i textfält,</p>
+<p>fylla i text i tomma fält eller välja annan text i uppslagskolumner. Tryck på knappen "Ok" när du är klara med era ändringar.</p>
 <p>Följande flikar och fält finns när du skall ändra en kopierad kund:</p>
-<p>Kunduppgifter Kundnummer Här skriver du in ett unikt nummer för att identifiera en kund, ett kundnummer kan bestå av både bokstäver
-och siffror.</p>
-<p>Namn Här skriver du in kundens företagsnamn eller personnamn.</p>
-<p>E-post Här skriver du in kundens e-post adress.</p>
-<p>Organisationsnummer Här skriver du in kundens organisationsnummer eller personnummer.</p>
-<p>VAT-nummer Här skriver du in kundens VAT-nummer (momsregistreringsnummer).</p>
-<p>Vår kontaktperson Här skriver du in ert företags kontaktperson vid kontakter med den här kunden.</p>
-<p>Er kontaktperson Här skriver du in kundens kontaktperson, den person som ska kontaktas av ert företag vid kontakter med kunden.</p>
-<p>Fax Här skriver du in kundens faxnummer.</p>
-<p>Telefon Här skriver du in kundens huvudsakliga telefonnummer.</p>
-<p>Telefon2 Här skriver du in kundens andra telefonnummer.</p>
-<p>EU-försäljning varor Kryssa i den här rutan om du säljer och levererar varor till ett annat EU-land utanför Sverige. Du kan inte
-kryssa i "EU-försäljning trepart varor" om den här rutan är ikryssad.</p>
-<p>EU-försäljning trepart varor Kryssa i den här rutan om du säljer varor till ett annat EU-land utanför Sverige som mellanman.
-Det här är aktuellt om tre EU-länder är inblandade i en transaktion och du säljer varor till ett EU-land där varorna levereras till
-det här EU-landet direkt från ett annat EU-land. Du kan inte kryssa i "EU-försäljning varor" om den här rutan är ikryssad.</p>
-<p>Momsfri försäljning Kryssa i den här rutan om din försäljning till den här kunden är momsfri, det vill säga då någon moms inte skall
-läggas till på fakturan.</p>
-<p>Dölj enhetspris på följesedel Kryssa i den här rutan om du inte vill visa enhetspriset på följesedlar för den här kunden.</p>
-<p>Övriga uppgifter Faktureringsvaluta Här väljer du en faktureringsvaluta för kunden, det vill säga den standardvaluta som kunden ska faktureras i.
-Du kan lägga till, ändra och ta bort valutor med hjälp av knappen längst till
-höger om textfältet för faktureringsvaluta. När du väljer ändra eller ta bort så avses den valuta som visas i textrutan.</p>
-<p>Betalningsvillkor Här väljer du betalningsvillkor för kunden, det vill säga standardvärde för betalningsvillkor.
-Du kan lägga till, ändra och ta bort betalningsvillkor med hjälp av knappen längst till
-höger om textfältet för betalningsvillkor. När du väljer ändra eller ta bort så avses det betalningsvillkor som visas i textrutan.</p>
-<p>Leveransvillkor Här väljer du leveransvillkor för kunden, det vill säga standardvärde för leveransvillkor.
-Du kan lägga till, ändra och ta bort leveransvillkor med hjälp av knappen längst till
-höger om textfältet för leveransvillkor. När du väljer ändra eller ta bort så avses det leveransvillkor som visas i textrutan.</p>
-<p>Leveranssätt Här väljer du leveranssätt för kunden, det vill säga standardvärde för leveranssätt.
-Du kan lägga till, ändra och ta bort leveranssätt med hjälp av knappen längst till
-höger om textfältet för leveranssätt. När du väljer ändra eller ta bort så avses det leveranssätt som visas i textrutan.</p>
-<p>Kreditgräns Här skriver du in en kreditgräns för kunden i vald faktureringsvaluta för kunden. Kreditgränsen avser att vara
-ett maxbelopp för hur stor kundfordran en kund får ha.</p>
-<p>Rabatt i % Här skriver du in en procentuell rabatt för kunden, den här rabatten utgör standarvärde för radrabatt när du
-skapar offerter, orders och fakturor.</p>
-<p>Bankgiro nummer Här skriver du in kundens bankgironummer.</p>
-<p>Plusgiro nummer Här skriver du in kundens plusgironummer.</p>
-<p>Adresser Fakturaadress Namn Här skriver du in kundens företagsnamn eller personnamn för fakturaadress.</p>
-<p>Adress Här skriver du in kundens postadress för fakturering.</p>
-<p>Adress2 Här skriver du in kundens andra postadress för fakturering.</p>
-<p>Postnummer Här skriver du in kundens postnummer för fakturering.</p>
-<p>Postort Här skriver du in kundens ort för fakturering.</p>
-<p>Land Här skriver du in kundens land för fakturering.</p>
-<p>Leveransadress Namn Här skriver du in kundens företagsnamn eller personnamn för leverans.</p>
-<p>Adress Här skriver du in kundens postadress för leverans.</p>
-<p>Adress2 Här skriver du in kundens andra postadress för leverans.</p>
-<p>Postnummer Här skriver du in kundens postnummer för leverans.</p>
-<p>Postort Här skriver du in kundens ort för leverans.</p>
-<p>Land Här skriver du in kundens land för leverans.</p>
-<p>Använd fakturaadress som leveransadress Kryssa i den här rutan för att använda fakturadressen som leveransadress.</p>
-
+<p>Kunduppgifter</p>
+<dl>
+  <dt>Kundnummer</dt>
+  <dd>Här skriver du in ett unikt nummer för att identifiera en kund, ett kundnummer kan bestå av både bokstäver och siffror.</dd>
+</dl>
+<dl>
+  <dt>Namn</dt>
+  <dd>Här skriver du in kundens företagsnamn eller personnamn.</dd>
+</dl>
+<dl>
+  <dt>E-post</dt>
+  <dd>Här skriver du in kundens e-post adress.</dd>
+</dl>
+<dl>
+  <dt>Organisationsnummer</dt>
+  <dd>Här skriver du in kundens organisationsnummer eller personnummer.</dd>
+</dl>
+<dl>
+  <dt>VAT-nummer</dt>
+  <dd>Här skriver du in kundens VAT-nummer (momsregistreringsnummer).</dd>
+</dl>
+<dl>
+  <dt>Vår kontaktperson</dt>
+  <dd>Här skriver du in ert företags kontaktperson vid kontakter med den här kunden.</dd>
+</dl>
+<dl>
+  <dt>Er kontaktperson</dt>
+  <dd>Här skriver du in kundens kontaktperson, den person som ska kontaktas av ert företag vid kontakter med kunden.</dd>
+</dl>
+<dl>
+  <dt>Fax</dt>
+  <dd>Här skriver du in kundens faxnummer.</dd>
+</dl>
+<dl>
+  <dt>Telefon</dt>
+  <dd>Här skriver du in kundens huvudsakliga telefonnummer.</dd>
+</dl>
+<dl>
+  <dt>Telefon2</dt>
+  <dd>Här skriver du in kundens andra telefonnummer.</dd>
+</dl>
+<dl>
+  <dt>EU-försäljning varor</dt>
+  <dd>Kryssa i den här rutan om du säljer och levererar varor till ett annat EU-land utanför Sverige. Du kan inte kryssa i "EU-försäljning trepart varor" om den här rutan är ikryssad.</dd>
+</dl>
+<dl>
+  <dt>EU-försäljning trepart varor</dt>
+  <dd>Kryssa i den här rutan om du säljer varor till ett annat EU-land utanför Sverige som mellanman. Det här är aktuellt om tre EU-länder är inblandade i en transaktion och du säljer varor till ett EU-land där varorna levereras till det här EU-landet direkt från ett annat EU-land. Du kan inte kryssa i "EU-försäljning varor" om den här rutan är ikryssad.</dd>
+</dl>
+<dl>
+  <dt>Momsfri försäljning</dt>
+  <dd>Kryssa i den här rutan om din försäljning till den här kunden är momsfri, det vill säga då någon moms inte skall läggas till på fakturan.</dd>
+</dl>
+<dl>
+  <dt>Dölj enhetspris på följesedel</dt>
+  <dd>Kryssa i den här rutan om du inte vill visa enhetspriset på följesedlar för den här kunden.</dd>
+</dl>
+<p>Övriga uppgifter</p>
+<dl>
+  <dt>Faktureringsvaluta</dt>
+  <dd>Här väljer du en faktureringsvaluta för kunden, det vill säga den standardvaluta som kunden ska faktureras i. Du kan lägga till, ändra och ta bort valutor med hjälp av knappen längst till höger om textfältet för faktureringsvaluta. När du väljer ändra eller ta bort så avses den valuta som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Betalningsvillkor</dt>
+  <dd>Här väljer du betalningsvillkor för kunden, det vill säga standardvärde för betalningsvillkor. Du kan lägga till, ändra och ta bort betalningsvillkor med hjälp av knappen längst till höger om textfältet för betalningsvillkor. När du väljer ändra eller ta bort så avses det betalningsvillkor som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Leveransvillkor</dt>
+  <dd>Här väljer du leveransvillkor för kunden, det vill säga standardvärde för leveransvillkor. Du kan lägga till, ändra och ta bort leveransvillkor med hjälp av knappen längst till höger om textfältet för leveransvillkor. När du väljer ändra eller ta bort så avses det leveransvillkor som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Leveranssätt</dt>
+  <dd>Här väljer du leveranssätt för kunden, det vill säga standardvärde för leveranssätt. Du kan lägga till, ändra och ta bort leveranssätt med hjälp av knappen längst till höger om textfältet för leveranssätt. När du väljer ändra eller ta bort så avses det leveranssätt som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Kreditgräns</dt>
+  <dd>Här skriver du in en kreditgräns för kunden i vald faktureringsvaluta för kunden. Kreditgränsen avser att vara ett maxbelopp för hur stor kundfordran en kund får ha.</dd>
+</dl>
+<dl>
+  <dt>Rabatt i %</dt>
+  <dd>Här skriver du in en procentuell rabatt för kunden, den här rabatten utgör standarvärde för radrabatt när du skapar offerter, orders och fakturor.</dd>
+</dl>
+<dl>
+  <dt>Bankgiro nummer</dt>
+  <dd>Här skriver du in kundens bankgironummer.</dd>
+</dl>
+<dl>
+  <dt>Plusgiro nummer</dt>
+  <dd>Här skriver du in kundens plusgironummer.</dd>
+</dl>
+<p>Adresser</p>
+<dl>
+  <dt>Fakturaadress</dt>
+</dl>
+<dl>
+  <dt>Namn</dt>
+  <dd>Här skriver du in kundens företagsnamn eller personnamn för fakturaadress.</dd>
+</dl>
+<dl>
+  <dt>Adress</dt>
+  <dd>Här skriver du in kundens postadress för fakturering.</dd>
+</dl>
+<dl>
+  <dt>Adress2</dt>
+  <dd>Här skriver du in kundens andra postadress för fakturering.</dd>
+</dl>
+<dl>
+  <dt>Postnummer</dt>
+  <dd>Här skriver du in kundens postnummer för fakturering.</dd>
+</dl>
+<dl>
+  <dt>Postort</dt>
+  <dd>Här skriver du in kundens ort för fakturering.</dd>
+</dl>
+<dl>
+  <dt>Land</dt>
+  <dd>Här skriver du in kundens land för fakturering.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress</dt>
+</dl>
+<dl>
+  <dt>Namn</dt>
+  <dd>Här skriver du in kundens företagsnamn eller personnamn för leverans.</dd>
+</dl>
+<dl>
+  <dt>Adress</dt>
+  <dd>Här skriver du in kundens postadress för leverans.</dd>
+</dl>
+<dl>
+  <dt>Adress2</dt>
+  <dd>Här skriver du in kundens andra postadress för leverans.</dd>
+</dl>
+<dl>
+  <dt>Postnummer</dt>
+  <dd>Här skriver du in kundens postnummer för leverans.</dd>
+</dl>
+<dl>
+  <dt>Postort</dt>
+  <dd>Här skriver du in kundens ort för leverans.</dd>
+</dl>
+<dl>
+  <dt>Land</dt>
+  <dd>Här skriver du in kundens land för leverans.</dd>
+</dl>
+<dl>
+  <dt>Använd fakturaadress som leveransadress</dt>
+  <dd>Kryssa i den här rutan för att använda fakturadressen som leveransadress.</dd>
+</dl>
 
 </body>
 </html>

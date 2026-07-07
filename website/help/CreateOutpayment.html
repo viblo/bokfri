@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Skapa utbetalning</title>
+<title>Skapa utbetalning</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,84 +14,166 @@
 
 <h1>Skapa utbetalning</h1>
 
-<p>I det här formuläret registrerar du nya utbetalningar. En utbetalning är en
-betalning till leverantör av en från leverantören utställd leverantörsfaktura.
-Du tar bort utbetalningsrader genom att markera utbetalningsraden och trycka på knappen "Del" på tangentbordet.</p>
+<p>I det här formuläret registrerar du nya utbetalningar. En utbetalning är en</p>
+<p>betalning till leverantör av en från leverantören utställd leverantörsfaktura.</p>
+<p>Du tar bort utbetalningsrader genom att markera utbetalningsraden och trycka på knappen "Del" på tangentbordet.</p>
 <p>Följande flikar och fält finns när du skall registrera en ny utbetalning:</p>
-<p>Utbetalningsuppgifter Utbetalningsnummer Här uppräknas ett unikt nummer enligt en sekventiell nummerserie för att kunna identifiera en utbetalning.</p>
-<p>Betalningsdatum Här skriver du in eller väljer ett datum för utbetalningen, det datum på utbetalningen drogs från ert bank- eller plusgirokonto.
-Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Beskrivning Här kan du skriva in en beskrivande text för utbetalningen.</p>
-<p>Fakturanr Här skriver du in eller väljer en leverantörsfaktura för att registrera en utbetalning av den här leverantörsfakturan.</p>
-<p>Valuta Här visas leverantörfakturans valuta.</p>
-<p>Fakturakurs Här visas valutakursen för leverantörsfakturan då den här leverantörsfakturan skapades och utställdes från leverantör.</p>
-<p>Fakturabelopp Här visas kvarvarande saldo för leverantörsfakturan angivet i leverantörsfakturans valuta, du kan här skriva in utbetalt
-belopp angivet i leverantörsfakturans valuta.</p>
-<p>Betalkurs Här skriver du in valutakursen vid betalningstillfället i framförvarande angiven valuta. Betalkursen anges som
-antalet enheter av redovisningsvalutan som måste betalas för en enhet av leverantörsfakturans valuta vid utbetalningstidpunkten. Betalkursen måste
-anges för att kursdifferens ska kunna beräknas och bokföras.</p>
-<p>Betalningsbelopp Här visas betalningsbeloppet angivet i redovisningsvalutan, beräknas utifrån och påverkas av ändringar i "Fakturabelopp"
-och "Betalkurs". Du kan här skriva in ett betalningsbelopp i redovisningsvalutan men då påverkas inte "Fakturabelopp" eller "Betalkurs" utan
-endast fältet "Differens".</p>
-<p>Kursdifferens Här visas valutakursdifferensen som uppstår på grund av skillnader mellan betalkurs och fakturakurs. Kursdifferensen
-beräknas utifrån fakturabelopp, betalkurs och fakturakurs. En positiv kursdifferens visar på en valutakursvinst och en negativ
-kursdifferens visar på en valutakursförlust.</p>
-<p>Differens Här visas differensen mellan "Betalningsbelopp" och ("Fakturabelopp" * "Betalkurs"). Den här differensen kan uppstå
-tillexempel på grund av ert företag även har betalat påminnelseavgifter. "Differens" bokförs inte automatiskt och du måste därför
-manuellt bokföra den här differensen under fliken "Differens".</p>
-<p>Summa Här visas totalt utbetalt belopp för hela utbetalningen, beräknas som summan av ("Fakturabelopp" * "Betalkurs").</p>
-<p>Konton Kundfordran Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inbetalning Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Utbetalning Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Kontant Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Leverantörsskuld Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 1 Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 2 Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 3 Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Försäljning Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inköp Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursvinst Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursförlust Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Öresavrundning Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ränteintäkt Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ingående moms Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Differens Här kan du manuellt bokföra den differens som uppstått på grund av skillnader
-mellan "Betalningsbelopp" och ("Fakturabelopp" * "Betalkurs") under fliken "Utbetalningsuppgifter". Den här skillnaden kan uppstå
-tillexempel på grund av ert företag även har betalat in påminnelseavgifter. De konteringsrader som du lägger till här visas sedan
-under fliken "Kontering".</p>
-<p>Konto Här skriver du in eller väljer ett kontonummer för konteringsraden.</p>
-<p>Benämning Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot.
-Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan.</p>
-<p>Debet Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kredit Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kontering Här visas hur den här utbetalningen kommer att bokföras i utbetalningsjournalen, och hur den här utbetalningen kommer
-påverka den totala bokföringsposten i bokföringsunderlaget när utbetalningsjournalen skrivs ut och bokförs. Tryck på knappen
-"Uppdatera" för att se konteringen för den här utbetalningen. Du kan ändra de automatiskt ifyllda kontona i konteringen genom att ändra
-kontonummer under fliken "Konton" för "Leverantörsskuld", "Utbetalning", "Valutakursvinst" och "Valutakursförlust".</p>
-<p>Konto Här visas ett kontonummer för konteringsraden.</p>
-<p>Benämning Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot.
-Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan.</p>
-<p>Debet Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kredit Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Utbetalningen är bokförd Den här kryssrutan är ikryssad om utbetalningen blivit utskriven i en utbetalningsjournal och bokförd enligt
-utbetalningsjournalens bokföringsunderlag.</p>
-
+<p>Utbetalningsuppgifter</p>
+<dl>
+  <dt>Utbetalningsnummer</dt>
+  <dd>Här uppräknas ett unikt nummer enligt en sekventiell nummerserie för att kunna identifiera en utbetalning.</dd>
+</dl>
+<dl>
+  <dt>Betalningsdatum</dt>
+  <dd>Här skriver du in eller väljer ett datum för utbetalningen, det datum på utbetalningen drogs från ert bank- eller plusgirokonto. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här kan du skriva in en beskrivande text för utbetalningen.</dd>
+</dl>
+<dl>
+  <dt>Fakturanr</dt>
+  <dd>Här skriver du in eller väljer en leverantörsfaktura för att registrera en utbetalning av den här leverantörsfakturan.</dd>
+</dl>
+<dl>
+  <dt>Valuta</dt>
+  <dd>Här visas leverantörfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Fakturakurs</dt>
+  <dd>Här visas valutakursen för leverantörsfakturan då den här leverantörsfakturan skapades och utställdes från leverantör.</dd>
+</dl>
+<dl>
+  <dt>Fakturabelopp</dt>
+  <dd>Här visas kvarvarande saldo för leverantörsfakturan angivet i leverantörsfakturans valuta, du kan här skriva in utbetalt belopp angivet i leverantörsfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Betalkurs</dt>
+  <dd>Här skriver du in valutakursen vid betalningstillfället i framförvarande angiven valuta. Betalkursen anges som antalet enheter av redovisningsvalutan som måste betalas för en enhet av leverantörsfakturans valuta vid utbetalningstidpunkten. Betalkursen måste anges för att kursdifferens ska kunna beräknas och bokföras.</dd>
+</dl>
+<dl>
+  <dt>Betalningsbelopp</dt>
+  <dd>Här visas betalningsbeloppet angivet i redovisningsvalutan, beräknas utifrån och påverkas av ändringar i "Fakturabelopp" och "Betalkurs". Du kan här skriva in ett betalningsbelopp i redovisningsvalutan men då påverkas inte "Fakturabelopp" eller "Betalkurs" utan endast fältet "Differens".</dd>
+</dl>
+<dl>
+  <dt>Kursdifferens</dt>
+  <dd>Här visas valutakursdifferensen som uppstår på grund av skillnader mellan betalkurs och fakturakurs. Kursdifferensen beräknas utifrån fakturabelopp, betalkurs och fakturakurs. En positiv kursdifferens visar på en valutakursvinst och en negativ kursdifferens visar på en valutakursförlust.</dd>
+</dl>
+<dl>
+  <dt>Differens</dt>
+  <dd>Här visas differensen mellan "Betalningsbelopp" och ("Fakturabelopp" * "Betalkurs"). Den här differensen kan uppstå tillexempel på grund av ert företag även har betalat påminnelseavgifter. "Differens" bokförs inte automatiskt och du måste därför manuellt bokföra den här differensen under fliken "Differens".</dd>
+</dl>
+<dl>
+  <dt>Summa</dt>
+  <dd>Här visas totalt utbetalt belopp för hela utbetalningen, beräknas som summan av ("Fakturabelopp" * "Betalkurs").</dd>
+</dl>
+<p>Konton</p>
+<dl>
+  <dt>Kundfordran</dt>
+  <dd>Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inbetalning</dt>
+  <dd>Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Utbetalning</dt>
+  <dd>Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Kontant</dt>
+  <dd>Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Leverantörsskuld</dt>
+  <dd>Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 1</dt>
+  <dd>Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 2</dt>
+  <dd>Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 3</dt>
+  <dd>Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Försäljning</dt>
+  <dd>Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inköp</dt>
+  <dd>Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursvinst</dt>
+  <dd>Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursförlust</dt>
+  <dd>Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Öresavrundning</dt>
+  <dd>Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ränteintäkt</dt>
+  <dd>Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ingående moms</dt>
+  <dd>Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här utbetalningen eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<p>Differens</p>
+<p>Här kan du manuellt bokföra den differens som uppstått på grund av skillnader</p>
+<p>mellan "Betalningsbelopp" och ("Fakturabelopp" * "Betalkurs") under fliken "Utbetalningsuppgifter". Den här skillnaden kan uppstå</p>
+<p>tillexempel på grund av ert företag även har betalat in påminnelseavgifter. De konteringsrader som du lägger till här visas sedan</p>
+<p>under fliken "Kontering".</p>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här skriver du in eller väljer ett kontonummer för konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Benämning</dt>
+  <dd>Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot. Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här skriver du in ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<p>Kontering</p>
+<p>Här visas hur den här utbetalningen kommer att bokföras i utbetalningsjournalen, och hur den här utbetalningen kommer</p>
+<p>påverka den totala bokföringsposten i bokföringsunderlaget när utbetalningsjournalen skrivs ut och bokförs. Tryck på knappen</p>
+<p>"Uppdatera" för att se konteringen för den här utbetalningen. Du kan ändra de automatiskt ifyllda kontona i konteringen genom att ändra</p>
+<p>kontonummer under fliken "Konton" för "Leverantörsskuld", "Utbetalning", "Valutakursvinst" och "Valutakursförlust".</p>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här visas ett kontonummer för konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Benämning</dt>
+  <dd>Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot. Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Utbetalningen är bokförd</dt>
+  <dd>Den här kryssrutan är ikryssad om utbetalningen blivit utskriven i en utbetalningsjournal och bokförd enligt utbetalningsjournalens bokföringsunderlag.</dd>
+</dl>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Fakturajournal</title>
+<title>Fakturajournal</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,43 +14,105 @@
 
 <h1>Fakturajournal</h1>
 
-<p>Den här rapporten listar kundfakturor mellan två datum och visar hur varje kundfaktura kommer att bokföras och hur de bidrar
-till den totala bokföringsposten i bokföringsunderlaget på sista sidan i den här rapporten.</p>
-<p>När du ska skriva ut fakturajournalen
-kan du välja startdatum och slutdatum för fakturadatum för att få med alla icke bokförda kundfakturor under vald period i fakturajournalen.
-Fakturajournalen används för att bokföra flera kundfakturor under en månad automatiskt i en verifikation.</p>
-<p>I fakturajournalen är det viktigt
-att kontrollera kundfakturornas nummerserie, att det inte finns några luckor i nummerserien, så att inte vissa kundfakturor utelämnas i bokföringen.
-Du bör även kontrollera att rätt kontonummer har använts vid bokföring av kundfakturorna, du kan ändra konteringen för de enskilda kundfakturorna
-tills fakturajournalen med aktuella kundfakturor har godkänts och bokförts.</p>
-<p>När du har skrivit ut fakturajournalen kommer du få en fråga om
-ni vill godkänna och bokföra fakturajournalen, om du svarar "Ja" på den här frågan så kommer fakturajournalen bokföras automatiskt enligt bokföringsunderlaget.
-Bokföringsunderlaget utgör en verifikation för konteringen.</p>
+<p>Den här rapporten listar kundfakturor mellan två datum och visar hur varje kundfaktura kommer att bokföras och hur de bidrar</p>
+<p>till den totala bokföringsposten i bokföringsunderlaget på sista sidan i den här rapporten.</p>
+<p>När du ska skriva ut fakturajournalen</p>
+<p>kan du välja startdatum och slutdatum för fakturadatum för att få med alla icke bokförda kundfakturor under vald period i fakturajournalen.</p>
+<p>Fakturajournalen används för att bokföra flera kundfakturor under en månad automatiskt i en verifikation.</p>
+<p>I fakturajournalen är det viktigt</p>
+<p>att kontrollera kundfakturornas nummerserie, att det inte finns några luckor i nummerserien, så att inte vissa kundfakturor utelämnas i bokföringen.</p>
+<p>Du bör även kontrollera att rätt kontonummer har använts vid bokföring av kundfakturorna, du kan ändra konteringen för de enskilda kundfakturorna</p>
+<p>tills fakturajournalen med aktuella kundfakturor har godkänts och bokförts.</p>
+<p>När du har skrivit ut fakturajournalen kommer du få en fråga om</p>
+<p>ni vill godkänna och bokföra fakturajournalen, om du svarar "Ja" på den här frågan så kommer fakturajournalen bokföras automatiskt enligt bokföringsunderlaget.</p>
+<p>Bokföringsunderlaget utgör en verifikation för konteringen.</p>
 <p>Följande sidor och fält finns i den här rapporten:</p>
-<p>Fakturajournal Faktura nr Här visas ett unikt nummer för varje registrerad kundfaktura.</p>
-<p>Kund nr Här visas kundnumret för den kund som kundfakturan är skapad för.</p>
-<p>Kundnamn Här visas kundens företagsnamn eller personnamn.</p>
-<p>Datum Här visas datumet då kundfakturan skapades och utfärdades.</p>
-<p>Valuta Här visas kundfakturans valuta.</p>
-<p>Konto nr Här visas de kontonummer som anges under kundfakturans konteringsflik.</p>
-<p>Beskrivning Här visas kontobeskrivningen för framförvarande kontonummer.</p>
-<p>Debet Här visas ett monetärt belopp som har registrerats för framförvarande konto i kundfakturan.</p>
-<p>Kredit Här visas ett monetärt belopp som har registrerats för framförvarande konto i kundfakturan.</p>
-<p>Projekt Här visas projektet som har registrerats för framförvarande konto i kundfakturan.</p>
-<p>Resultatenhet Här visas resultatenheten som har registrerats för framförvarande konto i kundfakturan.</p>
-<p>Totalsumma Här visas kundfakturans totala monetära värde inklusive moms angivet i kundfakturans valuta.</p>
-<p>Varav moms Här visas kundfakturans totala monetära värde för mervärdesskatt angivet i kundfakturans valuta.</p>
-<p>Valutakurs Här visas kundfakturans valutakurs, valutakursen visas som hur många enheter av redovisningsvalutan du måste betala för en enhet av
-valutan som är angiven i kundfakturan.</p>
-<p>Totalt redovisningsvaluta Här visas kundfakturans totala monetära värde inklusive moms angivet i redovisningsvalutan, det här värdet
-beräknas genom att "Totalsumma" multipliceras med "Valutakurs".</p>
-<p>Bokföringsunderlag Konto Här visas de kontonummer som ska användas vid bokföring av fakturajournalen.</p>
-<p>Beskrivning Här visas kontobeskrivningen för framförvarande kontonummer.</p>
-<p>Projekt Här visas projektet som skall bokföras för framförvarande konto.</p>
-<p>Resultatenhet Här visas resultatenheten som skall bokföras för framförvarande konto.</p>
-<p>Debet Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</p>
-<p>Kredit Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</p>
-
+<p>Fakturajournal</p>
+<dl>
+  <dt>Faktura nr</dt>
+  <dd>Här visas ett unikt nummer för varje registrerad kundfaktura.</dd>
+</dl>
+<dl>
+  <dt>Kund nr</dt>
+  <dd>Här visas kundnumret för den kund som kundfakturan är skapad för.</dd>
+</dl>
+<dl>
+  <dt>Kundnamn</dt>
+  <dd>Här visas kundens företagsnamn eller personnamn.</dd>
+</dl>
+<dl>
+  <dt>Datum</dt>
+  <dd>Här visas datumet då kundfakturan skapades och utfärdades.</dd>
+</dl>
+<dl>
+  <dt>Valuta</dt>
+  <dd>Här visas kundfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Konto nr</dt>
+  <dd>Här visas de kontonummer som anges under kundfakturans konteringsflik.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas kontobeskrivningen för framförvarande kontonummer.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här visas ett monetärt belopp som har registrerats för framförvarande konto i kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här visas ett monetärt belopp som har registrerats för framförvarande konto i kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här visas projektet som har registrerats för framförvarande konto i kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här visas resultatenheten som har registrerats för framförvarande konto i kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Totalsumma</dt>
+  <dd>Här visas kundfakturans totala monetära värde inklusive moms angivet i kundfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Varav moms</dt>
+  <dd>Här visas kundfakturans totala monetära värde för mervärdesskatt angivet i kundfakturans valuta.</dd>
+</dl>
+<dl>
+  <dt>Valutakurs</dt>
+  <dd>Här visas kundfakturans valutakurs, valutakursen visas som hur många enheter av redovisningsvalutan du måste betala för en enhet av valutan som är angiven i kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Totalt redovisningsvaluta</dt>
+  <dd>Här visas kundfakturans totala monetära värde inklusive moms angivet i redovisningsvalutan, det här värdet beräknas genom att "Totalsumma" multipliceras med "Valutakurs".</dd>
+</dl>
+<p>Bokföringsunderlag</p>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här visas de kontonummer som ska användas vid bokföring av fakturajournalen.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas kontobeskrivningen för framförvarande kontonummer.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här visas projektet som skall bokföras för framförvarande konto.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här visas resultatenheten som skall bokföras för framförvarande konto.</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här visas ett monetärt belopp som skall bokföras för framförvarande konto.</dd>
+</dl>
 
 </body>
 </html>

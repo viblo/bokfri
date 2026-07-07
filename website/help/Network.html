@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Nätverk</title>
+<title>Nätverk</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,28 +14,17 @@
 
 <h1>Nätverk</h1>
 
-<p>I Bokfri Administration kan du vara flera användare samtidigt som arbetar med
-samma företag eller olika företag. För att komma igång och arbeta med nätverk måste ett antal
-åtgärder vidtas för att det skall fungera att arbeta i nätverk.</p>
-<p>Förberedelser För det första bör man bestämma vilken dator i nätverket som skall vara värddator.</p>
-<p>Antivirus program kan ställa till
-problem när man arbetar i nätverk i och med att virusprogrammen vill söka igenom nätverksmappar. På varje
-dator i nätverket bör man göra ett genomsökningsundantag på nätverksmappen så att inte flera datorer i nätverket
-söker igenom nätverksmappen samtidigt.</p>
-<p>På värddatorn måste man köra igång Bokfri Server varje gång innan man börjar
-arbeta i nätverk, Bokfri Server ligger i programmappen i mappen db. Bokfri Server tar hand om anslutningar till
-databasmappen, låsning för skrivning och läsning samt postlåsning. I Antivirusprogrammet bör man godkänna
-programmet Bokfri Server så att programmen i nätverket kan kommunicera med detta program.</p>
-<p>Arbeta i nätverk När förberedelserna är gjorda kan klientdatorerna ansluta sig till Bokfri Server på värddatorn, Bokfri Server
-ansluter till databasen.</p>
-<p>I varje klientprogram går man till "Arkiv" och "Nätverksinställningar", där
-skall ip-adressen till värddatorn eller datornamnet
-för värddatorn anges så att klientprogrammet kan ansluta till Bokfri Server på värddatorn.</p>
-<p>Ip-adressen och datornamnet på
-värddatorn står i  huvudfönstret i Bokfri Server på värddatorn. Bokfri Server måste alltid vara igång innan klientprogrammen
-kan ansluta till databasen och arbeta i nätverk, om Bokfri Server avslutas när
-klientdatorer är anslutna måste klientprogrammen stängas ned och Bokfri Server startas om.</p>
-
+<p>I Bokfri Administration kan du vara flera användare samtidigt som arbetar med</p>
+<p>samma företag eller olika företag. För att komma igång och arbeta med nätverk måste ett antal</p>
+<p>åtgärder vidtas för att det skall fungera att arbeta i nätverk.</p>
+<dl>
+  <dt>Förberedelser</dt>
+  <dd>För det första bör man bestämma vilken dator i nätverket som skall vara värddator. Antivirus program kan ställa till problem när man arbetar i nätverk i och med att virusprogrammen vill söka igenom nätverksmappar. På varje dator i nätverket bör man göra ett genomsökningsundantag på nätverksmappen så att inte flera datorer i nätverket söker igenom nätverksmappen samtidigt. På värddatorn måste man köra igång Bokfri Server varje gång innan man börjar arbeta i nätverk, Bokfri Server ligger i programmappen i mappen db. Bokfri Server tar hand om anslutningar till databasmappen, låsning för skrivning och läsning samt postlåsning. I Antivirusprogrammet bör man godkänna programmet Bokfri Server så att programmen i nätverket kan kommunicera med detta program.</dd>
+</dl>
+<dl>
+  <dt>Arbeta i nätverk</dt>
+  <dd>När förberedelserna är gjorda kan klientdatorerna ansluta sig till Bokfri Server på värddatorn, Bokfri Server ansluter till databasen. I varje klientprogram går man till "Arkiv" och "Nätverksinställningar", där skall ip-adressen till värddatorn eller datornamnet för värddatorn anges så att klientprogrammet kan ansluta till Bokfri Server på värddatorn. Ip-adressen och datornamnet på värddatorn står i  huvudfönstret i Bokfri Server på värddatorn. Bokfri Server måste alltid vara igång innan klientprogrammen kan ansluta till databasen och arbeta i nätverk, om Bokfri Server avslutas när klientdatorer är anslutna måste klientprogrammen stängas ned och Bokfri Server startas om.</dd>
+</dl>
 
 </body>
 </html>

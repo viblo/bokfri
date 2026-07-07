@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bokfri — Skapa periodfaktura</title>
+<title>Skapa periodfaktura</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,154 +14,319 @@
 
 <h1>Skapa periodfaktura</h1>
 
-<p>I det här formuläret registrerar du nya periodfakturor. En periodfaktura är en inställning för en
-samling fakturor som enligt förutbestämda intervall för förutbestämda perioder skall skapas vid eller efter specifika datum.
-Du tar bort produktrader genom att markera produktraden och trycka på knappen "Del" på tangentbordet.</p>
+<p>I det här formuläret registrerar du nya periodfakturor. En periodfaktura är en inställning för en</p>
+<p>samling fakturor som enligt förutbestämda intervall för förutbestämda perioder skall skapas vid eller efter specifika datum.</p>
+<p>Du tar bort produktrader genom att markera produktraden och trycka på knappen "Del" på tangentbordet.</p>
 <p>Följande flikar och fält finns när du skall registrera en ny periodfaktura:</p>
-<p>Fakturauppgifter Fakturanummer Här uppräknas ett unikt nummer enligt en sekventiell nummerserie för att kunna identifiera en periodfaktura.</p>
-<p>Kundnummer Här kan du välja en redan registrerad kund för kundfakturan och få data om kunden hämtad till kundfakturan. Du behöver inte
-välja en kund i uppslagskolumnen utan kan ändå skapa en kundfaktura.</p>
-<p>Kundnamn Här skriver du in kundens företagsnamn eller personnamn.</p>
-<p>Vår kontaktperson Här skriver du in ert företags kontaktperson för frågor när det gäller den här kundfakturan.</p>
-<p>Er kontaktperson Här skriver du in kundens kontaktperson för frågor när det gäller den här kundfakturan.</p>
-<p>Fakturadatum Här skriver du in eller väljer ett datum för kundfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Förfallodag Här skriver du in eller väljer ett datum då kundfakturan senast ska vara betald. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Leveransvillkor Här väljer du leveransvillkor för kundfakturan.
-Du kan lägga till, ändra och ta bort leveransvillkor med hjälp av knappen längst till
-höger om textfältet för leveransvillkor. När du väljer ändra eller ta bort så avses det leveransvillkor som visas i textrutan.</p>
-<p>Betalningsvillkor Här väljer du betalningsvillkor för kundfakturan.
-Du kan lägga till, ändra och ta bort betalningsvillkor med hjälp av knappen längst till
-höger om textfältet för betalningsvillkor. När du väljer ändra eller ta bort så avses det betalningsvillkor som visas i textrutan.</p>
-<p>Leveranssätt Här väljer du leveranssätt för kundfakturan.
-Du kan lägga till, ändra och ta bort leveranssätt med hjälp av knappen längst till
-höger om textfältet för leveranssätt. När du väljer ändra eller ta bort så avses det leveranssätt som visas i textrutan.</p>
-<p>Valuta Här väljer du valuta för kundfakturan. Du kan lägga till, ändra och ta bort valuta med hjälp av knappen näst längst till
-höger om textfältet för valuta. När du väljer ändra eller ta bort så avses den valuta som visas i textrutan. Med hjälp av miniräknaren längst
-till höger om textfältet för valuta kan du räkna om priserna i "Enhetspris" i hela kundfakturan till vald valuta. Du måste ha angett en
-redovisningsvaluta i företagsinställningarna och valt en valuta för kundfakturan.</p>
-<p>Valutakurs Här skriver du in valutakursen på fakturadatum för kundfakturan då fakturan ställs ut i en valuta skild från
-redovisningsvalutan. Du skriver in valutakursen som hur många enheter av redovisningsvalutan du måste betala för en enhet av
-valutan som är angiven i fakturan.</p>
-<p>Lägg automatiskt till nya kunder och produkter i kund- och produktregister Kryssa i den här rutan om du vill att en tillagd kund eller tillagda produkter i kundfakturan som inte redan
-finns i respektive register skall läggas till i dessa register automatiskt.</p>
-<p>Produktnr Här skriver du in eller väljer en produkt från uppslagskolumnen. Du kan skriva in ett helt nytt
-produktnummer som inte finns sparat sedan tidigare i produktregistret.</p>
-<p>Beskrivning Här visas produktens beskrivning om du valt en produkt från produktregistret, du kan ändra den här beskrivningen
-eller skriva en helt egen om beskrivning saknas.</p>
-<p>Enhetspris Här visas produktens enhetspris om du valt en produkt från produktregistret, du kan ändra det här priset
-eller skriva in ett eget pris om enhetspris saknas.</p>
-<p>Antal Här skriver du in antalet enheter för produkten som ska vara med i kundfakturan.</p>
-<p>Enhet Här visas produktens enhet om du valt en produkt från produktregistret, du kan ändra den här enheten till en annan
-eller välja en enhet om enhet saknas.</p>
-<p>Rabatt Här visas en radrabatt i procent om du valt en kund från kundregistret, du kan ändra den här rabatten eller skriva
-in en egen rabatt om rabatt saknas.</p>
-<p>Summa Här visas radens nettosumma exklusive moms, summa beräknas från enhetspris, antal och rabatt.</p>
-<p>Moms Här visas produktens momssats om du valt en produkt från produktregistret, du kan välja en annan momssats genom att
-dubbelklicka i fältet.</p>
-<p>Konto Här visas försäljningskontot för produkten om du valt en produkt från produktregistret, du kan välja ett annat konto,
-skriva in ett nytt konto eller välja ett nytt konto om kontonummer saknas. Kontonumret visar på hur produktraden skall bokföras.</p>
-<p>Resultatenhet Här kan du skriva in eller välja en resultatenhet för produktraden, det här har betydelse för vilken resultatenhet
-produktraden skall bokföras på.</p>
-<p>Projekt Här kan du skriva in eller välja ett projekt för produktraden, det här har betydelse för vilket projekt
-produktraden skall bokföras på.</p>
-<p>Periodfaktura Första faktureringsdatum Här skriver du in eller väljer ett datum då den första kundfakturan skall skapas och utfärdas. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Beskrivning Här kan du skriva in en text för att beskriva vad den här periodfakturan avser.</p>
-<p>Fakturaintervall i månader Här kan du skriva in en siffra som anger efter hur många månader nästkommande kundfaktura skall skapas och utfärdas.</p>
-<p>Antal fakturor Här anger du det antal kundfakturor som skall skapas för den här periodfakturan.</p>
-<p>Lägg till perioden som en rad i fakturan Kryssa i den här rutan för att visa varje periods start- och slutdatum på de skapade kundfakturorna.</p>
-<p>Första datum i perioden Här skriver du in eller väljer ett datum för första dagen i perioden för första kundfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Sista datum i perioden Här skriver du in eller väljer ett datum för sista dagen i perioden för första kundfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag.
-Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</p>
-<p>Lägg till informationsrad som en rad i fakturan Kryssa i den här rutan för att visa en informationsrad på de skapade kundfakturorna.</p>
-<p>Information Här kan du skriva in en informationsrad för de kundfakturor som skapas från periodfakturan.</p>
-<p>Kunduppgifter Fakturaadress: Namn Här visas kundens företagsnamn eller personnamn för fakturering om du har valt en kund från kundregistret, du kan ändra
-det här namnet eller skriva in ett nytt namn.</p>
-<p>Fakturaadress: Adress Här visas kundens postadress för fakturering om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Fakturaadress: Adress2 Här visas kundens andra postadress för fakturering om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Fakturaadress: Postnummer Här visas kundens postnummer för fakturering om du har valt en kund från kundregistret, du kan ändra
-det här postnumret eller skriva in ett nytt postnummer.</p>
-<p>Fakturaadress: Postort Här visas kundens postort för fakturering om du har valt en kund från kundregistret, du kan ändra
-den här postorten eller skriva in en ny postort.</p>
-<p>Fakturaadress: Land Här visas kundens land för fakturering om du har valt en kund från kundregistret, du kan ändra
-det här landet eller skriva in ett nytt land.</p>
-<p>Leveransadress: Namn Här visas kundens företagsnamn eller personnamn för leverans om du har valt en kund från kundregistret, du kan ändra
-det här namnet eller skriva in ett nytt namn.</p>
-<p>Leveransadress: Adress Här visas kundens postadress för leverans om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Leveransadress: Adress2 Här visas kundens andra postadress för leverans om du har valt en kund från kundregistret, du kan ändra
-den här adressen eller skriva in en ny adress.</p>
-<p>Leveransadress: Postnummer Här visas kundens postnummer för leverans om du har valt en kund från kundregistret, du kan ändra
-det här postnumret eller skriva in ett nytt postnummer.</p>
-<p>Leveransadress: Postort Här visas kundens postort för leverans om du har valt en kund från kundregistret, du kan ändra
-den här postorten eller skriva in en ny postort.</p>
-<p>Leveransadress: Land Här visas kundens land för leverans om du har valt en kund från kundregistret, du kan ändra
-det här landet eller skriva in ett nytt land.</p>
-<p>Fakturatext Här visas fakturatexten från företagsinställningarna, du kan ändra den här standardtexten för den här kundfakturan eller
-skriva in en ny text om fakturatext saknas.</p>
-<p>Dröjsmålsränta Här visas dröjsmålsräntan hämtad från företagsinställningarna, du kan ändra den här dröjsmålsräntan för den här kundfakturan eller skriva in
-en ny dröjsmålsränta om dröjsmålsränta saknas.</p>
-<p>Ert order/avtalsnr Här kan du skriva in kundens order- eller avtalsnummer så att kunden kan knyta kundfakturan från ert företag till
-sin egen beställning eller till ett avtal mellan ert företag och kunden.</p>
-<p>EU-försäljning varor Kryssa i den här rutan om den här kundfakturan avser försäljning och leverans av varor till ett annat EU-land utanför Sverige. Du kan inte
-kryssa i "EU-försäljning trepart varor" om den här rutan är ikryssad.</p>
-<p>EU-försäljning trepart varor Kryssa i den här rutan om den här kundfakturan avser försäljning till ett annat EU-land utanför Sverige där ert företag är mellanman.
-Det här är aktuellt om tre EU-länder är inblandade i en transaktion och ert företag säljer varor till ett EU-land där varorna levereras till
-det här EU-landet direkt från ett annat EU-land. Du kan inte kryssa i "EU-försäljning varor" om den här rutan är ikryssad.</p>
-<p>Konton och moms Kundfordran Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inbetalning Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Utbetalning Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Kontant Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Leverantörsskuld Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 1 Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 2 Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Moms 3 Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Försäljning Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Inköp Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursvinst Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Valutakursförlust Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Öresavrundning Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ränteintäkt Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Ingående moms Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här
-kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</p>
-<p>Momsfri Kryssa i den här rutan om din försäljning till den här kunden är momsfri, det vill säga då någon moms inte skall
-läggas till på fakturan.</p>
-<p>Momskod 1 Här visas procentuell moms för momskod 1 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</p>
-<p>Momskod 2 Här visas procentuell moms för momskod 2 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</p>
-<p>Momskod 3 Här visas procentuell moms för momskod 3 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</p>
-<p>Kontering Här visas hur den här kundfakturan kommer att bokföras i fakturajournalen, och hur den här kundfakturan kommer
-påverka den totala bokföringsposten när bokföringsunderlaget för fakturajournalen skrivs ut och bokförs. Tryck på knappen
-"Uppdatera" för att se konteringen för den här kundfakturan. Du kan ändra de automatiskt ifyllda kontona i konteringen genom att ändra
-kontonummer under fliken "Konton och moms" för "Kundfordran", "Kontant", "Öresavrundning", "Moms 1", "Moms 2" och "Moms 3".</p>
-<p>Konto Här visas ett kontonummer för konteringsraden.</p>
-<p>Benämning Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot.
-Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan</p>
-<p>Debet Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Kredit Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</p>
-<p>Projekt Här visas ett projektnummer för att specificera intäkten eller kostnaden
-på ett visst projekt.</p>
-<p>Resultatenhet Här visas ett resultatenhetsnummer för att specificera intäkten eller kostnaden
-på en viss resultatenhet.</p>
-
+<p>Fakturauppgifter</p>
+<dl>
+  <dt>Fakturanummer</dt>
+  <dd>Här uppräknas ett unikt nummer enligt en sekventiell nummerserie för att kunna identifiera en periodfaktura.</dd>
+</dl>
+<dl>
+  <dt>Kundnummer</dt>
+  <dd>Här kan du välja en redan registrerad kund för kundfakturan och få data om kunden hämtad till kundfakturan. Du behöver inte välja en kund i uppslagskolumnen utan kan ändå skapa en kundfaktura.</dd>
+</dl>
+<dl>
+  <dt>Kundnamn</dt>
+  <dd>Här skriver du in kundens företagsnamn eller personnamn.</dd>
+</dl>
+<dl>
+  <dt>Vår kontaktperson</dt>
+  <dd>Här skriver du in ert företags kontaktperson för frågor när det gäller den här kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Er kontaktperson</dt>
+  <dd>Här skriver du in kundens kontaktperson för frågor när det gäller den här kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Fakturadatum</dt>
+  <dd>Här skriver du in eller väljer ett datum för kundfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Förfallodag</dt>
+  <dd>Här skriver du in eller väljer ett datum då kundfakturan senast ska vara betald. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Leveransvillkor</dt>
+  <dd>Här väljer du leveransvillkor för kundfakturan. Du kan lägga till, ändra och ta bort leveransvillkor med hjälp av knappen längst till höger om textfältet för leveransvillkor. När du väljer ändra eller ta bort så avses det leveransvillkor som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Betalningsvillkor</dt>
+  <dd>Här väljer du betalningsvillkor för kundfakturan. Du kan lägga till, ändra och ta bort betalningsvillkor med hjälp av knappen längst till höger om textfältet för betalningsvillkor. När du väljer ändra eller ta bort så avses det betalningsvillkor som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Leveranssätt</dt>
+  <dd>Här väljer du leveranssätt för kundfakturan. Du kan lägga till, ändra och ta bort leveranssätt med hjälp av knappen längst till höger om textfältet för leveranssätt. När du väljer ändra eller ta bort så avses det leveranssätt som visas i textrutan.</dd>
+</dl>
+<dl>
+  <dt>Valuta</dt>
+  <dd>Här väljer du valuta för kundfakturan. Du kan lägga till, ändra och ta bort valuta med hjälp av knappen näst längst till höger om textfältet för valuta. När du väljer ändra eller ta bort så avses den valuta som visas i textrutan. Med hjälp av miniräknaren längst till höger om textfältet för valuta kan du räkna om priserna i "Enhetspris" i hela kundfakturan till vald valuta. Du måste ha angett en redovisningsvaluta i företagsinställningarna och valt en valuta för kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Valutakurs</dt>
+  <dd>Här skriver du in valutakursen på fakturadatum för kundfakturan då fakturan ställs ut i en valuta skild från redovisningsvalutan. Du skriver in valutakursen som hur många enheter av redovisningsvalutan du måste betala för en enhet av valutan som är angiven i fakturan.</dd>
+</dl>
+<dl>
+  <dt>Lägg automatiskt till nya kunder och produkter i kund- och produktregister</dt>
+  <dd>Kryssa i den här rutan om du vill att en tillagd kund eller tillagda produkter i kundfakturan som inte redan finns i respektive register skall läggas till i dessa register automatiskt.</dd>
+</dl>
+<dl>
+  <dt>Produktnr</dt>
+  <dd>Här skriver du in eller väljer en produkt från uppslagskolumnen. Du kan skriva in ett helt nytt produktnummer som inte finns sparat sedan tidigare i produktregistret.</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här visas produktens beskrivning om du valt en produkt från produktregistret, du kan ändra den här beskrivningen eller skriva en helt egen om beskrivning saknas.</dd>
+</dl>
+<dl>
+  <dt>Enhetspris</dt>
+  <dd>Här visas produktens enhetspris om du valt en produkt från produktregistret, du kan ändra det här priset eller skriva in ett eget pris om enhetspris saknas.</dd>
+</dl>
+<dl>
+  <dt>Antal</dt>
+  <dd>Här skriver du in antalet enheter för produkten som ska vara med i kundfakturan.</dd>
+</dl>
+<dl>
+  <dt>Enhet</dt>
+  <dd>Här visas produktens enhet om du valt en produkt från produktregistret, du kan ändra den här enheten till en annan eller välja en enhet om enhet saknas.</dd>
+</dl>
+<dl>
+  <dt>Rabatt</dt>
+  <dd>Här visas en radrabatt i procent om du valt en kund från kundregistret, du kan ändra den här rabatten eller skriva in en egen rabatt om rabatt saknas.</dd>
+</dl>
+<dl>
+  <dt>Summa</dt>
+  <dd>Här visas radens nettosumma exklusive moms, summa beräknas från enhetspris, antal och rabatt.</dd>
+</dl>
+<dl>
+  <dt>Moms</dt>
+  <dd>Här visas produktens momssats om du valt en produkt från produktregistret, du kan välja en annan momssats genom att dubbelklicka i fältet.</dd>
+</dl>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här visas försäljningskontot för produkten om du valt en produkt från produktregistret, du kan välja ett annat konto, skriva in ett nytt konto eller välja ett nytt konto om kontonummer saknas. Kontonumret visar på hur produktraden skall bokföras.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här kan du skriva in eller välja en resultatenhet för produktraden, det här har betydelse för vilken resultatenhet produktraden skall bokföras på.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här kan du skriva in eller välja ett projekt för produktraden, det här har betydelse för vilket projekt produktraden skall bokföras på.</dd>
+</dl>
+<p>Periodfaktura</p>
+<dl>
+  <dt>Första faktureringsdatum</dt>
+  <dd>Här skriver du in eller väljer ett datum då den första kundfakturan skall skapas och utfärdas. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Beskrivning</dt>
+  <dd>Här kan du skriva in en text för att beskriva vad den här periodfakturan avser.</dd>
+</dl>
+<dl>
+  <dt>Fakturaintervall i månader</dt>
+  <dd>Här kan du skriva in en siffra som anger efter hur många månader nästkommande kundfaktura skall skapas och utfärdas.</dd>
+</dl>
+<dl>
+  <dt>Antal fakturor</dt>
+  <dd>Här anger du det antal kundfakturor som skall skapas för den här periodfakturan.</dd>
+</dl>
+<dl>
+  <dt>Lägg till perioden som en rad i fakturan</dt>
+  <dd>Kryssa i den här rutan för att visa varje periods start- och slutdatum på de skapade kundfakturorna.</dd>
+</dl>
+<dl>
+  <dt>Första datum i perioden</dt>
+  <dd>Här skriver du in eller väljer ett datum för första dagen i perioden för första kundfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Sista datum i perioden</dt>
+  <dd>Här skriver du in eller väljer ett datum för sista dagen i perioden för första kundfakturan. Du kan välja datum genom att trycka på "Kalendern" och däri välja månad, år och dag. Du kan också stega din upp en dag genom att trycka på "pil upp" och stega din ner en dag genom att trycka på knappen "pil ned".</dd>
+</dl>
+<dl>
+  <dt>Lägg till informationsrad som en rad i fakturan</dt>
+  <dd>Kryssa i den här rutan för att visa en informationsrad på de skapade kundfakturorna.</dd>
+</dl>
+<dl>
+  <dt>Information</dt>
+  <dd>Här kan du skriva in en informationsrad för de kundfakturor som skapas från periodfakturan.</dd>
+</dl>
+<p>Kunduppgifter</p>
+<dl>
+  <dt>Fakturaadress: Namn</dt>
+  <dd>Här visas kundens företagsnamn eller personnamn för fakturering om du har valt en kund från kundregistret, du kan ändra det här namnet eller skriva in ett nytt namn.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Adress</dt>
+  <dd>Här visas kundens postadress för fakturering om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Adress2</dt>
+  <dd>Här visas kundens andra postadress för fakturering om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Postnummer</dt>
+  <dd>Här visas kundens postnummer för fakturering om du har valt en kund från kundregistret, du kan ändra det här postnumret eller skriva in ett nytt postnummer.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Postort</dt>
+  <dd>Här visas kundens postort för fakturering om du har valt en kund från kundregistret, du kan ändra den här postorten eller skriva in en ny postort.</dd>
+</dl>
+<dl>
+  <dt>Fakturaadress: Land</dt>
+  <dd>Här visas kundens land för fakturering om du har valt en kund från kundregistret, du kan ändra det här landet eller skriva in ett nytt land.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Namn</dt>
+  <dd>Här visas kundens företagsnamn eller personnamn för leverans om du har valt en kund från kundregistret, du kan ändra det här namnet eller skriva in ett nytt namn.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Adress</dt>
+  <dd>Här visas kundens postadress för leverans om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Adress2</dt>
+  <dd>Här visas kundens andra postadress för leverans om du har valt en kund från kundregistret, du kan ändra den här adressen eller skriva in en ny adress.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Postnummer</dt>
+  <dd>Här visas kundens postnummer för leverans om du har valt en kund från kundregistret, du kan ändra det här postnumret eller skriva in ett nytt postnummer.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Postort</dt>
+  <dd>Här visas kundens postort för leverans om du har valt en kund från kundregistret, du kan ändra den här postorten eller skriva in en ny postort.</dd>
+</dl>
+<dl>
+  <dt>Leveransadress: Land</dt>
+  <dd>Här visas kundens land för leverans om du har valt en kund från kundregistret, du kan ändra det här landet eller skriva in ett nytt land.</dd>
+</dl>
+<dl>
+  <dt>Fakturatext</dt>
+  <dd>Här visas fakturatexten från företagsinställningarna, du kan ändra den här standardtexten för den här kundfakturan eller skriva in en ny text om fakturatext saknas.</dd>
+</dl>
+<dl>
+  <dt>Dröjsmålsränta</dt>
+  <dd>Här visas dröjsmålsräntan hämtad från företagsinställningarna, du kan ändra den här dröjsmålsräntan för den här kundfakturan eller skriva in en ny dröjsmålsränta om dröjsmålsränta saknas.</dd>
+</dl>
+<dl>
+  <dt>Ert order/avtalsnr</dt>
+  <dd>Här kan du skriva in kundens order- eller avtalsnummer så att kunden kan knyta kundfakturan från ert företag till sin egen beställning eller till ett avtal mellan ert företag och kunden.</dd>
+</dl>
+<dl>
+  <dt>EU-försäljning varor</dt>
+  <dd>Kryssa i den här rutan om den här kundfakturan avser försäljning och leverans av varor till ett annat EU-land utanför Sverige. Du kan inte kryssa i "EU-försäljning trepart varor" om den här rutan är ikryssad.</dd>
+</dl>
+<dl>
+  <dt>EU-försäljning trepart varor</dt>
+  <dd>Kryssa i den här rutan om den här kundfakturan avser försäljning till ett annat EU-land utanför Sverige där ert företag är mellanman. Det här är aktuellt om tre EU-länder är inblandade i en transaktion och ert företag säljer varor till ett EU-land där varorna levereras till det här EU-landet direkt från ett annat EU-land. Du kan inte kryssa i "EU-försäljning varor" om den här rutan är ikryssad.</dd>
+</dl>
+<p>Konton och moms</p>
+<dl>
+  <dt>Kundfordran</dt>
+  <dd>Här visas konto för bokföring av kundfordran hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inbetalning</dt>
+  <dd>Här visas konto för bokföring av inbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Utbetalning</dt>
+  <dd>Här visas konto för bokföring av utbetalning hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Kontant</dt>
+  <dd>Här visas konto för bokföring av kontantförsäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Leverantörsskuld</dt>
+  <dd>Här visas konto för bokföring av leverantörsskuld hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 1</dt>
+  <dd>Här visas konto för bokföring av momskod 1 hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 2</dt>
+  <dd>Här visas konto för bokföring av momskod 2 hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Moms 3</dt>
+  <dd>Här visas konto för bokföring av momskod 3 hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Försäljning</dt>
+  <dd>Här visas konto för bokföring av försäljning hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Inköp</dt>
+  <dd>Här visas konto för bokföring av inköp hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursvinst</dt>
+  <dd>Här visas konto för bokföring av valutakursvinst hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Valutakursförlust</dt>
+  <dd>Här visas konto för bokföring av valutakursförlust hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Öresavrundning</dt>
+  <dd>Här visas konto för bokföring av öresavrundning hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ränteintäkt</dt>
+  <dd>Här visas konto för bokföring av ränteintäkt hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Ingående moms</dt>
+  <dd>Här visas konto för bokföring av ingående moms hämtat från företagsinställningarna, du kan ändra det här kontot för den här kundfakturan eller välja ett nytt konto från uppslagskolumnen om konto saknas.</dd>
+</dl>
+<dl>
+  <dt>Momsfri</dt>
+  <dd>Kryssa i den här rutan om din försäljning till den här kunden är momsfri, det vill säga då någon moms inte skall läggas till på fakturan.</dd>
+</dl>
+<dl>
+  <dt>Momskod 1</dt>
+  <dd>Här visas procentuell moms för momskod 1 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</dd>
+</dl>
+<dl>
+  <dt>Momskod 2</dt>
+  <dd>Här visas procentuell moms för momskod 2 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</dd>
+</dl>
+<dl>
+  <dt>Momskod 3</dt>
+  <dd>Här visas procentuell moms för momskod 3 hämtat från företagsinställningarna, du kan ändra den här momssatsen.</dd>
+</dl>
+<p>Kontering</p>
+<p>Här visas hur den här kundfakturan kommer att bokföras i fakturajournalen, och hur den här kundfakturan kommer</p>
+<p>påverka den totala bokföringsposten när bokföringsunderlaget för fakturajournalen skrivs ut och bokförs. Tryck på knappen</p>
+<p>"Uppdatera" för att se konteringen för den här kundfakturan. Du kan ändra de automatiskt ifyllda kontona i konteringen genom att ändra</p>
+<p>kontonummer under fliken "Konton och moms" för "Kundfordran", "Kontant", "Öresavrundning", "Moms 1", "Moms 2" och "Moms 3".</p>
+<dl>
+  <dt>Konto</dt>
+  <dd>Här visas ett kontonummer för konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Benämning</dt>
+  <dd>Här visas en text som beskriver kontot och mer specifikt anger vilka affärshändelser som skall bokföras på kontot. Beskrivningen hämtas från kontoplanen enligt kontonumret enligt ovan</dd>
+</dl>
+<dl>
+  <dt>Debet</dt>
+  <dd>Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Kredit</dt>
+  <dd>Här visas ett monetärt belopp för framförvarande konto på konteringsraden.</dd>
+</dl>
+<dl>
+  <dt>Projekt</dt>
+  <dd>Här visas ett projektnummer för att specificera intäkten eller kostnaden på ett visst projekt.</dd>
+</dl>
+<dl>
+  <dt>Resultatenhet</dt>
+  <dd>Här visas ett resultatenhetsnummer för att specificera intäkten eller kostnaden på en viss resultatenhet.</dd>
+</dl>
 
 </body>
 </html>
