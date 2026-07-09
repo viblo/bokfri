@@ -16,7 +16,7 @@
 <div class="layout">
 
 <nav class="sidebar" id="sidebar">
-  <h2><a href="index.html">Hjälp</a></h2>
+  <h2>Hjälp</h2>
   <ul class="toc">
     <li class="section">Administration
       <ul>
@@ -31,10 +31,10 @@
         <li><a href="DeleteAccounts.html">Radera kontoplan</a></li>
         <li><a href="ExportAccounts.html">Exportera kontoplan</a></li>
         <li><a href="ImportAccounts.html">Importera kontoplan</a></li>
-        <li><a href="SIEimport.html">SIE</a></li>
-        <li><a href="import.voucher.html">Verifikationer</a></li>
-        <li><a href="SIEexport.html">SIE</a></li>
-        <li><a href="SIEexportVer.html">Verifikationer</a></li>
+        <li><a href="SIEimport.html">Importera från SIE-fil</a></li>
+        <li><a href="import.voucher.html">Importera verifikationer</a></li>
+        <li><a href="SIEexport.html">Exportera till SIE-fil</a></li>
+        <li><a href="SIEexportVer.html">Exportera verifikationer</a></li>
         <li><a href="Backup.html">Säkerhetskopiering</a></li>
         <li><a href="BackupAllCompany.html">Säkerhetskopiera hela databasen</a></li>
         <li><a href="RestoreBackup.html">Återställ från säkerhetskopia</a></li>
@@ -42,14 +42,14 @@
     </li>
     <li class="section">Företagsimport
       <ul>
-        <li><a href="SIEimport.html">SIE</a></li>
-        <li><a href="import.voucher.html">Verifikationer</a></li>
+        <li><a href="SIEimport.html">Importera från SIE-fil</a></li>
+        <li><a href="import.voucher.html">Importera verifikationer</a></li>
       </ul>
     </li>
     <li class="section">Företagsexport
       <ul>
-        <li><a href="SIEexport.html">SIE</a></li>
-        <li><a href="SIEexportVer.html">Verifikationer</a></li>
+        <li><a href="SIEexport.html">Exportera till SIE-fil</a></li>
+        <li><a href="SIEexportVer.html">Exportera verifikationer</a></li>
       </ul>
     </li>
     <li class="section">Register
@@ -494,12 +494,6 @@
 document.getElementById('sidebar').querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() {
       document.getElementById('sidebar').classList.add('hidden');
-    });
-  });
-
-  document.addEventListener('click', function(e) {
-      if (!document.getElementById('help-search').parentElement.contains(e.target))
-        document.getElementById('search-results').classList.add('hidden');
     });
   });
 

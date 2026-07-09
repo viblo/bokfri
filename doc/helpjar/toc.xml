@@ -19,18 +19,17 @@
       <tocitem target="ImportAccounts_html" text="Importera kontoplan"/>
     </tocitem>
     <tocitem image="Book Red 16 n p_png" text="Företagsimport">
-      <tocitem target="SIEimport_html" text="SIE"/>
-      <tocitem target="import_voucher_html" text="Verifikationer"/>
+      <tocitem target="SIEimport_html" text="Importera från SIE-fil"/>
+      <tocitem target="import_voucher_html" text="Importera verifikationer"/>
     </tocitem>
     <tocitem image="Book Red 16 n p_png" text="Företagsexport">
-      <tocitem target="SIEexport_html" text="SIE"/>
-      <tocitem target="SIEexportVer_html" text="Verifikationer"/>
+      <tocitem target="SIEexport_html" text="Exportera till SIE-fil"/>
+      <tocitem target="SIEexportVer_html" text="Exportera verifikationer"/>
     </tocitem>
     <tocitem image="Book Red 16 n p_png" target="Backup_html" text="Säkerhetskopiering">
       <tocitem target="BackupAllCompany_html" text="Säkerhetskopiera hela databasen"/>
       <tocitem target="RestoreBackup_html" text="Återställ från säkerhetskopia"/>
     </tocitem>
-    <tocitem target="NetworkSettings_html" text="Nätverksinställningar"/>
   </tocitem>
   <tocitem image="Book Green 16 n p_png" text="Register">
     <tocitem image="Book Red 16 n p_png" target="Year_html" text="Välj bokföringsår">
@@ -299,7 +298,6 @@
   <tocitem image="Book Green 16 n p_png" text="Hjälp">
     <tocitem target="updates_html" text="Uppdatering online"/>
     <tocitem target="support_html" text="Support online"/>
-    <tocitem target="DeletePostlocks_html" text="Ta bort postlås"/>
     <tocitem target="CompressDatabase_html" text="Komprimera databasen"/>
   </tocitem>
 </toc>
