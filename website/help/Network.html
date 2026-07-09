@@ -387,5 +387,13 @@
 </main>
 </div>
 
+<script>
+document.getElementById('sidebar').querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('sidebar').classList.add('hidden');
+  });
+});
+</script>
+
 </body>
 </html>

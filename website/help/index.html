@@ -516,7 +516,13 @@ fetch('pages.json')
       results.classList.remove('hidden');
     });
     
-    document.addEventListener('click', function(e) {
+    document.getElementById('sidebar').querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.getElementById('sidebar').classList.add('hidden');
+    });
+  });
+
+  document.addEventListener('click', function(e) {
       if (!input.parentElement.contains(e.target)) results.classList.add('hidden');
     });
   });
