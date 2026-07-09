@@ -20,11 +20,20 @@
 <p class="copyright">Copyright 2006–2018 – Fribok.org</p>
 
 <script>
-document.getElementById('sidebar').querySelectorAll('a').forEach(function(a) {
-  a.addEventListener('click', function() {
-    document.getElementById('sidebar').classList.add('hidden');
+(function() {
+  var sidebar = document.getElementById('sidebar');
+  var toggle = document.getElementById('menu-toggle');
+  
+  toggle.addEventListener('click', function() {
+    sidebar.classList.toggle('hidden');
   });
-});
+  
+  sidebar.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      sidebar.classList.add('hidden');
+    });
+  });
+})();
 </script>
 
 </body>

@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<button class="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('hidden')">☰ Meny</button>
+<button class="sidebar-toggle" id="menu-toggle">☰ Meny</button>
 
 <div class="layout">
 
@@ -491,40 +491,51 @@
 </div>
 
 <script>
-document.getElementById('sidebar').querySelectorAll('a').forEach(function(a) {
+(function() {
+  var sidebar = document.getElementById('sidebar');
+  var toggle = document.getElementById('menu-toggle');
+  
+  toggle.addEventListener('click', function() {
+    sidebar.classList.toggle('hidden');
+  });
+  
+  sidebar.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() {
-      document.getElementById('sidebar').classList.add('hidden');
+      sidebar.classList.add('hidden');
     });
   });
-
-fetch('pages.json')
-  .then(r => r.json())
-  .then(pages => {
-    const input = document.getElementById('help-search');
-    const results = document.getElementById('search-results');
-    
-    input.addEventListener('input', function() {
-      const q = this.value.trim().toLowerCase();
-      if (q.length < 2) {
-        results.classList.add('hidden');
-        return;
-      }
-      const matches = pages.filter(p => p.name.toLowerCase().includes(q) || p.section.toLowerCase().includes(q));
-      if (matches.length === 0) {
-        results.innerHTML = '<div class="search-item">Inga träffar</div>';
+  
+  fetch('pages.json')
+    .then(function(r) { return r.json(); })
+    .then(function(pages) {
+      var input = document.getElementById('help-search');
+      var results = document.getElementById('search-results');
+      
+      input.addEventListener('input', function() {
+        var q = this.value.trim().toLowerCase();
+        if (q.length < 2) {
+          results.classList.add('hidden');
+          return;
+        }
+        var matches = pages.filter(function(p) {
+          return p.name.toLowerCase().indexOf(q) !== -1 || p.section.toLowerCase().indexOf(q) !== -1;
+        });
+        if (matches.length === 0) {
+          results.innerHTML = '<div class="search-item">Inga träffar</div>';
+          results.classList.remove('hidden');
+          return;
+        }
+        results.innerHTML = matches.slice(0, 15).map(function(p) {
+          return '<a href="' + p.file + '" class="search-item"><span>' + p.name + '</span><small>' + p.section + '</small></a>';
+        }).join('');
         results.classList.remove('hidden');
-        return;
-      }
-      results.innerHTML = matches.slice(0, 15).map(p =>
-        `<a href="${p.file}" class="search-item"><span>${p.name}</span><small>${p.section}</small></a>`
-      ).join('');
-      results.classList.remove('hidden');
+      });
+      
+      document.addEventListener('click', function(e) {
+        if (!input.parentElement.contains(e.target)) results.classList.add('hidden');
+      });
     });
-    
-    document.addEventListener('click', function(e) {
-      if (!input.parentElement.contains(e.target)) results.classList.add('hidden');
-    });
-  });
+})();
 </script>
 
 </body>
