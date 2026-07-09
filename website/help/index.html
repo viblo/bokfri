@@ -38,7 +38,6 @@
         <li><a href="Backup.html">Säkerhetskopiering</a></li>
         <li><a href="BackupAllCompany.html">Säkerhetskopiera hela databasen</a></li>
         <li><a href="RestoreBackup.html">Återställ från säkerhetskopia</a></li>
-        <li><a href="NetworkSettings.html">Nätverksinställningar</a></li>
       </ul>
     </li>
     <li class="section">Företagsimport
@@ -375,7 +374,7 @@
   <h1>Hjälp</h1>
   <p class="hero-sub">Alla funktioner i Bokfri — sök eller klicka</p>
   <div class="search-wrapper">
-    <input type="search" id="help-search" placeholder="Sök bland 228 hjälpsidor…" autocomplete="off">
+    <input type="search" id="help-search" placeholder="Sök bland 227 hjälpsidor…" autocomplete="off">
     <div id="search-results" class="search-results hidden"></div>
   </div>
 </div>
@@ -384,7 +383,7 @@
     <a href="Company.html" class="card">
       <span class="card-icon">⚙️</span>
       <h3>Administration</h3>
-      <span class="card-count">19 sidor</span>
+      <span class="card-count">18 sidor</span>
     </a>
     <a href="SIEimport.html" class="card">
       <span class="card-icon">📥</span>
@@ -492,6 +491,18 @@
 </div>
 
 <script>
+document.getElementById('sidebar').querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.getElementById('sidebar').classList.add('hidden');
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+      if (!document.getElementById('help-search').parentElement.contains(e.target))
+        document.getElementById('search-results').classList.add('hidden');
+    });
+  });
+
 fetch('pages.json')
   .then(r => r.json())
   .then(pages => {
@@ -516,13 +527,7 @@ fetch('pages.json')
       results.classList.remove('hidden');
     });
     
-    document.getElementById('sidebar').querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      document.getElementById('sidebar').classList.add('hidden');
-    });
-  });
-
-  document.addEventListener('click', function(e) {
+    document.addEventListener('click', function(e) {
       if (!input.parentElement.contains(e.target)) results.classList.add('hidden');
     });
   });
