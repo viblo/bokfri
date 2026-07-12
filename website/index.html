@@ -11,22 +11,34 @@
 </head>
 <body>
 
-<header>
-  <img src="assets/logo.svg" alt="Bokfri logotyp" class="logo" width="256" height="96">
-  <p class="tagline">Fri bokföring för föreningar och småföretag</p>
+<header class="site-header">
+  <a href="/" class="header-logo">
+    <img src="/assets/logo.svg" alt="Bokfri" width="64" height="24">
+    Bokfri
+  </a>
+  <nav class="header-nav">
+    <a href="/" class="active">Hem</a>
+    <a href="/download/">Ladda ner</a>
+    <a href="/help/">Hjälp</a>
+  </nav>
 </header>
 
-<main>
+<div class="landing">
+  <div class="landing-hero">
+    <img src="assets/logo.svg" alt="Bokfri logotyp" class="logo" width="256" height="96">
+    <p class="tagline">Fri bokföring för föreningar och småföretag</p>
+  </div>
+
+  <div class="screenshot-wrap">
+    <img src="assets/screenshot.png" alt="Skärmdump av Bokfri — skapa ny verifikation" class="screenshot">
+  </div>
+
   <section id="intro">
     <p>
       Bokfri är ett fritt bokföringsprogram med öppen källkod.
       Det hjälper dig med verifikationer, fakturor, kund- och leverantörsregister,
       rapporter och import/export — allt i ett klassiskt skrivbordsprogram.
     </p>
-  </section>
-
-  <section id="screenshot">
-    <img src="assets/screenshot.png" alt="Skärmdump av Bokfri — skapa ny verifikation" class="screenshot">
   </section>
 
   <section id="features">
@@ -54,6 +66,7 @@
     <h2>Ladda ner</h2>
     <p>
       Senaste versionen hittar du på
+      <a href="/download/">nedladdningssidan</a> eller
       <a href="https://github.com/viblo/bokfri/releases">GitHub Releases</a>.
     </p>
   </section>
@@ -93,19 +106,17 @@
       Available for Windows, macOS, and Linux under the GPLv3 license.
     </p>
   </section>
-</main>
+</div>
 
-<footer>
-  <p>
-    <a href="help/">Hjälp</a>
-    ·
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/download/">Ladda ner</a>
+    <a href="/help/">Hjälp</a>
     <a href="https://codeberg.org/viblo-ai/bokfri">Codeberg</a>
-    ·
-    <a href="https://github.com/viblo/bokfri/releases">Nedladdningar</a>
-    ·
+    <a href="https://github.com/viblo/bokfri/releases">GitHub Releases</a>
     <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a>
-  </p>
-  <p class="contact">
+  </div>
+  <p class="footer-contact">
     Kontakt: <a href="mailto:vb@viblo.se">vb@viblo.se</a>
   </p>
 </footer>

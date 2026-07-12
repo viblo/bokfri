@@ -4,373 +4,384 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Orderbekräftelse</title>
-<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
+<header class="site-header">
+  <a href="/" class="header-logo">
+    <img src="/assets/logo.svg" alt="Bokfri" width="64" height="24">
+    Bokfri
+  </a>
+  <nav class="header-nav">
+    <a href="/">Hem</a>
+    <a href="/download/">Ladda ner</a>
+    <a href="/help/" class="active">Hjälp</a>
+  </nav>
+</header>
+
 <button class="sidebar-toggle" id="menu-toggle">☰ Meny</button>
 
-<div class="layout">
+<div class="help-layout">
 
 <nav class="sidebar hidden" id="sidebar">
-  <h2><a href="index.html">Hjälp</a></h2>
+  <h2><a href="/help/">Hjälp</a></h2>
   <ul class="toc">
     <li class="section">Administration
       <ul>
-        <li><a href="Company.html">Företag</a></li>
-        <li><a href="CreateCompany.html">Skapa företag</a></li>
-        <li><a href="OpenCompany.html">Öppna företag</a></li>
-        <li><a href="ChangeCompany.html">Ändra företag</a></li>
-        <li><a href="DeleteCompany.html">Radera företag</a></li>
-        <li><a href="Accounts.html">Kontoplaner</a></li>
-        <li><a href="CreateAccounts.html">Skapa kontoplan</a></li>
-        <li><a href="ChangeAccounts.html">Ändra kontoplan</a></li>
-        <li><a href="DeleteAccounts.html">Radera kontoplan</a></li>
-        <li><a href="ExportAccounts.html">Exportera kontoplan</a></li>
-        <li><a href="ImportAccounts.html">Importera kontoplan</a></li>
-        <li><a href="SIEimport.html">Importera från SIE-fil</a></li>
-        <li><a href="import.voucher.html">Importera verifikationer</a></li>
-        <li><a href="SIEexport.html">Exportera till SIE-fil</a></li>
-        <li><a href="SIEexportVer.html">Exportera verifikationer</a></li>
-        <li><a href="Backup.html">Säkerhetskopiering</a></li>
-        <li><a href="BackupAllCompany.html">Säkerhetskopiera hela databasen</a></li>
-        <li><a href="RestoreBackup.html">Återställ från säkerhetskopia</a></li>
+        <li><a href="/help/Company.html">Företag</a></li>
+        <li><a href="/help/CreateCompany.html">Skapa företag</a></li>
+        <li><a href="/help/OpenCompany.html">Öppna företag</a></li>
+        <li><a href="/help/ChangeCompany.html">Ändra företag</a></li>
+        <li><a href="/help/DeleteCompany.html">Radera företag</a></li>
+        <li><a href="/help/Accounts.html">Kontoplaner</a></li>
+        <li><a href="/help/CreateAccounts.html">Skapa kontoplan</a></li>
+        <li><a href="/help/ChangeAccounts.html">Ändra kontoplan</a></li>
+        <li><a href="/help/DeleteAccounts.html">Radera kontoplan</a></li>
+        <li><a href="/help/ExportAccounts.html">Exportera kontoplan</a></li>
+        <li><a href="/help/ImportAccounts.html">Importera kontoplan</a></li>
+        <li><a href="/help/SIEimport.html">Importera från SIE-fil</a></li>
+        <li><a href="/help/import.voucher.html">Importera verifikationer</a></li>
+        <li><a href="/help/SIEexport.html">Exportera till SIE-fil</a></li>
+        <li><a href="/help/SIEexportVer.html">Exportera verifikationer</a></li>
+        <li><a href="/help/Backup.html">Säkerhetskopiering</a></li>
+        <li><a href="/help/BackupAllCompany.html">Säkerhetskopiera hela databasen</a></li>
+        <li><a href="/help/RestoreBackup.html">Återställ från säkerhetskopia</a></li>
       </ul>
     </li>
     <li class="section">Företagsimport
       <ul>
-        <li><a href="SIEimport.html">Importera från SIE-fil</a></li>
-        <li><a href="import.voucher.html">Importera verifikationer</a></li>
+        <li><a href="/help/SIEimport.html">Importera från SIE-fil</a></li>
+        <li><a href="/help/import.voucher.html">Importera verifikationer</a></li>
       </ul>
     </li>
     <li class="section">Företagsexport
       <ul>
-        <li><a href="SIEexport.html">Exportera till SIE-fil</a></li>
-        <li><a href="SIEexportVer.html">Exportera verifikationer</a></li>
+        <li><a href="/help/SIEexport.html">Exportera till SIE-fil</a></li>
+        <li><a href="/help/SIEexportVer.html">Exportera verifikationer</a></li>
       </ul>
     </li>
     <li class="section">Register
       <ul>
-        <li><a href="Year.html">Välj bokföringsår</a></li>
-        <li><a href="CreateYear.html">Skapa bokföringsår</a></li>
-        <li><a href="ChangeYear.html">Ändra bokföringsår</a></li>
-        <li><a href="OpenYear.html">Öppna bokföringsår</a></li>
-        <li><a href="DeleteYear.html">Radera bokföringsår</a></li>
-        <li><a href="ChangeActiveAccounts.html">Ändra kontoplan för aktivt år</a></li>
-        <li><a href="Project.html">Projekt</a></li>
-        <li><a href="CreateProject.html">Skapa projekt</a></li>
-        <li><a href="ChangeProject.html">Ändra projekt</a></li>
-        <li><a href="DeleteProject.html">Radera projekt</a></li>
-        <li><a href="ProjectRevenue.html">Projektomsättning</a></li>
-        <li><a href="Profitcenter.html">Resultatenhet</a></li>
-        <li><a href="CreateProfitcenter.html">Skapa resultatenhet</a></li>
-        <li><a href="ChangeProfitcenter.html">Ändra resultatenhet</a></li>
-        <li><a href="DeleteProfitcenter.html">Radera resultatenhet</a></li>
-        <li><a href="ResultunitRevenue.html">Resultatenhetsomsättning</a></li>
-        <li><a href="Products.html">Produkter</a></li>
-        <li><a href="CreateProducts.html">Skapa produkter</a></li>
-        <li><a href="ChangeProducts.html">Ändra produkter</a></li>
-        <li><a href="CopyProducts.html">Kopiera produkter</a></li>
-        <li><a href="DeleteProducts.html">Radera produkter</a></li>
-        <li><a href="ProductRevenue.html">Produktomsättning</a></li>
-        <li><a href="Customers.html">Kunder</a></li>
-        <li><a href="CreateCustomers.html">Skapa kunder</a></li>
-        <li><a href="ChangeCustomers.html">Ändra kunder</a></li>
-        <li><a href="CopyCustomers.html">Kopiera kunder</a></li>
-        <li><a href="DeleteCustomers.html">Radera kunder</a></li>
-        <li><a href="CustomerRevenue.html">Kundomsättning</a></li>
-        <li><a href="Suppliers.html">Leverantörer</a></li>
-        <li><a href="CreateSuppliers.html">Skapa leverantörer</a></li>
-        <li><a href="ChangeSuppliers.html">Ändra leverantörer</a></li>
-        <li><a href="CopySuppliers.html">Kopiera leverantörer</a></li>
-        <li><a href="DeleteSuppliers.html">Radera leverantörer</a></li>
-        <li><a href="ImportSuppliers.html">Importera leverantörer</a></li>
-        <li><a href="ExportSuppliers.html">Exportera leverantörer</a></li>
-        <li><a href="SupplierRevenue.html">Leverantörsomsättning</a></li>
-        <li><a href="AccountingTemplate.html">Konteringsmallar</a></li>
-        <li><a href="ImportTemplateExcel.html">Importera konteringsmallar från Excel-fil</a></li>
-        <li><a href="ExportTemplateExcel.html">Exportera konteringsmallar till Excel-fil</a></li>
-        <li><a href="AutomaticDistribution.html">Automatfördelning</a></li>
-        <li><a href="CreateAutomaticDist.html">Skapa automatfördelning</a></li>
-        <li><a href="ChangeAutomaticDist.html">Ändra automatfördelning</a></li>
-        <li><a href="CopyAutomaticDist.html">Kopiera automatfördelning</a></li>
-        <li><a href="DeleteAutomaticDist.html">Radera automatfördelning</a></li>
+        <li><a href="/help/Year.html">Välj bokföringsår</a></li>
+        <li><a href="/help/CreateYear.html">Skapa bokföringsår</a></li>
+        <li><a href="/help/ChangeYear.html">Ändra bokföringsår</a></li>
+        <li><a href="/help/OpenYear.html">Öppna bokföringsår</a></li>
+        <li><a href="/help/DeleteYear.html">Radera bokföringsår</a></li>
+        <li><a href="/help/ChangeActiveAccounts.html">Ändra kontoplan för aktivt år</a></li>
+        <li><a href="/help/Project.html">Projekt</a></li>
+        <li><a href="/help/CreateProject.html">Skapa projekt</a></li>
+        <li><a href="/help/ChangeProject.html">Ändra projekt</a></li>
+        <li><a href="/help/DeleteProject.html">Radera projekt</a></li>
+        <li><a href="/help/ProjectRevenue.html">Projektomsättning</a></li>
+        <li><a href="/help/Profitcenter.html">Resultatenhet</a></li>
+        <li><a href="/help/CreateProfitcenter.html">Skapa resultatenhet</a></li>
+        <li><a href="/help/ChangeProfitcenter.html">Ändra resultatenhet</a></li>
+        <li><a href="/help/DeleteProfitcenter.html">Radera resultatenhet</a></li>
+        <li><a href="/help/ResultunitRevenue.html">Resultatenhetsomsättning</a></li>
+        <li><a href="/help/Products.html">Produkter</a></li>
+        <li><a href="/help/CreateProducts.html">Skapa produkter</a></li>
+        <li><a href="/help/ChangeProducts.html">Ändra produkter</a></li>
+        <li><a href="/help/CopyProducts.html">Kopiera produkter</a></li>
+        <li><a href="/help/DeleteProducts.html">Radera produkter</a></li>
+        <li><a href="/help/ProductRevenue.html">Produktomsättning</a></li>
+        <li><a href="/help/Customers.html">Kunder</a></li>
+        <li><a href="/help/CreateCustomers.html">Skapa kunder</a></li>
+        <li><a href="/help/ChangeCustomers.html">Ändra kunder</a></li>
+        <li><a href="/help/CopyCustomers.html">Kopiera kunder</a></li>
+        <li><a href="/help/DeleteCustomers.html">Radera kunder</a></li>
+        <li><a href="/help/CustomerRevenue.html">Kundomsättning</a></li>
+        <li><a href="/help/Suppliers.html">Leverantörer</a></li>
+        <li><a href="/help/CreateSuppliers.html">Skapa leverantörer</a></li>
+        <li><a href="/help/ChangeSuppliers.html">Ändra leverantörer</a></li>
+        <li><a href="/help/CopySuppliers.html">Kopiera leverantörer</a></li>
+        <li><a href="/help/DeleteSuppliers.html">Radera leverantörer</a></li>
+        <li><a href="/help/ImportSuppliers.html">Importera leverantörer</a></li>
+        <li><a href="/help/ExportSuppliers.html">Exportera leverantörer</a></li>
+        <li><a href="/help/SupplierRevenue.html">Leverantörsomsättning</a></li>
+        <li><a href="/help/AccountingTemplate.html">Konteringsmallar</a></li>
+        <li><a href="/help/ImportTemplateExcel.html">Importera konteringsmallar från Excel-fil</a></li>
+        <li><a href="/help/ExportTemplateExcel.html">Exportera konteringsmallar till Excel-fil</a></li>
+        <li><a href="/help/AutomaticDistribution.html">Automatfördelning</a></li>
+        <li><a href="/help/CreateAutomaticDist.html">Skapa automatfördelning</a></li>
+        <li><a href="/help/ChangeAutomaticDist.html">Ändra automatfördelning</a></li>
+        <li><a href="/help/CopyAutomaticDist.html">Kopiera automatfördelning</a></li>
+        <li><a href="/help/DeleteAutomaticDist.html">Radera automatfördelning</a></li>
       </ul>
     </li>
     <li class="section">Importera produkter
       <ul>
-        <li><a href="ImportProducts.html">Importera produkter (Excel)</a></li>
-        <li><a href="ImportProductsXML.html">Importera produkter (XML)</a></li>
+        <li><a href="/help/ImportProducts.html">Importera produkter (Excel)</a></li>
+        <li><a href="/help/ImportProductsXML.html">Importera produkter (XML)</a></li>
       </ul>
     </li>
     <li class="section">Exportera produkter
       <ul>
-        <li><a href="ExportProducts.html">Exportera produkter (Excel)</a></li>
-        <li><a href="ExportProductsXML.html">Exportera produkter (XML)</a></li>
+        <li><a href="/help/ExportProducts.html">Exportera produkter (Excel)</a></li>
+        <li><a href="/help/ExportProductsXML.html">Exportera produkter (XML)</a></li>
       </ul>
     </li>
     <li class="section">Importera kunder
       <ul>
-        <li><a href="ImportCustomers.html">Importera kunder (Excel)</a></li>
-        <li><a href="ImportCustomersXML.html">Importera kunder (XML)</a></li>
-        <li><a href="ImportCustomersEbutik.html">Importera kunder E-butik</a></li>
+        <li><a href="/help/ImportCustomers.html">Importera kunder (Excel)</a></li>
+        <li><a href="/help/ImportCustomersXML.html">Importera kunder (XML)</a></li>
+        <li><a href="/help/ImportCustomersEbutik.html">Importera kunder E-butik</a></li>
       </ul>
     </li>
     <li class="section">Exportera kunder
       <ul>
-        <li><a href="ExportCustomers.html">Exportera kunder (Excel)</a></li>
-        <li><a href="ExportCustomersXML.html">Exportera kunder (XML)</a></li>
+        <li><a href="/help/ExportCustomers.html">Exportera kunder (Excel)</a></li>
+        <li><a href="/help/ExportCustomersXML.html">Exportera kunder (XML)</a></li>
       </ul>
     </li>
     <li class="section">Försäljning
       <ul>
-        <li><a href="Inpayment.html">Inbetalningar</a></li>
-        <li><a href="CreateInpayment.html">Skapa inbetalning</a></li>
-        <li><a href="ChangeInpayment.html">Ändra inbetalning</a></li>
-        <li><a href="DeleteInpayments.html">Radera inbetalningar</a></li>
-        <li><a href="Inpaymentlist.html">Inbetalningslista</a></li>
-        <li><a href="Quotation.html">Offerter</a></li>
-        <li><a href="CreateQuotation.html">Skapa offert</a></li>
-        <li><a href="ChangeQuotation.html">Ändra offert</a></li>
-        <li><a href="CopyQuotation.html">Kopiera offert</a></li>
-        <li><a href="AutoOrderFromQuote.html">Skapa order från offert</a></li>
-        <li><a href="DeleteQuotations.html">Radera offerter</a></li>
-        <li><a href="QuotationReport.html">Offert</a></li>
-        <li><a href="EmailQuotation.html">E-postoffert</a></li>
-        <li><a href="QuotationList.html">Offertlista</a></li>
-        <li><a href="Saleorder.html">Ordrar</a></li>
-        <li><a href="CreateOrder.html">Skapa order</a></li>
-        <li><a href="ChangeOrder.html">Ändra order</a></li>
-        <li><a href="CopyOrder.html">Kopiera order</a></li>
-        <li><a href="AutoInvoiceFromOrder.html">Skapa kundfaktura från ordrar</a></li>
-        <li><a href="AutoCashFromOrder.html">Skapa kontantkvitto från ordrar</a></li>
-        <li><a href="AutoPeriodicinvoiceFromOrder.html">Skapa periodfaktura från ordrar</a></li>
-        <li><a href="AutoPOFromOrder.html">Skapa inköpsorder från ordrar</a></li>
-        <li><a href="DeleteOrders.html">Radera ordrar</a></li>
-        <li><a href="ExportOrdersXML.html">Exportera ordrar (XML)</a></li>
-        <li><a href="OrderReport.html">Orderbekräftelse</a></li>
-        <li><a href="EmailOrder.html">E-postorderbekräftelse</a></li>
-        <li><a href="Pickingslip.html">Plocklista</a></li>
-        <li><a href="Deliverynote.html">Följesedel</a></li>
-        <li><a href="OrderList.html">Orderlista</a></li>
-        <li><a href="Invoices.html">Kundfakturor</a></li>
-        <li><a href="CreateInvoice.html">Skapa kundfaktura</a></li>
-        <li><a href="ChangeInvoice.html">Ändra kundfaktura</a></li>
-        <li><a href="CopyInvoice.html">Kopiera kundfaktura</a></li>
-        <li><a href="AutoInpayFromInvoice.html">Skapa inbetalning från kundfakturor</a></li>
-        <li><a href="AutoCreditFromInvoice.html">Skapa kreditfaktura från kundfaktura</a></li>
-        <li><a href="AutoReminderFromInvoice.html">Skapa påminnelser från kundfakturor</a></li>
-        <li><a href="CreateInterestinvoice.html">Skapa räntefakturor</a></li>
-        <li><a href="DeleteInvoices.html">Radera kundfakturor</a></li>
-        <li><a href="InvoiceReport.html">Kundfaktura</a></li>
-        <li><a href="EmailInvoice.html">E-postfaktura</a></li>
-        <li><a href="OCRInvoice.html">OCR-faktura</a></li>
-        <li><a href="Reminder.html">Betalningspåminnelse</a></li>
-        <li><a href="InvoiceList.html">Fakturalista</a></li>
-        <li><a href="CreditInvoices.html">Kreditfakturor</a></li>
-        <li><a href="CreateCreditinvoice.html">Skapa kreditfaktura</a></li>
-        <li><a href="ChangeCreditinvoice.html">Ändra kreditfaktura</a></li>
-        <li><a href="CopyCreditinvoice.html">Kopiera kreditfaktura</a></li>
-        <li><a href="DeleteCreditinvoices.html">Radera kreditfakturor</a></li>
-        <li><a href="CreditinvoiceReport.html">Kreditfaktura</a></li>
-        <li><a href="EmailCreditInvoice.html">E-postkreditfaktura</a></li>
-        <li><a href="CreditInvoiceList.html">Kreditfakturalista</a></li>
-        <li><a href="PeriodicInvoices.html">Periodfakturor</a></li>
-        <li><a href="CreatePeriodicInvoice.html">Skapa periodfaktura</a></li>
-        <li><a href="ChangePeriodicInvoice.html">Ändra periodfaktura</a></li>
-        <li><a href="CopyPeriodicInvoice.html">Kopiera periodfaktura</a></li>
-        <li><a href="DeletePeriodicInvoices.html">Radera periodfakturor</a></li>
-        <li><a href="ListInvoicesForPeriodicInvoices.html">Lista fakturor för vald periodfaktura</a></li>
-        <li><a href="AutoInvoicesFromPeriodic.html">Skapa kundfakturor från periodfakturor</a></li>
-        <li><a href="SaleProfitReport.html">Försäljningsrapport</a></li>
-        <li><a href="SaleValues.html">Försäljningsvärden</a></li>
-        <li><a href="InvoiceReceivable.html">Kundfordran</a></li>
-        <li><a href="AccountsReceivable.html">Kundreskontra</a></li>
-        <li><a href="EUQReport.html">EU Kvartalsredovisning</a></li>
+        <li><a href="/help/Inpayment.html">Inbetalningar</a></li>
+        <li><a href="/help/CreateInpayment.html">Skapa inbetalning</a></li>
+        <li><a href="/help/ChangeInpayment.html">Ändra inbetalning</a></li>
+        <li><a href="/help/DeleteInpayments.html">Radera inbetalningar</a></li>
+        <li><a href="/help/Inpaymentlist.html">Inbetalningslista</a></li>
+        <li><a href="/help/Quotation.html">Offerter</a></li>
+        <li><a href="/help/CreateQuotation.html">Skapa offert</a></li>
+        <li><a href="/help/ChangeQuotation.html">Ändra offert</a></li>
+        <li><a href="/help/CopyQuotation.html">Kopiera offert</a></li>
+        <li><a href="/help/AutoOrderFromQuote.html">Skapa order från offert</a></li>
+        <li><a href="/help/DeleteQuotations.html">Radera offerter</a></li>
+        <li><a href="/help/QuotationReport.html">Offert</a></li>
+        <li><a href="/help/EmailQuotation.html">E-postoffert</a></li>
+        <li><a href="/help/QuotationList.html">Offertlista</a></li>
+        <li><a href="/help/Saleorder.html">Ordrar</a></li>
+        <li><a href="/help/CreateOrder.html">Skapa order</a></li>
+        <li><a href="/help/ChangeOrder.html">Ändra order</a></li>
+        <li><a href="/help/CopyOrder.html">Kopiera order</a></li>
+        <li><a href="/help/AutoInvoiceFromOrder.html">Skapa kundfaktura från ordrar</a></li>
+        <li><a href="/help/AutoCashFromOrder.html">Skapa kontantkvitto från ordrar</a></li>
+        <li><a href="/help/AutoPeriodicinvoiceFromOrder.html">Skapa periodfaktura från ordrar</a></li>
+        <li><a href="/help/AutoPOFromOrder.html">Skapa inköpsorder från ordrar</a></li>
+        <li><a href="/help/DeleteOrders.html">Radera ordrar</a></li>
+        <li><a href="/help/ExportOrdersXML.html">Exportera ordrar (XML)</a></li>
+        <li><a href="/help/OrderReport.html">Orderbekräftelse</a></li>
+        <li><a href="/help/EmailOrder.html">E-postorderbekräftelse</a></li>
+        <li><a href="/help/Pickingslip.html">Plocklista</a></li>
+        <li><a href="/help/Deliverynote.html">Följesedel</a></li>
+        <li><a href="/help/OrderList.html">Orderlista</a></li>
+        <li><a href="/help/Invoices.html">Kundfakturor</a></li>
+        <li><a href="/help/CreateInvoice.html">Skapa kundfaktura</a></li>
+        <li><a href="/help/ChangeInvoice.html">Ändra kundfaktura</a></li>
+        <li><a href="/help/CopyInvoice.html">Kopiera kundfaktura</a></li>
+        <li><a href="/help/AutoInpayFromInvoice.html">Skapa inbetalning från kundfakturor</a></li>
+        <li><a href="/help/AutoCreditFromInvoice.html">Skapa kreditfaktura från kundfaktura</a></li>
+        <li><a href="/help/AutoReminderFromInvoice.html">Skapa påminnelser från kundfakturor</a></li>
+        <li><a href="/help/CreateInterestinvoice.html">Skapa räntefakturor</a></li>
+        <li><a href="/help/DeleteInvoices.html">Radera kundfakturor</a></li>
+        <li><a href="/help/InvoiceReport.html">Kundfaktura</a></li>
+        <li><a href="/help/EmailInvoice.html">E-postfaktura</a></li>
+        <li><a href="/help/OCRInvoice.html">OCR-faktura</a></li>
+        <li><a href="/help/Reminder.html">Betalningspåminnelse</a></li>
+        <li><a href="/help/InvoiceList.html">Fakturalista</a></li>
+        <li><a href="/help/CreditInvoices.html">Kreditfakturor</a></li>
+        <li><a href="/help/CreateCreditinvoice.html">Skapa kreditfaktura</a></li>
+        <li><a href="/help/ChangeCreditinvoice.html">Ändra kreditfaktura</a></li>
+        <li><a href="/help/CopyCreditinvoice.html">Kopiera kreditfaktura</a></li>
+        <li><a href="/help/DeleteCreditinvoices.html">Radera kreditfakturor</a></li>
+        <li><a href="/help/CreditinvoiceReport.html">Kreditfaktura</a></li>
+        <li><a href="/help/EmailCreditInvoice.html">E-postkreditfaktura</a></li>
+        <li><a href="/help/CreditInvoiceList.html">Kreditfakturalista</a></li>
+        <li><a href="/help/PeriodicInvoices.html">Periodfakturor</a></li>
+        <li><a href="/help/CreatePeriodicInvoice.html">Skapa periodfaktura</a></li>
+        <li><a href="/help/ChangePeriodicInvoice.html">Ändra periodfaktura</a></li>
+        <li><a href="/help/CopyPeriodicInvoice.html">Kopiera periodfaktura</a></li>
+        <li><a href="/help/DeletePeriodicInvoices.html">Radera periodfakturor</a></li>
+        <li><a href="/help/ListInvoicesForPeriodicInvoices.html">Lista fakturor för vald periodfaktura</a></li>
+        <li><a href="/help/AutoInvoicesFromPeriodic.html">Skapa kundfakturor från periodfakturor</a></li>
+        <li><a href="/help/SaleProfitReport.html">Försäljningsrapport</a></li>
+        <li><a href="/help/SaleValues.html">Försäljningsvärden</a></li>
+        <li><a href="/help/InvoiceReceivable.html">Kundfordran</a></li>
+        <li><a href="/help/AccountsReceivable.html">Kundreskontra</a></li>
+        <li><a href="/help/EUQReport.html">EU Kvartalsredovisning</a></li>
       </ul>
     </li>
     <li class="section">Importera ordrar
       <ul>
-        <li><a href="ImportOrdersXML.html">Importera ordrar (XML)</a></li>
-        <li><a href="ImportOrdersEbutik.html">Importera ordrar E-butik</a></li>
+        <li><a href="/help/ImportOrdersXML.html">Importera ordrar (XML)</a></li>
+        <li><a href="/help/ImportOrdersEbutik.html">Importera ordrar E-butik</a></li>
       </ul>
     </li>
     <li class="section">Rapporter
       <ul>
-        <li><a href="InpaymentJournal.html">Inbetalningsjournal</a></li>
-        <li><a href="InvoiceJournal.html">Fakturajournal</a></li>
-        <li><a href="CreditinvoiceJournal.html">Kreditfakturajournal</a></li>
-        <li><a href="SaleProfitReport.html">Försäljningsrapport</a></li>
-        <li><a href="SaleValues.html">Försäljningsvärden</a></li>
-        <li><a href="InvoiceReceivable.html">Kundfordran</a></li>
-        <li><a href="AccountsReceivable.html">Kundreskontra</a></li>
-        <li><a href="EUQReport.html">EU Kvartalsredovisning</a></li>
+        <li><a href="/help/InpaymentJournal.html">Inbetalningsjournal</a></li>
+        <li><a href="/help/InvoiceJournal.html">Fakturajournal</a></li>
+        <li><a href="/help/CreditinvoiceJournal.html">Kreditfakturajournal</a></li>
+        <li><a href="/help/SaleProfitReport.html">Försäljningsrapport</a></li>
+        <li><a href="/help/SaleValues.html">Försäljningsvärden</a></li>
+        <li><a href="/help/InvoiceReceivable.html">Kundfordran</a></li>
+        <li><a href="/help/AccountsReceivable.html">Kundreskontra</a></li>
+        <li><a href="/help/EUQReport.html">EU Kvartalsredovisning</a></li>
       </ul>
     </li>
     <li class="section">Journaler
       <ul>
-        <li><a href="InpaymentJournal.html">Inbetalningsjournal</a></li>
-        <li><a href="InvoiceJournal.html">Fakturajournal</a></li>
-        <li><a href="CreditinvoiceJournal.html">Kreditfakturajournal</a></li>
+        <li><a href="/help/InpaymentJournal.html">Inbetalningsjournal</a></li>
+        <li><a href="/help/InvoiceJournal.html">Fakturajournal</a></li>
+        <li><a href="/help/CreditinvoiceJournal.html">Kreditfakturajournal</a></li>
       </ul>
     </li>
     <li class="section">Inköp
       <ul>
-        <li><a href="Outpayment.html">Utbetalningar</a></li>
-        <li><a href="CreateOutpayment.html">Skapa utbetalning</a></li>
-        <li><a href="ChangeOutpayment.html">Ändra utbetalning</a></li>
-        <li><a href="DeleteOutpayments.html">Radera utbetalningar</a></li>
-        <li><a href="Outpaymentlist.html">Utbetalningslista</a></li>
-        <li><a href="Purchaseorders.html">Inköpsordrar</a></li>
-        <li><a href="CreatePurchaseorder.html">Skapa inköpsorder</a></li>
-        <li><a href="ChangePurchaseorder.html">Ändra inköpsorder</a></li>
-        <li><a href="CopyPurchaseorder.html">Kopiera inköpsorder</a></li>
-        <li><a href="AutoSuppinvoiceFromPurchorder.html">Skapa leverantörsfaktura från inköpsordrar</a></li>
-        <li><a href="DeletePurchaseorders.html">Radera inköpsordrar</a></li>
-        <li><a href="Purchaseorderreport.html">Inköpsorder</a></li>
-        <li><a href="EmailPO.html">E-postinköpsorder</a></li>
-        <li><a href="InquiryReport.html">Förfrågan</a></li>
-        <li><a href="EmailInquiry.html">E-postförfrågan</a></li>
-        <li><a href="PurchaseorderList.html">Inköpsorderlista</a></li>
-        <li><a href="Supplierinvoices.html">Leverantörsfakturor</a></li>
-        <li><a href="CreateSupplierinvoice.html">Skapa leverantörsfaktura</a></li>
-        <li><a href="ChangeSupplierinvoice.html">Ändra leverantörsfaktura</a></li>
-        <li><a href="CopySupplierinvoice.html">Kopiera leverantörsfaktura</a></li>
-        <li><a href="AutoCsuppinvFromSuppinv.html">Skapa leverantörskreditfaktura från leverantörsfaktura</a></li>
-        <li><a href="DeleteSupplierinvoices.html">Radera leverantörsfakturor</a></li>
-        <li><a href="AutoOutpayFromSuppInvoice.html">Skapa utbetalning från leverantörsfakturor</a></li>
-        <li><a href="CreateLBpayment.html">Skapa LB-fil för leverantörsbetalning</a></li>
-        <li><a href="SupplierinvoiceList.html">Leverantörsfakturalista</a></li>
-        <li><a href="Suppliercreditinvoices.html">Leverantörskreditfakturor</a></li>
-        <li><a href="CreateSuppliercreditinvoice.html">Skapa leverantörskreditfaktura</a></li>
-        <li><a href="ChangeSuppliercreditinvoice.html">Ändra leverantörskreditfaktura</a></li>
-        <li><a href="CopySuppliercreditinvoice.html">Kopiera leverantörskreditfaktura</a></li>
-        <li><a href="DeleteSuppliercreditinvoices.html">Radera leverantörskreditfakturor</a></li>
-        <li><a href="SuppliercreditInvoiceList.html">Leverantörskreditfakturalista</a></li>
-        <li><a href="PurchaseValues.html">Inköpsvärden</a></li>
-        <li><a href="SupplierinvoicePayable.html">Leverantörsskuld</a></li>
-        <li><a href="AccountsPayable.html">Leverantörsreskontra</a></li>
+        <li><a href="/help/Outpayment.html">Utbetalningar</a></li>
+        <li><a href="/help/CreateOutpayment.html">Skapa utbetalning</a></li>
+        <li><a href="/help/ChangeOutpayment.html">Ändra utbetalning</a></li>
+        <li><a href="/help/DeleteOutpayments.html">Radera utbetalningar</a></li>
+        <li><a href="/help/Outpaymentlist.html">Utbetalningslista</a></li>
+        <li><a href="/help/Purchaseorders.html">Inköpsordrar</a></li>
+        <li><a href="/help/CreatePurchaseorder.html">Skapa inköpsorder</a></li>
+        <li><a href="/help/ChangePurchaseorder.html">Ändra inköpsorder</a></li>
+        <li><a href="/help/CopyPurchaseorder.html">Kopiera inköpsorder</a></li>
+        <li><a href="/help/AutoSuppinvoiceFromPurchorder.html">Skapa leverantörsfaktura från inköpsordrar</a></li>
+        <li><a href="/help/DeletePurchaseorders.html">Radera inköpsordrar</a></li>
+        <li><a href="/help/Purchaseorderreport.html">Inköpsorder</a></li>
+        <li><a href="/help/EmailPO.html">E-postinköpsorder</a></li>
+        <li><a href="/help/InquiryReport.html">Förfrågan</a></li>
+        <li><a href="/help/EmailInquiry.html">E-postförfrågan</a></li>
+        <li><a href="/help/PurchaseorderList.html">Inköpsorderlista</a></li>
+        <li><a href="/help/Supplierinvoices.html">Leverantörsfakturor</a></li>
+        <li><a href="/help/CreateSupplierinvoice.html">Skapa leverantörsfaktura</a></li>
+        <li><a href="/help/ChangeSupplierinvoice.html">Ändra leverantörsfaktura</a></li>
+        <li><a href="/help/CopySupplierinvoice.html">Kopiera leverantörsfaktura</a></li>
+        <li><a href="/help/AutoCsuppinvFromSuppinv.html">Skapa leverantörskreditfaktura från leverantörsfaktura</a></li>
+        <li><a href="/help/DeleteSupplierinvoices.html">Radera leverantörsfakturor</a></li>
+        <li><a href="/help/AutoOutpayFromSuppInvoice.html">Skapa utbetalning från leverantörsfakturor</a></li>
+        <li><a href="/help/CreateLBpayment.html">Skapa LB-fil för leverantörsbetalning</a></li>
+        <li><a href="/help/SupplierinvoiceList.html">Leverantörsfakturalista</a></li>
+        <li><a href="/help/Suppliercreditinvoices.html">Leverantörskreditfakturor</a></li>
+        <li><a href="/help/CreateSuppliercreditinvoice.html">Skapa leverantörskreditfaktura</a></li>
+        <li><a href="/help/ChangeSuppliercreditinvoice.html">Ändra leverantörskreditfaktura</a></li>
+        <li><a href="/help/CopySuppliercreditinvoice.html">Kopiera leverantörskreditfaktura</a></li>
+        <li><a href="/help/DeleteSuppliercreditinvoices.html">Radera leverantörskreditfakturor</a></li>
+        <li><a href="/help/SuppliercreditInvoiceList.html">Leverantörskreditfakturalista</a></li>
+        <li><a href="/help/PurchaseValues.html">Inköpsvärden</a></li>
+        <li><a href="/help/SupplierinvoicePayable.html">Leverantörsskuld</a></li>
+        <li><a href="/help/AccountsPayable.html">Leverantörsreskontra</a></li>
       </ul>
     </li>
     <li class="section">Rapporter
       <ul>
-        <li><a href="OutpaymentJournal.html">Utbetalningsjournal</a></li>
-        <li><a href="SupplierinvoiceJournal.html">Leverantörsfakturajournal</a></li>
-        <li><a href="SuppliercreditinvoiceJournal.html">Leverantörskreditfakturajournal</a></li>
-        <li><a href="PurchaseValues.html">Inköpsvärden</a></li>
-        <li><a href="SupplierinvoicePayable.html">Leverantörsskuld</a></li>
-        <li><a href="AccountsPayable.html">Leverantörsreskontra</a></li>
+        <li><a href="/help/OutpaymentJournal.html">Utbetalningsjournal</a></li>
+        <li><a href="/help/SupplierinvoiceJournal.html">Leverantörsfakturajournal</a></li>
+        <li><a href="/help/SuppliercreditinvoiceJournal.html">Leverantörskreditfakturajournal</a></li>
+        <li><a href="/help/PurchaseValues.html">Inköpsvärden</a></li>
+        <li><a href="/help/SupplierinvoicePayable.html">Leverantörsskuld</a></li>
+        <li><a href="/help/AccountsPayable.html">Leverantörsreskontra</a></li>
       </ul>
     </li>
     <li class="section">Journaler
       <ul>
-        <li><a href="OutpaymentJournal.html">Utbetalningsjournal</a></li>
-        <li><a href="SupplierinvoiceJournal.html">Leverantörsfakturajournal</a></li>
-        <li><a href="SuppliercreditinvoiceJournal.html">Leverantörskreditfakturajournal</a></li>
+        <li><a href="/help/OutpaymentJournal.html">Utbetalningsjournal</a></li>
+        <li><a href="/help/SupplierinvoiceJournal.html">Leverantörsfakturajournal</a></li>
+        <li><a href="/help/SuppliercreditinvoiceJournal.html">Leverantörskreditfakturajournal</a></li>
       </ul>
     </li>
     <li class="section">Bankgiro
       <ul>
-        <li><a href="ImportBgMax.html">Importera inbetalningar från BgMax-fil</a></li>
-        <li><a href="ImportLbin.html">Importera utbetalningar från Lbut-fil</a></li>
+        <li><a href="/help/ImportBgMax.html">Importera inbetalningar från BgMax-fil</a></li>
+        <li><a href="/help/ImportLbin.html">Importera utbetalningar från Lbut-fil</a></li>
       </ul>
     </li>
     <li class="section">Lager
       <ul>
-        <li><a href="InDelivery.html">Inleveranser</a></li>
-        <li><a href="CreateIndelivery.html">Skapa inleverans</a></li>
-        <li><a href="ChangeIndelivery.html">Ändra inleverans</a></li>
-        <li><a href="CopyIndelivery.html">Kopiera inleverans</a></li>
-        <li><a href="DeleteIndelivery.html">Radera inleveranser</a></li>
-        <li><a href="InDeliverylist.html">Inleveranslista</a></li>
-        <li><a href="OutDelivery.html">Utleveranser</a></li>
-        <li><a href="CreateOutdelivery.html">Skapa utleverans</a></li>
-        <li><a href="ChangeOutdelivery.html">Ändra utleverans</a></li>
-        <li><a href="CopyOutdelivery.html">Kopiera utleverans</a></li>
-        <li><a href="DeleteOutdelivery.html">Radera utleveranser</a></li>
-        <li><a href="OutDeliverylist.html">Utleveranslista</a></li>
-        <li><a href="AutoPO.html">Inköpsförslag</a></li>
-        <li><a href="InventoryCount.html">Inventeringar</a></li>
-        <li><a href="CreateInventorycount.html">Skapa inventering</a></li>
-        <li><a href="ChangeInventorycount.html">Ändra inventering</a></li>
-        <li><a href="DeleteInventorycount.html">Radera inventeringar</a></li>
-        <li><a href="Inventorycountlist.html">Inventeringslista</a></li>
-        <li><a href="Inventorycountdoc.html">Inventeringsunderlag</a></li>
-        <li><a href="Instockreport.html">Lagerredovisning</a></li>
-        <li><a href="Stockvaluereport.html">Lagervärde</a></li>
+        <li><a href="/help/InDelivery.html">Inleveranser</a></li>
+        <li><a href="/help/CreateIndelivery.html">Skapa inleverans</a></li>
+        <li><a href="/help/ChangeIndelivery.html">Ändra inleverans</a></li>
+        <li><a href="/help/CopyIndelivery.html">Kopiera inleverans</a></li>
+        <li><a href="/help/DeleteIndelivery.html">Radera inleveranser</a></li>
+        <li><a href="/help/InDeliverylist.html">Inleveranslista</a></li>
+        <li><a href="/help/OutDelivery.html">Utleveranser</a></li>
+        <li><a href="/help/CreateOutdelivery.html">Skapa utleverans</a></li>
+        <li><a href="/help/ChangeOutdelivery.html">Ändra utleverans</a></li>
+        <li><a href="/help/CopyOutdelivery.html">Kopiera utleverans</a></li>
+        <li><a href="/help/DeleteOutdelivery.html">Radera utleveranser</a></li>
+        <li><a href="/help/OutDeliverylist.html">Utleveranslista</a></li>
+        <li><a href="/help/AutoPO.html">Inköpsförslag</a></li>
+        <li><a href="/help/InventoryCount.html">Inventeringar</a></li>
+        <li><a href="/help/CreateInventorycount.html">Skapa inventering</a></li>
+        <li><a href="/help/ChangeInventorycount.html">Ändra inventering</a></li>
+        <li><a href="/help/DeleteInventorycount.html">Radera inventeringar</a></li>
+        <li><a href="/help/Inventorycountlist.html">Inventeringslista</a></li>
+        <li><a href="/help/Inventorycountdoc.html">Inventeringsunderlag</a></li>
+        <li><a href="/help/Instockreport.html">Lagerredovisning</a></li>
+        <li><a href="/help/Stockvaluereport.html">Lagervärde</a></li>
       </ul>
     </li>
     <li class="section">Rapporter
       <ul>
-        <li><a href="Inventorycountdoc.html">Inventeringsunderlag</a></li>
-        <li><a href="Instockreport.html">Lagerredovisning</a></li>
-        <li><a href="Stockvaluereport.html">Lagervärde</a></li>
+        <li><a href="/help/Inventorycountdoc.html">Inventeringsunderlag</a></li>
+        <li><a href="/help/Instockreport.html">Lagerredovisning</a></li>
+        <li><a href="/help/Stockvaluereport.html">Lagervärde</a></li>
       </ul>
     </li>
     <li class="section">Bokföring
       <ul>
-        <li><a href="BeginningBalance.html">Ingående balans</a></li>
-        <li><a href="Verifications.html">Bokföra</a></li>
-        <li><a href="CreateVerifications.html">Skapa verifikationer</a></li>
-        <li><a href="ChangeVerifications.html">Ändra verifikationer</a></li>
-        <li><a href="CorrectionVerifications.html">Skapa ändringsverifikation</a></li>
-        <li><a href="ExportVerExcel.html">Exportera verifikationer till Excel-fil</a></li>
-        <li><a href="ImportVerExcel.html">Importera verifikationer från Excel-fil</a></li>
-        <li><a href="import.voucher.html">Importera verifikationer från SIE-fil</a></li>
-        <li><a href="ProfitLossBudget.html">Resultatbudget</a></li>
-        <li><a href="VerificationsReport.html">Verifikationer</a></li>
-        <li><a href="BeginningBalanceReport.html">Ingående balans</a></li>
-        <li><a href="AccountsReport.html">Kontoplan</a></li>
-        <li><a href="GeneralLedgerReport.html">Huvudbok</a></li>
-        <li><a href="ProfitLossReport.html">Resultatrapport</a></li>
-        <li><a href="ProjectReport.html">Resultatrapport för projekt</a></li>
-        <li><a href="ProfitcenterReport.html">Resultatrapport för resultatenhet</a></li>
-        <li><a href="ProfitLossBudgetReport.html">Resultatbudget</a></li>
-        <li><a href="BalanceReport.html">Balansrapport</a></li>
-        <li><a href="SalesTaxReport.html">Momsrapport</a></li>
-        <li><a href="AccountingSchemeReport.html">Räkenskapsschema</a></li>
-        <li><a href="SimpleStatement.html">Förenklat årsbokslut</a></li>
-        <li><a href="OwnIncomeReport.html">Egna resultatrapporter</a></li>
+        <li><a href="/help/BeginningBalance.html">Ingående balans</a></li>
+        <li><a href="/help/Verifications.html">Bokföra</a></li>
+        <li><a href="/help/CreateVerifications.html">Skapa verifikationer</a></li>
+        <li><a href="/help/ChangeVerifications.html">Ändra verifikationer</a></li>
+        <li><a href="/help/CorrectionVerifications.html">Skapa ändringsverifikation</a></li>
+        <li><a href="/help/ExportVerExcel.html">Exportera verifikationer till Excel-fil</a></li>
+        <li><a href="/help/ImportVerExcel.html">Importera verifikationer från Excel-fil</a></li>
+        <li><a href="/help/import.voucher.html">Importera verifikationer från SIE-fil</a></li>
+        <li><a href="/help/ProfitLossBudget.html">Resultatbudget</a></li>
+        <li><a href="/help/VerificationsReport.html">Verifikationer</a></li>
+        <li><a href="/help/BeginningBalanceReport.html">Ingående balans</a></li>
+        <li><a href="/help/AccountsReport.html">Kontoplan</a></li>
+        <li><a href="/help/GeneralLedgerReport.html">Huvudbok</a></li>
+        <li><a href="/help/ProfitLossReport.html">Resultatrapport</a></li>
+        <li><a href="/help/ProjectReport.html">Resultatrapport för projekt</a></li>
+        <li><a href="/help/ProfitcenterReport.html">Resultatrapport för resultatenhet</a></li>
+        <li><a href="/help/ProfitLossBudgetReport.html">Resultatbudget</a></li>
+        <li><a href="/help/BalanceReport.html">Balansrapport</a></li>
+        <li><a href="/help/SalesTaxReport.html">Momsrapport</a></li>
+        <li><a href="/help/AccountingSchemeReport.html">Räkenskapsschema</a></li>
+        <li><a href="/help/SimpleStatement.html">Förenklat årsbokslut</a></li>
+        <li><a href="/help/OwnIncomeReport.html">Egna resultatrapporter</a></li>
       </ul>
     </li>
     <li class="section">Rapporter
       <ul>
-        <li><a href="VerificationsReport.html">Verifikationer</a></li>
-        <li><a href="BeginningBalanceReport.html">Ingående balans</a></li>
-        <li><a href="AccountsReport.html">Kontoplan</a></li>
-        <li><a href="GeneralLedgerReport.html">Huvudbok</a></li>
-        <li><a href="ProfitLossReport.html">Resultatrapport</a></li>
-        <li><a href="ProjectReport.html">Resultatrapport för projekt</a></li>
-        <li><a href="ProfitcenterReport.html">Resultatrapport för resultatenhet</a></li>
-        <li><a href="ProfitLossBudgetReport.html">Resultatbudget</a></li>
-        <li><a href="BalanceReport.html">Balansrapport</a></li>
-        <li><a href="SalesTaxReport.html">Momsrapport</a></li>
-        <li><a href="AccountingSchemeReport.html">Räkenskapsschema</a></li>
-        <li><a href="SimpleStatement.html">Förenklat årsbokslut</a></li>
-        <li><a href="OwnIncomeReport.html">Egna resultatrapporter</a></li>
-        <li><a href="CreateOwnIncomeReport.html">Skapa egen resultatrapport</a></li>
-        <li><a href="ChangeOwnIncomeReport.html">Ändra egen resultatrapport</a></li>
-        <li><a href="DeleteOwnIncomeReport.html">Radera egen resultatrapport</a></li>
-        <li><a href="PrintOwnIncomeReport.html">Skriv ut egen resultatrapport</a></li>
+        <li><a href="/help/VerificationsReport.html">Verifikationer</a></li>
+        <li><a href="/help/BeginningBalanceReport.html">Ingående balans</a></li>
+        <li><a href="/help/AccountsReport.html">Kontoplan</a></li>
+        <li><a href="/help/GeneralLedgerReport.html">Huvudbok</a></li>
+        <li><a href="/help/ProfitLossReport.html">Resultatrapport</a></li>
+        <li><a href="/help/ProjectReport.html">Resultatrapport för projekt</a></li>
+        <li><a href="/help/ProfitcenterReport.html">Resultatrapport för resultatenhet</a></li>
+        <li><a href="/help/ProfitLossBudgetReport.html">Resultatbudget</a></li>
+        <li><a href="/help/BalanceReport.html">Balansrapport</a></li>
+        <li><a href="/help/SalesTaxReport.html">Momsrapport</a></li>
+        <li><a href="/help/AccountingSchemeReport.html">Räkenskapsschema</a></li>
+        <li><a href="/help/SimpleStatement.html">Förenklat årsbokslut</a></li>
+        <li><a href="/help/OwnIncomeReport.html">Egna resultatrapporter</a></li>
+        <li><a href="/help/CreateOwnIncomeReport.html">Skapa egen resultatrapport</a></li>
+        <li><a href="/help/ChangeOwnIncomeReport.html">Ändra egen resultatrapport</a></li>
+        <li><a href="/help/DeleteOwnIncomeReport.html">Radera egen resultatrapport</a></li>
+        <li><a href="/help/PrintOwnIncomeReport.html">Skriv ut egen resultatrapport</a></li>
       </ul>
     </li>
     <li class="section">Support & underhåll
       <ul>
-        <li><a href="updates.html">Uppdatering online</a></li>
-        <li><a href="support.html">Support online</a></li>
-        <li><a href="CompressDatabase.html">Komprimera databasen</a></li>
+        <li><a href="/help/updates.html">Uppdatering online</a></li>
+        <li><a href="/help/support.html">Support online</a></li>
+        <li><a href="/help/CompressDatabase.html">Komprimera databasen</a></li>
       </ul>
     </li>
-    <li><a href="../index.html" style="color:#7dd3fc">← Till startsidan</a></li>
   </ul>
 </nav>
 
-<main class="content">
+<main class="help-content">
 
-<nav class="breadcrumb"><a href="index.html">Hjälp</a> &rsaquo; Försäljning</nav>
+<nav class="breadcrumb"><a href="/help/">Hjälp</a> &rsaquo; Försäljning</nav>
 <h1>Orderbekräftelse</h1>
 
 <p>Den här rapporten visar en orderbekräftelse. En orderbekräftelse är ett accepterande av en kunds beställning och ett bevis på att kundens beställning mottagits av ert företag.</p>
@@ -553,27 +564,37 @@
   <dd>Här visas ert företags internationella bankkontonummer(IBAN) enligt företagsinställningarna.</dd>
 </dl>
 
+
+
 <nav class="page-nav">
-  <a href="ExportOrdersXML.html" class="prev">Exportera ordrar (XML)</a>
-  <a href="EmailOrder.html" class="next">E-postorderbekräftelse</a>
+  <a href="/help/ExportOrdersXML.html" class="prev">Exportera ordrar (XML)</a>
+  <a href="/help/EmailOrder.html" class="next">E-postorderbekräftelse</a>
 </nav>
 
 </main>
+
 </div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/download/">Ladda ner</a>
+    <a href="/help/">Hjälp</a>
+    <a href="https://codeberg.org/viblo-ai/bokfri">Codeberg</a>
+    <a href="https://github.com/viblo/bokfri/releases">GitHub Releases</a>
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a>
+  </div>
+  <p class="footer-contact">
+    Kontakt: <a href="mailto:vb@viblo.se">vb@viblo.se</a>
+  </p>
+</footer>
 
 <script>
 (function() {
   var sidebar = document.getElementById('sidebar');
   var toggle = document.getElementById('menu-toggle');
-  
-  toggle.addEventListener('click', function() {
-    sidebar.classList.toggle('hidden');
-  });
-  
+  toggle.addEventListener('click', function() { sidebar.classList.toggle('hidden'); });
   sidebar.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      sidebar.classList.add('hidden');
-    });
+    a.addEventListener('click', function() { sidebar.classList.add('hidden'); });
   });
 })();
 </script>
