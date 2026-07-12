@@ -19,10 +19,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up JDK
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
         java-version: '21'
@@ -32,7 +32,7 @@ jobs:
 
     - name: Upload coverage report
       if: runner.os == 'Linux'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: jacoco-report
         path: target/site/jacoco/
@@ -51,10 +51,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up JDK
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
         java-version: '21'
@@ -148,7 +148,7 @@ jobs:
 
     - name: Upload Linux artifact
       if: runner.os == 'Linux'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ${{ github.ref == 'refs/heads/main' && 'bokfri-linux-dev' || 'bokfri-linux' }}
         path: ${{ github.ref == 'refs/heads/main' && 'dist/Bokfri-Dev-x86_64.AppImage' || 'dist/Bokfri-x86_64.AppImage' }}
@@ -156,7 +156,7 @@ jobs:
     # --- Windows steps ---
     - name: Upload Windows artifact
       if: runner.os == 'Windows'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ${{ github.ref == 'refs/heads/main' && 'bokfri-windows-dev' || 'bokfri-windows' }}
         path: dist/*.msi
@@ -164,7 +164,7 @@ jobs:
     # --- macOS steps ---
     - name: Upload macOS artifact
       if: runner.os == 'macOS'
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ${{ github.ref == 'refs/heads/main' && 'bokfri-macos-dev' || 'bokfri-macos' }}
         path: dist/*.dmg
