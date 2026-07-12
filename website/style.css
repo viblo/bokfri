@@ -220,9 +220,10 @@ body {
   border-color: #c86845;
 }
 
-.dl-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+.dl-icon-img {
+  height: 72px;
+  width: auto;
+  margin-bottom: 0.5rem;
 }
 
 .dl-card h2 {
@@ -279,20 +280,6 @@ body {
   padding: 2rem 1.5rem;
   overflow-y: auto;
   font-size: 0.9rem;
-}
-
-.sidebar h2 a {
-  color: #f4e9d8;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(244,233,216,0.2);
-}
-
-.sidebar h2 a:hover {
-  color: #c86845;
 }
 
 .sidebar .toc {
