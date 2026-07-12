@@ -37,6 +37,15 @@ header {
   color: #5a3a2e;
 }
 
+.screenshot {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(22,53,59,0.15);
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
 section {
   margin-bottom: 2rem;
 }
@@ -84,4 +93,9 @@ footer {
 
 footer a {
   color: #c86845;
+}
+
+.contact {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
