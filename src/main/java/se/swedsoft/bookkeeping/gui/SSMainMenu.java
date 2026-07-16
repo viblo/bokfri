@@ -17,7 +17,7 @@ import se.swedsoft.bookkeeping.gui.company.SSCompanyDialog;
 import se.swedsoft.bookkeeping.gui.company.SSCompanyFrame;
 import se.swedsoft.bookkeeping.gui.creditinvoice.SSCreditInvoiceFrame;
 import se.swedsoft.bookkeeping.gui.customer.SSCustomerFrame;
-import se.swedsoft.bookkeeping.gui.help.SSHelpFrame;
+import se.swedsoft.bookkeeping.gui.help.SSHelpBrowser;
 import se.swedsoft.bookkeeping.gui.indelivery.SSIndeliveryFrame;
 import se.swedsoft.bookkeeping.gui.inpayment.SSInpaymentFrame;
 import se.swedsoft.bookkeeping.gui.inventory.SSInventoryFrame;
@@ -827,7 +827,7 @@ public class SSMainMenu {    private static final Logger LOG = LoggerFactory.get
     private void loadHelpActions() {
         // Hjälp
         // *****************************
-        iMenuLoader.addActionListener("helpmenu.help",e -> SSHelpFrame.showFrame(iMainFrame, 980, 720));
+        iMenuLoader.addActionListener("helpmenu.help", e -> SSHelpBrowser.openHelp());
 
         // Online support
         // *****************************

@@ -1,7 +1,6 @@
 package se.swedsoft.bookkeeping.gui.util.dialogs;
 
 
-import com.sun.java.help.impl.SwingWorker;
 import se.swedsoft.bookkeeping.gui.SSMainFrame;
 
 import javax.swing.*;
@@ -70,9 +69,7 @@ public class SSProgressDialog extends SSDialog {
         dialog.setCursor(new Cursor(Cursor.WAIT_CURSOR));
         dialog.setVisible();
 
-        new SwingWorker() {
-            @Override
-            public Object construct() {
+        new Thread(() -> {
                 try {
                     iAction.run();
                 } catch (RuntimeException e) {
@@ -83,9 +80,7 @@ public class SSProgressDialog extends SSDialog {
                     dialog.setVisible(false);
                     dialog.dispose();
                 }
-                return null;
-            }
-        }.start();
+        }).start();
     }
 
     /**
@@ -109,9 +104,7 @@ public class SSProgressDialog extends SSDialog {
         dialog.setCursor(new Cursor(Cursor.WAIT_CURSOR));
         dialog.setVisible();
 
-        new SwingWorker() {
-            @Override
-            public Object construct() {
+        new Thread(() -> {
                 try {
                     iAction.run();
                 } catch (RuntimeException e) {
@@ -122,9 +115,7 @@ public class SSProgressDialog extends SSDialog {
                     dialog.setVisible(false);
                     dialog.dispose();
                 }
-                return null;
-            }
-        }.start();
+        }).start();
     }
 
     @Override

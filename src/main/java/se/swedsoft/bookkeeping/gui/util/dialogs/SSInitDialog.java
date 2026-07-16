@@ -1,7 +1,6 @@
 package se.swedsoft.bookkeeping.gui.util.dialogs;
 
 
-import com.sun.java.help.impl.SwingWorker;
 
 import javax.swing.*;
 import java.awt.*;
@@ -69,9 +68,7 @@ public class SSInitDialog extends SSDialog {
         dialog.setCursor(new Cursor(Cursor.WAIT_CURSOR));
         dialog.setVisible();
 
-        new SwingWorker() {
-            @Override
-            public Object construct() {
+        new Thread(() -> {
                 try {
                     iAction.run();
                 } finally {
@@ -79,9 +76,7 @@ public class SSInitDialog extends SSDialog {
                     dialog.setVisible(false);
                     dialog.dispose();
                 }
-                return null;
-            }
-        }.start();
+        }).start();
     }
 
     /**
@@ -105,9 +100,7 @@ public class SSInitDialog extends SSDialog {
         dialog.setCursor(new Cursor(Cursor.WAIT_CURSOR));
         dialog.setVisible();
 
-        new SwingWorker() {
-            @Override
-            public Object construct() {
+        new Thread(() -> {
                 try {
                     iAction.run();
                 } finally {
@@ -115,9 +108,7 @@ public class SSInitDialog extends SSDialog {
                     dialog.setVisible(false);
                     dialog.dispose();
                 }
-                return null;
-            }
-        }.start();
+        }).start();
     }
 
     @Override

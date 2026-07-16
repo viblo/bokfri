@@ -21,7 +21,10 @@ package se.swedsoft.bookkeeping.util;
 
 
 import javax.swing.*;
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -59,6 +62,12 @@ public class BrowserLaunch {
         String error = null;
 
         try {
+            if (Desktop.isDesktopSupported()
+                    && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                Desktop.getDesktop().browse(new URI(url));
+                return;
+            }
+
             if (WINDOWS) {
                 Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + url);
             } else { // assume Unix
@@ -106,12 +115,13 @@ public class BrowserLaunch {
                     error = "Could not find web browser";
                 }
             }
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             error = e.getMessage();
         }
         if (error != null) {
             JOptionPane.showMessageDialog(null,
-                    "Error attempting to launch web browser:\n" + error);
+                    "Kunde inte öppna webbläsaren:\n" + error
+                            + "\n\nÖppna adressen manuellt:\n" + url);
         }
     }
 }
